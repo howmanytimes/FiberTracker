@@ -1,0 +1,526 @@
+[Root]
+Most Recent Package=FiberTrack Denier 2.5.0
+
+
+[Package|FiberTrack Resistance Setup Script|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=e:\FTGeneric\New Folder
+
+[Package|FiberTrack Resistance Setup Script|Configure DAO ISAMs]
+Applicable=No
+
+[Package|FiberTrack Resistance Setup Script|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|FiberTrack Resistance Setup Script|Files Found]
+
+[Package|FiberTrack Resistance Setup Script|Files Released]
+setup.svd=
+
+[Package|FiberTrack Resistance Setup Script|Missing Dependency Information]
+
+[Package|FiberTrack Resistance Setup Script|Out-of-Date Dependency Information]
+C:\WINNT\system32\scrrun.dll=
+C:\WINDOWS\SYSTEM32\msmask32.ocx=
+C:\WINDOWS\SYSTEM32\comdlg32.ocx=
+C:\WINDOWS\SYSTEM32\SCRRUN.DLL=
+
+[Package|FiberTrack Resistance Setup Script|Files Added]
+setup.svd=
+
+[Package|FiberTrack Resistance Setup Script|Files Removed]
+
+[Package|FiberTrack Resistance Setup Script|Files In Project]
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+E:\FTGeneric\FiberTrack.exe=Yes
+C:\WINDOWS\SYSTEM32\MSVBVM60.DLL=Yes
+C:\WINDOWS\SYSTEM32\OLEAUT32.DLL=Yes
+C:\WINDOWS\SYSTEM32\OLEPRO32.DLL=Yes
+C:\WINDOWS\SYSTEM32\ASYCFILT.DLL=Yes
+C:\WINDOWS\SYSTEM32\STDOLE2.TLB=Yes
+C:\WINDOWS\SYSTEM32\SCRRUN.DLL=Yes
+C:\WINDOWS\SYSTEM32\MSVCRT.DLL=Yes
+C:\WINDOWS\SYSTEM32\cwui.ocx=Yes
+C:\WINDOWS\SYSTEM32\MFC42.DLL=Yes
+C:\WINDOWS\SYSTEM32\MSCOMM32.OCX=Yes
+C:\WINDOWS\SYSTEM32\comdlg32.ocx=Yes
+C:\WINDOWS\SYSTEM32\msmask32.ocx=Yes
+C:\WINDOWS\SYSTEM32\comct232.ocx=Yes
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=Yes
+
+[Package|FiberTrack Resistance Setup Script|Configure Registry Files]
+Applicable=No
+
+[Package|FiberTrack Resistance Setup Script|Configure Remote Servers]
+Applicable=No
+
+[Package|FiberTrack Resistance Setup Script|Install Locations]
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\scrrun.dll=$(WinSysPath)
+C:\WINNT\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\cwui.ocx=$(WinSysPath)
+C:\WINNT\system32\mfc42.dll=$(WinSysPath)
+C:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINNT\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINNT\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINNT\system32\Comct232.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\sti\bin\FiberTrack231\Denier\setup.svd=$(AppPath)
+E:\FTGeneric\FiberTrack.exe=$(AppPath)
+C:\WINDOWS\SYSTEM32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\SCRRUN.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\MSVCRT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM32\cwui.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\MFC42.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\msmask32.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\comct232.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+
+[Package|FiberTrack Resistance Setup Script|Configure Shared Files]
+Applicable=Yes
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=No
+C:\sti\bin\FiberTrack231\Denier\setup.svd=No
+E:\FTGeneric\FiberTrack.exe=No
+
+[Package|FiberTrack Resistance Setup Script|Distribution]
+Type=single
+Size=
+Title=FiberTrack 2.5.0
+
+[Package|FiberTrack Resistance Setup Script|IconGroups]
+Group0=FiberTrack 2.31 Denier
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|FiberTrack Resistance Setup Script|FiberTrack 2.31 Denier]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.31 Denier
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Resistance Setup Script|Package]
+PackageFolder=e:\FTGeneric\New Folder
+ProjectFolder=E:\FTGeneric
+ServerSideCab=
+File1=e:\FTGeneric\New Folder\setup.exe
+File2=e:\FTGeneric\New Folder\Setup.Lst
+File3=e:\FTGeneric\New Folder\FiberTrack.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|FiberTrack Orientation Setup Script|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\sti\code\FTPackage
+
+[Package|FiberTrack Orientation Setup Script|Configure DAO ISAMs]
+Applicable=No
+
+[Package|FiberTrack Orientation Setup Script|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|FiberTrack Orientation Setup Script|Files Found]
+
+[Package|FiberTrack Orientation Setup Script|Files Released]
+
+[Package|FiberTrack Orientation Setup Script|Missing Dependency Information]
+
+[Package|FiberTrack Orientation Setup Script|Out-of-Date Dependency Information]
+C:\WINNT\system32\scrrun.dll=
+
+[Package|FiberTrack Orientation Setup Script|Files Added]
+C:\sti\bin\FiberTrack231\Denier\setup.svd=
+
+[Package|FiberTrack Orientation Setup Script|Files Removed]
+
+[Package|FiberTrack Orientation Setup Script|Files In Project]
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=Yes
+C:\WINNT\system32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINNT\system32\scrrun.dll=Yes
+C:\WINNT\system32\msvcrt.dll=Yes
+C:\WINNT\system32\cwui.ocx=Yes
+C:\WINNT\system32\mfc42.dll=Yes
+C:\WINNT\system32\MSCOMM32.OCX=Yes
+C:\WINNT\system32\comdlg32.ocx=Yes
+C:\WINNT\system32\MSMASK32.OCX=Yes
+C:\WINNT\system32\Comct232.ocx=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\sti\bin\FiberTrack231\Denier\setup.svd=Yes
+
+[Package|FiberTrack Orientation Setup Script|Configure Registry Files]
+Applicable=No
+
+[Package|FiberTrack Orientation Setup Script|Configure Remote Servers]
+Applicable=No
+
+[Package|FiberTrack Orientation Setup Script|Install Locations]
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\scrrun.dll=$(WinSysPath)
+C:\WINNT\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\cwui.ocx=$(WinSysPath)
+C:\WINNT\system32\mfc42.dll=$(WinSysPath)
+C:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINNT\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINNT\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINNT\system32\Comct232.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\sti\bin\FiberTrack231\Denier\setup.svd=$(AppPath)
+
+[Package|FiberTrack Orientation Setup Script|Configure Shared Files]
+Applicable=Yes
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=No
+C:\sti\bin\FiberTrack231\Denier\setup.svd=No
+
+[Package|FiberTrack Orientation Setup Script|Distribution]
+Type=single
+Size=
+Title=FiberTrack 2.31 Denier
+
+[Package|FiberTrack Orientation Setup Script|IconGroups]
+Group0=FiberTrack 2.31 Denier
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|FiberTrack Orientation Setup Script|FiberTrack 2.31 Denier]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.31 Denier
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Orientation Setup Script|Package]
+PackageFolder=C:\sti\code\FTPackage
+ProjectFolder=C:\sti\code\FiberTrack231
+ServerSideCab=
+File1=C:\sti\code\FTPackage\setup.exe
+File2=C:\sti\code\FTPackage\Setup.Lst
+File3=C:\sti\code\FTPackage\FiberTrack.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|FiberTrack Orientation 2.5.0|FiberTrack 2.5.0 Denier]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.5.0 Denier
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Orientation 2.5.0|FiberTrack 2.31 Denier]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.31 Denier
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Orientation 2.5.0|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\FiberTrackerOrientation250
+
+[Package|FiberTrack Orientation 2.5.0|Configure DAO ISAMs]
+Applicable=No
+
+[Package|FiberTrack Orientation 2.5.0|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|FiberTrack Orientation 2.5.0|Files Found]
+
+[Package|FiberTrack Orientation 2.5.0|Files Released]
+setup.svd=
+
+[Package|FiberTrack Orientation 2.5.0|Missing Dependency Information]
+
+[Package|FiberTrack Orientation 2.5.0|Out-of-Date Dependency Information]
+C:\WINNT\system32\scrrun.dll=
+C:\WINNT\system32\comdlg32.ocx=
+C:\WINDOWS\system32\comdlg32.ocx=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|FiberTrack Orientation 2.5.0|Files Added]
+
+[Package|FiberTrack Orientation 2.5.0|Files Removed]
+
+[Package|FiberTrack Orientation 2.5.0|Files In Project]
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\FiberTrack.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\WINDOWS\system32\cwui.ocx=Yes
+C:\WINDOWS\system32\mfc42.dll=Yes
+C:\WINDOWS\system32\mesa.dll=Yes
+C:\WINDOWS\system32\MSCOMM32.OCX=Yes
+C:\WINDOWS\system32\comdlg32.ocx=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\WINDOWS\system32\COMCT232.OCX=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+
+[Package|FiberTrack Orientation 2.5.0|Configure Registry Files]
+Applicable=No
+
+[Package|FiberTrack Orientation 2.5.0|Configure Remote Servers]
+Applicable=No
+
+[Package|FiberTrack Orientation 2.5.0|Install Locations]
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\scrrun.dll=$(WinSysPath)
+C:\WINNT\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\cwui.ocx=$(WinSysPath)
+C:\WINNT\system32\mfc42.dll=$(WinSysPath)
+C:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINNT\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINNT\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINNT\system32\Comct232.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\sti\bin\FiberTrack231\Denier\setup.svd=$(AppPath)
+F:\Denier2.5.0\SourceCode\FiberTrack.exe=$(AppPath)
+C:\WINNT\system32\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\FiberTrack.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\cwui.ocx=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPath)
+C:\WINDOWS\system32\mesa.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCT232.OCX=$(WinSysPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+
+[Package|FiberTrack Orientation 2.5.0|Configure Shared Files]
+Applicable=Yes
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=No
+C:\sti\bin\FiberTrack231\Denier\setup.svd=No
+F:\Denier2.5.0\SourceCode\FiberTrack.exe=No
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\FiberTrack.exe=Yes
+
+[Package|FiberTrack Orientation 2.5.0|Distribution]
+Type=single
+Size=1.44 MB
+Title=FiberTrack - Orientation Rev 2.5.0
+
+[Package|FiberTrack Orientation 2.5.0|IconGroups]
+Group0=FiberTrack 2.5.0 Orientation
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|FiberTrack Orientation 2.5.0|FiberTrack 2.5.0 Orientation]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.5.0 Orientation
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Orientation 2.5.0|Package]
+PackageFolder=C:\FiberTrackerOrientation250
+ProjectFolder=C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode
+ServerSideCab=
+File1=C:\FiberTrackerOrientation250\setup.exe
+File2=C:\FiberTrackerOrientation250\Setup.Lst
+File3=C:\FiberTrackerOrientation250\FiberTrack.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|FiberTrack Denier 2.5.0|FiberTrack 2.31 Denier]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.31 Denier
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Denier 2.5.0|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\FiberTrackerDenier250
+
+[Package|FiberTrack Denier 2.5.0|Configure DAO ISAMs]
+Applicable=No
+
+[Package|FiberTrack Denier 2.5.0|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|FiberTrack Denier 2.5.0|Files Found]
+
+[Package|FiberTrack Denier 2.5.0|Files Released]
+setup.svd=
+3=
+
+[Package|FiberTrack Denier 2.5.0|Missing Dependency Information]
+C:\WINDOWS\system32\SQLPARSE.DLL=
+
+[Package|FiberTrack Denier 2.5.0|Out-of-Date Dependency Information]
+C:\WINNT\system32\scrrun.dll=
+C:\WINNT\system32\comdlg32.ocx=
+C:\WINDOWS\system32\comdlg32.ocx=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|FiberTrack Denier 2.5.0|Files Added]
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\settings.ini=
+
+[Package|FiberTrack Denier 2.5.0|Files Removed]
+
+[Package|FiberTrack Denier 2.5.0|Files In Project]
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\FiberTrack.exe=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\WINDOWS\system32\cwui.ocx=Yes
+C:\WINDOWS\system32\mfc42.dll=Yes
+C:\WINDOWS\system32\mesa.dll=Yes
+C:\WINDOWS\system32\MSCOMM32.OCX=Yes
+C:\WINDOWS\system32\comdlg32.ocx=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\WINDOWS\system32\COMCT232.OCX=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\WINDOWS\system32\SQLPARSE.DLL=Yes
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\settings.ini=Yes
+
+[Package|FiberTrack Denier 2.5.0|Configure Registry Files]
+Applicable=No
+
+[Package|FiberTrack Denier 2.5.0|Configure Remote Servers]
+Applicable=No
+
+[Package|FiberTrack Denier 2.5.0|Install Locations]
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\scrrun.dll=$(WinSysPath)
+C:\WINNT\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\cwui.ocx=$(WinSysPath)
+C:\WINNT\system32\mfc42.dll=$(WinSysPath)
+C:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINNT\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINNT\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINNT\system32\Comct232.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\sti\bin\FiberTrack231\Denier\setup.svd=$(AppPath)
+F:\Denier2.5.0\SourceCode\FiberTrack.exe=$(AppPath)
+C:\WINNT\system32\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\FiberTrack.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\cwui.ocx=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPath)
+C:\WINDOWS\system32\mesa.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCT232.OCX=$(WinSysPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\SQLPARSE.DLL=$(WinSysPath)
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\settings.ini=$(AppPath)
+
+[Package|FiberTrack Denier 2.5.0|Configure Shared Files]
+Applicable=Yes
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=No
+C:\sti\bin\FiberTrack231\Denier\setup.svd=No
+F:\Denier2.5.0\SourceCode\FiberTrack.exe=No
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\FiberTrack.exe=Yes
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\settings.ini=No
+
+[Package|FiberTrack Denier 2.5.0|Distribution]
+Type=single
+Size=1.44 MB
+Title=FiberTrack - Denier 2.5.0
+
+[Package|FiberTrack Denier 2.5.0|Package]
+PackageFolder=C:\FiberTrackerDenier250
+ProjectFolder=C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode
+ServerSideCab=
+File1=C:\FiberTrackerDenier250\setup.exe
+File2=C:\FiberTrackerDenier250\Setup.Lst
+File3=C:\FiberTrackerDenier250\FiberTrack.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|FiberTrack Denier 2.5.0|IconGroups]
+Group0=FiberTrack 2.5.0 Denier
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|FiberTrack Denier 2.5.0|FiberTrack 2.5.0 Denier]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.5.0 Denier
+StartIn1=$(AppPath)
+Key1=Icon1

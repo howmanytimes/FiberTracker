@@ -1,0 +1,12 @@
+    STS Denier Monitoring Summary Report  - 3/8/2014 4:18:07 PM 
+    ----------------------------------------------------------------
+
+IntegrationTime = 2 Sec Target Denier = 100 LineSpeed = 250 Meters/sec
+
+Sensor  1 
+         Maximum Value =  1510 
+         Mean Value = 315.4
+         Minimum Value = -5 
+         CV Value = 00.0
+         Level 1 Defects =  69 
+         Level 2 Defects =  71 

@@ -1,0 +1,100 @@
+[History]
+1=#P0#=mb	#P1#=Form_Load	#P2#=FiberTrackDenier/frmAbout/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140308164858	#P7#=0	#P8#=23	.
+2=#P0#=mb	#P1#=parseDataLine	#P2#=FiberTrackDenier/FTDataFile/parseDataLine	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308162713	#P7#=0	#P8#=54	.
+3=#P0#=mb	#P1#=OpenDataFile	#P2#=FiberTrackDenier/PlotData/OpenDataFile	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308161519	#P7#=0	#P8#=40	.
+4=#P0#=mb	#P1#=ChoosePlotDataFile	#P2#=FiberTrackDenier/PlotData/ChoosePlotDataFile	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308161505	#P7#=0	#P8#=7	.
+5=#P0#=mb	#P1#=ChooseExcelFile	#P2#=FiberTrackDenier/PlotData/ChooseExcelFile	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308161024	#P7#=0	#P8#=1	.
+6=#P0#=mb	#P1#=PlotDataFile	#P2#=FiberTrackDenier/PlotData/PlotDataFile	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308160906	#P7#=0	#P8#=97	.
+7=#P0#=mb	#P1#=Form_Load	#P2#=FiberTrackDenier/PlotData/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140308160807	#P7#=0	#P8#=85	.
+8=#P0#=mb	#P1#=cmdOK_Click	#P2#=FiberTrackDenier/PlotData/cmdOK_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140308160744	#P7#=0	#P8#=14	.
+9=#P0#=mb	#P1#=cmdLineChart_Click	#P2#=FiberTrackDenier/PlotData/cmdLineChart_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140308160740	#P7#=0	#P8#=14	.
+10=#P0#=mb	#P1#=cmdClearGraph_Click	#P2#=FiberTrackDenier/PlotData/cmdClearGraph_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140308160725	#P7#=0	#P8#=16	.
+11=#P0#=mb	#P1#=cmdCancel_Click	#P2#=FiberTrackDenier/PlotData/cmdCancel_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140308160723	#P7#=0	#P8#=13	.
+12=#P0#=mb	#P1#=cmdBarChart_Click	#P2#=FiberTrackDenier/PlotData/cmdBarChart_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140308160709	#P7#=0	#P8#=15	.
+13=#P0#=mb	#P1#=AddChart	#P2#=FiberTrackDenier/FTExcelController/AddChart	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308160207	#P7#=0	#P8#=30	.
+14=#P0#=mb	#P1#=ReadHeader	#P2#=FiberTrackDenier/FTDataFile/ReadHeader	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308160056	#P7#=0	#P8#=26	.
+15=#P0#=mb	#P1#=readExcelFile	#P2#=FiberTrackDenier/FTDataFile/readExcelFile	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140308155957	#P7#=0	#P8#=39	.
+16=#P0#=mb	#P1#=PrintSetupFile	#P2#=FiberTrackDenier/FiberTrack/PrintSetupFile	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308155940	#P7#=0	#P8#=33	.
+17=#P0#=mb	#P1#=cmdCurrent_Click	#P2#=FiberTrackDenier/FiberTrack/cmdCurrent_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140308155913	#P7#=0	#P8#=29	.
+18=#P0#=mb	#P1#=writeFooter	#P2#=FiberTrackDenier/FTDataFile/writeFooter	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308155737	#P7#=0	#P8#=10	.
+19=#P0#=mb	#P1#=writeHeaderCSV	#P2#=FiberTrackDenier/FTDataFile/writeHeaderCSV	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308155715	#P7#=0	#P8#=6	.
+20=#P0#=mb	#P1#=parseColumnLine	#P2#=FiberTrackDenier/FTDataFile/parseColumnLine	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308155358	#P7#=0	#P8#=-1	.
+21=#P0#=mb	#P1#=ReadDataArray	#P2#=FiberTrackDenier/FTDataFile/ReadDataArray	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308155323	#P7#=0	#P8#=-23	.
+22=#P0#=mb	#P1#=readFile	#P2#=FiberTrackDenier/FTDataFile/readFile	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308143302	#P7#=0	#P8#=-2	.
+23=#P0#=mb	#P1#=StartStop_Click	#P2#=FiberTrackDenier/FiberTrack/StartStop_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140308142751	#P7#=0	#P8#=135	.
+24=#P0#=mb	#P1#=SaveSetupFile	#P2#=FiberTrackDenier/FiberTrack/SaveSetupFile	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308142704	#P7#=0	#P8#=22	.
+25=#P0#=mb	#P1#=parseInfoLine	#P2#=FiberTrackDenier/FTDataFile/parseInfoLine	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308141906	#P7#=0	#P8#=0	.
+26=#P0#=mb	#P1#=ThreadLine	#P2#=FiberTrackDenier/FTDataFile/ThreadLine [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20140308141634	#P7#=0	#P8#=1	.
+27=#P0#=mb	#P1#=ParseTitleLine	#P2#=FiberTrackDenier/FTDataFile/ParseTitleLine	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140308141518	#P7#=0	#P8#=13	.
+28=#P0#=mb	#P1#=ConvertDATToCSV	#P2#=FiberTrackDenier/FTExcelController/ConvertDATToCSV	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307215243	#P7#=0	#P8#=22	.
+29=#P0#=mb	#P1#=CreateCompareFile	#P2#=FiberTrackDenier/FTDataFile/CreateCompareFile	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140307214130	#P7#=0	#P8#=41	.
+30=#P0#=mb	#P1#=readLine	#P2#=FiberTrackDenier/FTDataFile/readLine	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307213203	#P7#=0	#P8#=1	.
+31=#P0#=mb	#P1#=info	#P2#=FiberTrackDenier/FTDataFile/info [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20140307213148	#P7#=0	#P8#=1	.
+32=#P0#=mb	#P1#=ParseTime	#P2#=FiberTrackDenier/FTDataLine/ParseTime	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307213100	#P7#=0	#P8#=20	.
+33=#P0#=mb	#P1#=Class_Initialize	#P2#=FiberTrackDenier/FTDataLine/Class_Initialize	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307213016	#P7#=0	#P8#=6	.
+34=#P0#=mb	#P1#=runUnitTests	#P2#=FiberTrackDenier/modUnitTest/runUnitTests	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307212653	#P7#=0	#P8#=0	.
+35=#P0#=mb	#P1#=FileFormat	#P2#=FiberTrackDenier/FTDataFile/FileFormat [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20140307212451	#P7#=0	#P8#=2	.
+36=#P0#=mb	#P1#=ApplyFormatting	#P2#=FiberTrackDenier/FTExcelController/ApplyFormatting	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307212351	#P7#=0	#P8#=0	.
+37=#P0#=mb	#P1#=cmdPrintForm_MouseMove	#P2#=FiberTrackDenier/PlotData/cmdPrintForm_MouseMove	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307212305	#P7#=0	#P8#=0	.
+38=#P0#=mb	#P1#=cwgLineChart_CursorChange	#P2#=FiberTrackDenier/PlotData/cwgLineChart_CursorChange	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307212251	#P7#=0	#P8#=0	.
+39=#P0#=mb	#P1#=cwgBarChart_CursorChange	#P2#=FiberTrackDenier/PlotData/cwgBarChart_CursorChange	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307212245	#P7#=0	#P8#=4	.
+40=#P0#=mb	#P1#=SetDatafileDialog	#P2#=FiberTrackDenier/PlotData/SetDatafileDialog	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307212110	#P7#=0	#P8#=-1	.
+41=#P0#=mb	#P1#=cmdViewFile_Click	#P2#=FiberTrackDenier/PlotData/cmdViewFile_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307211934	#P7#=0	#P8#=1	.
+42=#P0#=mb	#P1#=Form_Unload	#P2#=FiberTrackDenier/PlotData/Form_Unload	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307211848	#P7#=0	#P8#=8	.
+43=#P0#=mb	#P1#=Form_Terminate	#P2#=FiberTrackDenier/PlotData/Form_Terminate	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307211841	#P7#=0	#P8#=0	.
+44=#P0#=mb	#P1#=mnuCompare_Click	#P2#=FiberTrackDenier/PlotData/mnuCompare_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307211832	#P7#=0	#P8#=27	.
+45=#P0#=mb	#P1#=mnuView_Click	#P2#=FiberTrackDenier/PlotData/mnuView_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307211815	#P7#=0	#P8#=2	.
+46=#P0#=mb	#P1#=cmdComPort_Click	#P2#=FiberTrackDenier/FiberTrack/cmdComPort_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307211447	#P7#=0	#P8#=51	.
+47=#P0#=mb	#P1#=Title	#P2#=FiberTrackDenier/FTDataFile/Title [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20140307211408	#P7#=0	#P8#=2	.
+48=#P0#=mb	#P1#=writeToFile	#P2#=FiberTrackDenier/FTSetup/writeToFile	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307211332	#P7#=0	#P8#=0	.
+49=#P0#=mb	#P1#=readFromFile	#P2#=FiberTrackDenier/FTSetup/readFromFile	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307211147	#P7#=0	#P8#=5	.
+50=#P0#=mb	#P1#=writeHeader	#P2#=FiberTrackDenier/FTDataFile/writeHeader	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307210644	#P7#=0	#P8#=1	.
+51=#P0#=mb	#P1#=writeDataLine	#P2#=FiberTrackDenier/FTDataFile/writeDataLine	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307210548	#P7#=0	#P8#=17	.
+52=#P0#=mb	#P1#=setTitleAndInfo	#P2#=FiberTrackDenier/FTDataFile/setTitleAndInfo	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307210509	#P7#=0	#P8#=15	.
+53=#P0#=mb	#P1#=ViewDataFileInExcel	#P2#=FiberTrackDenier/FTExcelController/ViewDataFileInExcel	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307205129	#P7#=0	#P8#=8	.
+54=#P0#=mb	#P1#=ConvertCSVToExcel	#P2#=FiberTrackDenier/FTExcelController/ConvertCSVToExcel	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307205005	#P7#=0	#P8#=17	.
+55=#P0#=mb	#P1#=writeHeaderText	#P2#=FiberTrackDenier/FTDataFile/writeHeaderText	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307144401	#P7#=0	#P8#=12	.
+56=#P0#=mb	#P1#=Main	#P2#=FiberTrackDenier/modGlobals/Main	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307143109	#P7#=0	#P8#=0	.
+57=#P0#=mb	#P1#=Form_Load	#P2#=FiberTrackDenier/FiberTrack/Form_Load	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307142758	#P7#=0	#P8#=372	.
+58=#P0#=mb	#P1#=cmdCanPC_Click	#P2#=FiberTrackDenier/FiberTrack/cmdCanPC_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307141449	#P7#=0	#P8#=4	.
+59=#P0#=mb	#P1#=cmdCanDR_Click	#P2#=FiberTrackDenier/FiberTrack/cmdCanDR_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307141434	#P7#=0	#P8#=9	.
+60=#P0#=mb	#P1#=cmdOkAP_Click	#P2#=FiberTrackDenier/FiberTrack/cmdOkAP_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307134330	#P7#=0	#P8#=2	.
+61=#P0#=mb	#P1#=cmdDenPar_Click	#P2#=FiberTrackDenier/FiberTrack/cmdDenPar_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307134313	#P7#=0	#P8#=56	.
+62=#P0#=mb	#P1#=mnuSetup_Click	#P2#=FiberTrackDenier/FiberTrack/mnuSetup_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307134144	#P7#=0	#P8#=2	.
+63=#P0#=mb	#P1#=mnuAbout_Click	#P2#=FiberTrackDenier/FiberTrack/mnuAbout_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307134125	#P7#=0	#P8#=4	.
+64=#P0#=mb	#P1#=cmdOKCom_Click	#P2#=FiberTrackDenier/FiberTrack/cmdOKCom_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307134112	#P7#=0	#P8#=2	.
+65=#P0#=mb	#P1#=DataLine	#P2#=FiberTrackDenier/FTDataFile/DataLine [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20140307133633	#P7#=0	#P8#=1	.
+66=#P0#=mb	#P1#=ActivateExcelApp	#P2#=FiberTrackDenier/FTExcelController/ActivateExcelApp	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307133013	#P7#=0	#P8#=5	.
+67=#P0#=mb	#P1#=GetTempCSVFileName	#P2#=FiberTrackDenier/FTExcelController/GetTempCSVFileName	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307132956	#P7#=0	#P8#=6	.
+68=#P0#=mb	#P1#=Disconnect	#P2#=FiberTrackDenier/FTExcelController/Disconnect	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307132919	#P7#=0	#P8#=4	.
+69=#P0#=mb	#P1#=cmdSaveIniSettings_Click	#P2#=FiberTrackDenier/FiberTrack/cmdSaveIniSettings_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307132030	#P7#=0	#P8#=26	.
+70=#P0#=mb	#P1#=cmdOkPC_Click	#P2#=FiberTrackDenier/FiberTrack/cmdOkPC_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307131902	#P7#=0	#P8#=27	.
+71=#P0#=mb	#P1#=getDefaultFileName	#P2#=FiberTrackDenier/FTDataFile/getDefaultFileName	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140307131827	#P7#=0	#P8#=1	.
+72=#P0#=mb	#P1#=fraAbout_Click	#P2#=FiberTrackDenier/FiberTrack/fraAbout_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140307131216	#P7#=0	#P8#=2	.
+73=#P0#=mb	#P1#=GetIniSetting	#P2#=FiberTrackDenier/modIni/GetIniSetting	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140306062601	#P7#=0	#P8#=0	.
+74=#P0#=mb	#P1#=PutIniSetting	#P2#=FiberTrackDenier/modIni/PutIniSetting	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140306062349	#P7#=0	#P8#=-1	.
+75=#P0#=mb	#P1#=cmdCanDD_Click	#P2#=FiberTrackDenier/FiberTrack/cmdCanDD_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140306024831	#P7#=0	#P8#=7	.
+76=#P0#=mb	#P1#=cmdCancelIniSettings_Click	#P2#=FiberTrackDenier/FiberTrack/cmdCancelIniSettings_Click	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140306023738	#P7#=0	#P8#=2	.
+77=#P0#=mb	#P1#=SaveReport	#P2#=FiberTrackDenier/FiberTrack/SaveReport	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140306015944	#P7#=0	#P8#=31	.
+78=#P0#=mb	#P1#=Form_Resize	#P2#=FiberTrackDenier/FiberTrack/Form_Resize	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140306015019	#P7#=0	#P8#=41	.
+79=#P0#=mb	#P1#=getFileExtension	#P2#=FiberTrackDenier/FTDataFile/getFileExtension	#P3#=	#P4#=	#P5#=MembMethodPrivate	#P6#=20140306013938	#P7#=0	#P8#=7	.
+80=#P0#=mb	#P1#=SetTime	#P2#=FiberTrackDenier/FiberTrack/SetTime	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140306012606	#P7#=0	#P8#=-1	.
+81=#P0#=mb	#P1#=SetStatusText	#P2#=FiberTrackDenier/FiberTrack/SetStatusText	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140306012550	#P7#=0	#P8#=2	.
+82=#P0#=mb	#P1#=Command_Click	#P2#=FiberTrackDenier/FiberTrack/Command_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140306012057	#P7#=0	#P8#=15	.
+83=#P0#=mb	#P1#=cmdPlotData_Click	#P2#=FiberTrackDenier/FiberTrack/cmdPlotData_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140306012044	#P7#=0	#P8#=1	.
+84=#P0#=mb	#P1#=FormatTime	#P2#=FiberTrackDenier/FTDataFile/FormatTime	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140306011727	#P7#=0	#P8#=-1	.
+85=#P0#=mb	#P1#=SensorFromChkSensor	#P2#=FiberTrackDenier/PlotData/SensorFromChkSensor	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140306011401	#P7#=0	#P8#=3	.
+86=#P0#=mb	#P1#=Cv	#P2#=FiberTrackDenier/SensorReportData/Cv [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20140306010636	#P7#=0	#P8#=3	.
+87=#P0#=mb	#P1#=Cv	#P2#=FiberTrackDenier/SensorReportData/Cv [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20140306010128	#P7#=0	#P8#=0	.
+88=#P0#=mb	#P1#=GetSensorReportData	#P2#=FiberTrackDenier/FiberTrack/GetSensorReportData	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140305025147	#P7#=0	#P8#=8	.
+89=#P0#=mb	#P1#=CommBufferFix	#P2#=FiberTrackDenier/FiberTrack/CommBufferFix	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140305021307	#P7#=0	#P8#=9	.
+90=#P0#=mb	#P1#=ProcessZeroData	#P2#=FiberTrackDenier/FiberTrack/ProcessZeroData	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140305021216	#P7#=0	#P8#=12	.
+91=#P0#=mb	#P1#=average	#P2#=FiberTrackDenier/SensorReportData/average [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20140305021139	#P7#=0	#P8#=1	.
+92=#P0#=mb	#P1#=Average	#P2#=FiberTrackDenier/SensorReportData/Average [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20140305021109	#P7#=0	#P8#=1	.
+93=#P0#=mb	#P1#=InitReceiveCvFunction	#P2#=FiberTrackDenier/FiberTrack/InitReceiveCvFunction	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140305015940	#P7#=0	#P8#=9	.
+94=#P0#=mb	#P1#=ZeroCal_Click	#P2#=FiberTrackDenier/FiberTrack/ZeroCal_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140305015850	#P7#=0	#P8#=1	.
+95=#P0#=mb	#P1#=Init_Click	#P2#=FiberTrackDenier/FiberTrack/Init_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140305015539	#P7#=0	#P8#=85	.
+96=#P0#=mb	#P1#=ReadSetupFile	#P2#=FiberTrackDenier/FiberTrack/ReadSetupFile	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140305015522	#P7#=0	#P8#=3	.
+97=#P0#=mb	#P1#=ProcessSensorInit	#P2#=FiberTrackDenier/FiberTrack/ProcessSensorInit	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140305015310	#P7#=0	#P8#=9	.
+98=#P0#=mb	#P1#=GainCal_Click	#P2#=FiberTrackDenier/FiberTrack/GainCal_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20140305015016	#P7#=0	#P8#=5	.
+99=#P0#=mb	#P1#=ProcessCalData	#P2#=FiberTrackDenier/FiberTrack/ProcessCalData	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20140305014932	#P7#=0	#P8#=4	.

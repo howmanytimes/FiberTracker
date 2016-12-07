@@ -1,0 +1,12 @@
+    STS Resistance Monitoring Summary Report  - 8/19/2013 5:21:49 PM 
+    ----------------------------------------------------------
+
+IntegrationTime = 2 Sec Target Resistance = 100 LineSpeed = 250 Meters/sec
+
+Sensor  1 
+         Maximum Value =  957 
+         Mean Value = 949.4
+         Minimum Value =  941 
+         CV Value = 00.0
+         Level 1 Defects =  0 
+         Level 2 Defects =  0 
