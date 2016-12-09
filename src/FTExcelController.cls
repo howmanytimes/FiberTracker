@@ -24,6 +24,8 @@ Private mo_ExcelObject        As Excel.Application
 
 #If SCALE_DIAMETER Then
 Private mi_DenierTarget As Single
+#ElseIf SCALE_DENIERTEMP Then
+Private mi_DenierTarget As Integer
 #Else
 Private mi_DenierTarget As Integer
 #End If
@@ -315,6 +317,8 @@ Private Sub AddChart(worksheet As Excel.worksheet, isPlaceInWorksheet As Boolean
     o_YAxis.HasTitle = True
 #If SCALE_DIAMETER Then
     o_YAxis.AxisTitle.Caption = "Diameter"
+#ElseIf SCALE_DENIERTEMP Then
+    o_YAxis.AxisTitle.Caption = "Temperature"
 #Else
     o_YAxis.AxisTitle.Caption = "Denier"
 #End If

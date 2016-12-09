@@ -56,6 +56,8 @@ Private mo_DataLines()                      As FTDataLine
 
 #If SCALE_DIAMETER Then
 Private mi_DenierTarget                     As Single
+#ElseIf SCALE_DENIERTEMP Then
+Private mi_DenierTarget                     As Integer
 #Else
 Private mi_DenierTarget                     As Integer
 #End If
@@ -84,6 +86,9 @@ Private Const HEADER_TIME_POST = " Sec.   "
 
 #If SCALE_DIAMETER Then
 Private Const HEADER_DNR_PRE = "Target Diameter = "
+Private Const HEADER_DNR_POST = "  "
+#ElseIf SCALE_DENIERTEMP Then
+Private Const HEADER_DNR_PRE = "Target Temperature = "
 Private Const HEADER_DNR_POST = "  "
 #Else
 Private Const HEADER_DNR_PRE = "Target Denier = "
@@ -428,6 +433,13 @@ Private Sub SetTitleAndInfo()
         ms_Title = "          STC Diameter Monitoring Data File - " & CStr(Now)
     End If
     ms_Info = HEADER_TIME_PRE & mbyt_IntegrationTime & HEADER_TIME_POST & HEADER_DNR_PRE & Format$(mi_DenierTarget, "0.000") & HEADER_DNR_POST & HEADER_SPEED_PRE & mi_LineSpeed & HEADER_SPEED_POST
+#ElseIf SCALE_DENIERTEMP Then
+    If mb_CompareMode Then
+        ms_Title = "          STC Temperature Comparison Data File - " & CStr(Now)
+    Else
+        ms_Title = "          STC Temperature Monitoring Data File - " & CStr(Now)
+    End If
+    ms_Info = HEADER_TIME_PRE & mbyt_IntegrationTime & HEADER_TIME_POST & HEADER_DNR_PRE & Format$(mi_DenierTarget, "0.000") & HEADER_DNR_POST & HEADER_SPEED_PRE & mi_LineSpeed & HEADER_SPEED_POST
 #Else
     If mb_CompareMode Then
         ms_Title = "            STC Denier Comparison Data File - " & CStr(Now)
@@ -768,6 +780,10 @@ Private Function ParseTitleLine(inputTitle As String) As Boolean
         MsgBox "This file was saved in Diameter mode and cannot be read " & vbCrLf & "by this software version.", vbExclamation Or vbOKOnly, StringFormat("{0} DataFile Error", GetIniSetting("Constants", "Name"))
         ParseTitleLine = False
         Exit Function
+    End If
+#ElseIf SCALE_DENIERTEMP Then
+    If Not mb_DiameterMode Then
+        MsgBox "This file was saved in Temperature mode and may not work properly.", vbInformation Or vbOKOnly, StringFormat("{0} DataFile Warning", GetIniSetting("Constants", "Name"))
     End If
 #ElseIf SCALE_DIAMETER Then
     If Not mb_DiameterMode Then

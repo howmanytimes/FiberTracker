@@ -20,12 +20,12 @@ Public Property Set MSComm(ByRef RHS As MSComm)
 End Property
 
 Public Sub ClearInputBuffer()
-    log "CLEARING INPUT BUFFER."
+    Log "CLEARING INPUT BUFFER."
     o_MSComm.InBufferCount = 0
 End Sub
 
 Public Sub ClosePort()
-    log "CLOSING COM PORT"
+    Log "CLOSING COM PORT"
     o_MSComm.PortOpen = False
 End Sub
 
@@ -62,7 +62,7 @@ Public Sub HandleEvent()
     If Len(ERMsg$) Then
         RxComm.error = True
         
-        log "COMM ERROR/EVENT " & "(" & o_MSComm.CommEvent & "): " & ERMsg$
+        Log "COMM ERROR/EVENT " & "(" & o_MSComm.CommEvent & "): " & ERMsg$
         
         'Display any error messages to the user
         MsgBox "Communications Error " & CStr(o_MSComm.CommEvent) & ": " & ERMsg$, vbOKOnly Or vbCritical, "FiberTrack FTComm"
@@ -73,7 +73,7 @@ Public Function OpenPort(portNumber As Integer) As Boolean
 On Error GoTo ErrHan
     Debug.Assert portNumber >= 1 And portNumber <= 16
     
-    log "OPENING COM PORT " & portNumber
+    Log "OPENING COM PORT " & portNumber
     
     If Not o_MSComm.PortOpen Then
         o_MSComm.Settings = "19200,n,8,1"    'Open comm port
@@ -88,7 +88,7 @@ ErrHan:
     OpenPort = False
     'MSDN says error 62 for invalid port; trial and error indicates 8002 received
     If Err.Number = 62 Or Err.Number = 8002 Then
-        log "Error " & Err.Number & ": " & Err.Description
+        Log "Error " & Err.Number & ": " & Err.Description
         MsgBox "Error opening communications channel.  Please try another COM Port or check your device configuration.", vbCritical Or vbOKOnly, "FiberTrack FTComm"
     Else
         MsgBox "Unexpected error occurred while opening communications channel." & vbCrLf & _
@@ -115,9 +115,9 @@ Public Sub WriteData(ByVal v As Variant)
     o_MSComm.Output = v
         
     If IsByteArray(v) Then
-        log "OUT: " & ByteArrayToString(v)
+        Log "OUT: " & ByteArrayToString(v)
     Else
-        log "OUT: " & v
+        Log "OUT: " & v
     End If
 End Sub
 
@@ -125,7 +125,7 @@ End Sub
 Public Sub WaitForPacket()
     Dim Dummy
     
-    log "WAITING FOR PACKET."
+    Log "WAITING FOR PACKET."
     
     Do Until SystemStatus.IsWait2Seconds = False Or RxComm.done
         
@@ -138,7 +138,7 @@ Public Sub WaitForPacket()
         End If
     Loop
     
-    log "PACKET RECEIVED OR TIMEOUT."
+    Log "PACKET RECEIVED OR TIMEOUT."
 End Sub
 
 Private Function IsByteArray(ByVal v As Variant) As Boolean

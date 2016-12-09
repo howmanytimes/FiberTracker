@@ -98,7 +98,7 @@ Begin VB.Form frmAbout
       Alignment       =   1  'Right Justify
       BackColor       =   &H00FFFFFF&
       BackStyle       =   0  'Transparent
-      Caption         =   "Build 2.05.00.02"
+      Caption         =   "Build 2.05.00.04"
       BeginProperty Font 
          Name            =   "Tahoma"
          Size            =   8.25

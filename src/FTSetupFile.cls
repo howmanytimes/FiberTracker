@@ -20,6 +20,10 @@ Option Explicit
 Private mi_DenierTarget             As Single
 Private mi_DenierMax                As Single
 Private mi_DenierCalibration        As Single
+#ElseIf SCALE_DENIERTEMP Then
+Private mi_DenierTarget             As Long
+Private mi_DenierMax                As Long
+Private mi_DenierCalibration        As Long
 #Else
 Private mi_DenierTarget             As Long
 Private mi_DenierMax                As Long
@@ -268,7 +272,7 @@ ErrHan:
         ReadFromFile = False
         Exit Function
     End If
-    MsgBox "Error occurred reading setup file " & inputFileName & vbCrLf & "Error " & Err.Number & ": " & Err.Description, vbOKOnly, App.title
+    MsgBox "Error occurred reading setup file " & inputFileName & vbCrLf & "Error " & Err.Number & ": " & Err.Description, vbOKOnly, App.Title
 End Function
 
 Public Function WriteToFile(inputFileName As String) As Boolean
@@ -295,5 +299,5 @@ ErrHan:
         WriteToFile = False
         Exit Function
     End If
-    MsgBox "Error occurred saving setup file " & inputFileName & vbCrLf & "Error " & Err.Number & ": " & Err.Description, vbOKOnly, App.title
+    MsgBox "Error occurred saving setup file " & inputFileName & vbCrLf & "Error " & Err.Number & ": " & Err.Description, vbOKOnly, App.Title
 End Function

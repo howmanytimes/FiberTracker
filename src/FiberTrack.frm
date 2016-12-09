@@ -16,6 +16,327 @@ Begin VB.Form FiberTrack
    ScaleMode       =   0  'User
    ScaleWidth      =   11190
    Tag             =   " "
+   Begin VB.Frame fraDefDet 
+      Caption         =   "Defect Detection"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   -1  'True
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   2415
+      Left            =   3720
+      TabIndex        =   88
+      Top             =   1440
+      Width           =   3375
+      Begin VB.TextBox txtCurValueDD 
+         Alignment       =   2  'Center
+         Height          =   285
+         Index           =   0
+         Left            =   2280
+         MultiLine       =   -1  'True
+         TabIndex        =   94
+         Text            =   "FiberTrack.frx":08CA
+         Top             =   600
+         Width           =   735
+      End
+      Begin VB.CommandButton cmdParDD 
+         Caption         =   "Level 1 Defect %"
+         Height          =   255
+         Index           =   0
+         Left            =   240
+         TabIndex        =   93
+         Top             =   600
+         Width           =   1455
+      End
+      Begin VB.CommandButton cmdCanDD 
+         Caption         =   "Cancel"
+         Height          =   375
+         Left            =   1920
+         TabIndex        =   92
+         Top             =   1920
+         Width           =   855
+      End
+      Begin VB.CommandButton cmdOkDD 
+         Caption         =   "OK"
+         Height          =   375
+         Left            =   480
+         TabIndex        =   91
+         Top             =   1920
+         Width           =   855
+      End
+      Begin VB.Label lblCurValDD 
+         Alignment       =   2  'Center
+         Caption         =   "Current Value"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   2160
+         TabIndex        =   90
+         Top             =   240
+         Width           =   975
+      End
+      Begin VB.Label lblParDD 
+         Alignment       =   2  'Center
+         Caption         =   "Parameter"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   600
+         TabIndex        =   89
+         Top             =   240
+         Width           =   855
+      End
+   End
+   Begin VB.Frame fraAppPar 
+      Caption         =   "Application Parameters"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   -1  'True
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   2175
+      Left            =   3720
+      TabIndex        =   80
+      Top             =   960
+      Width           =   3855
+      Begin VB.TextBox txtCurValueAp 
+         Alignment       =   2  'Center
+         Height          =   285
+         Index           =   0
+         Left            =   2520
+         MultiLine       =   -1  'True
+         TabIndex        =   86
+         Text            =   "FiberTrack.frx":08D3
+         Top             =   720
+         Width           =   495
+      End
+      Begin VB.CommandButton cmdCanAP 
+         Caption         =   "Cancel"
+         Height          =   375
+         Left            =   2280
+         TabIndex        =   85
+         Top             =   1680
+         Width           =   855
+      End
+      Begin VB.CommandButton cmdOkAP 
+         Caption         =   "OK"
+         Height          =   375
+         Left            =   720
+         TabIndex        =   84
+         Top             =   1680
+         Width           =   855
+      End
+      Begin VB.CommandButton cmdLineSpeed 
+         Caption         =   "Line &Speed"
+         Height          =   255
+         Index           =   0
+         Left            =   240
+         TabIndex        =   83
+         Top             =   720
+         Width           =   975
+      End
+      Begin VB.Label lblLineSpeed 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000004&
+         Caption         =   "m/min"
+         ForeColor       =   &H80000008&
+         Height          =   255
+         Index           =   0
+         Left            =   3120
+         TabIndex        =   87
+         Top             =   720
+         Width           =   495
+      End
+      Begin VB.Label lblCurValueAP 
+         Alignment       =   2  'Center
+         Caption         =   "Current Value"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   2520
+         TabIndex        =   82
+         Top             =   360
+         Width           =   1095
+      End
+      Begin VB.Label lblParAP 
+         Alignment       =   2  'Center
+         Caption         =   "Parameter"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   600
+         TabIndex        =   81
+         Top             =   360
+         Width           =   975
+      End
+   End
+   Begin VB.Frame fraDenierPar 
+      BackColor       =   &H80000013&
+      Caption         =   "Orientation Parameters"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   -1  'True
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   2415
+      Left            =   3720
+      TabIndex        =   62
+      Top             =   480
+      Width           =   3135
+      Begin VB.CommandButton cmdDoneDP 
+         BackColor       =   &H80000013&
+         Caption         =   "Done"
+         Height          =   375
+         Left            =   960
+         Style           =   1  'Graphical
+         TabIndex        =   74
+         Top             =   1920
+         Width           =   855
+      End
+      Begin VB.CommandButton cmdCanDP 
+         BackColor       =   &H80000013&
+         Caption         =   "Cancel"
+         Height          =   375
+         Left            =   1680
+         Style           =   1  'Graphical
+         TabIndex        =   68
+         Top             =   1920
+         Width           =   855
+      End
+      Begin VB.CommandButton cmdOkDP 
+         BackColor       =   &H80000013&
+         Caption         =   "OK"
+         Height          =   375
+         Left            =   360
+         Style           =   1  'Graphical
+         TabIndex        =   67
+         Top             =   1920
+         Width           =   855
+      End
+      Begin VB.TextBox txtDenPar 
+         Height          =   285
+         Index           =   0
+         Left            =   1920
+         TabIndex        =   66
+         Text            =   $"FiberTrack.frx":08D8
+         Top             =   600
+         Width           =   975
+      End
+      Begin VB.CommandButton cmdDenPar 
+         BackColor       =   &H80000013&
+         Caption         =   "Orientation &Range"
+         Height          =   255
+         Index           =   0
+         Left            =   120
+         Style           =   1  'Graphical
+         TabIndex        =   65
+         Top             =   600
+         Width           =   1695
+      End
+      Begin VB.Label lblParValue 
+         Alignment       =   2  'Center
+         BackColor       =   &H80000013&
+         Caption         =   "Current Value"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   1920
+         TabIndex        =   64
+         Top             =   240
+         Width           =   1095
+      End
+      Begin VB.Label lblPara 
+         Alignment       =   2  'Center
+         BackColor       =   &H80000013&
+         Caption         =   "Parameter"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   360
+         TabIndex        =   63
+         Top             =   240
+         Width           =   975
+      End
+   End
+   Begin VB.Frame fraAbout 
+      Caption         =   "About FiberTrack"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   -1  'True
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   4815
+      Left            =   5160
+      TabIndex        =   98
+      Top             =   3360
+      Width           =   5835
+      Begin VB.Label lblCopy 
+         Height          =   855
+         Index           =   0
+         Left            =   120
+         TabIndex        =   99
+         Top             =   480
+         Width           =   5355
+      End
+   End
    Begin VB.Frame fraApplicationIni 
       Caption         =   "Application Ini Settings"
       Height          =   3015
@@ -178,11 +499,11 @@ Begin VB.Form FiberTrack
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   1575
-      Left            =   3720
+      Height          =   1695
+      Left            =   6840
       TabIndex        =   70
-      Top             =   1560
-      Width           =   3855
+      Top             =   1440
+      Width           =   3975
       Begin VB.CommandButton cmdCanDR 
          BackColor       =   &H80000013&
          Caption         =   "Cancel"
@@ -212,112 +533,6 @@ Begin VB.Form FiberTrack
          TabIndex        =   71
          Top             =   360
          Width           =   2775
-      End
-   End
-   Begin VB.Frame fraDenierPar 
-      BackColor       =   &H80000013&
-      Caption         =   "Orientation Parameters"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   -1  'True
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   2415
-      Left            =   3720
-      TabIndex        =   62
-      Top             =   480
-      Width           =   3135
-      Begin VB.CommandButton cmdDoneDP 
-         BackColor       =   &H80000013&
-         Caption         =   "Done"
-         Height          =   375
-         Left            =   960
-         Style           =   1  'Graphical
-         TabIndex        =   74
-         Top             =   1920
-         Width           =   855
-      End
-      Begin VB.CommandButton cmdCanDP 
-         BackColor       =   &H80000013&
-         Caption         =   "Cancel"
-         Height          =   375
-         Left            =   1680
-         Style           =   1  'Graphical
-         TabIndex        =   68
-         Top             =   1920
-         Width           =   855
-      End
-      Begin VB.CommandButton cmdOkDP 
-         BackColor       =   &H80000013&
-         Caption         =   "OK"
-         Height          =   375
-         Left            =   360
-         Style           =   1  'Graphical
-         TabIndex        =   67
-         Top             =   1920
-         Width           =   855
-      End
-      Begin VB.TextBox txtDenPar 
-         Height          =   285
-         Index           =   0
-         Left            =   1920
-         TabIndex        =   66
-         Text            =   $"FiberTrack.frx":08CA
-         Top             =   600
-         Width           =   975
-      End
-      Begin VB.CommandButton cmdDenPar 
-         BackColor       =   &H80000013&
-         Caption         =   "Orientation &Range"
-         Height          =   255
-         Index           =   0
-         Left            =   120
-         Style           =   1  'Graphical
-         TabIndex        =   65
-         Top             =   600
-         Width           =   1695
-      End
-      Begin VB.Label lblParValue 
-         Alignment       =   2  'Center
-         BackColor       =   &H80000013&
-         Caption         =   "Current Value"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   -1  'True
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   1920
-         TabIndex        =   64
-         Top             =   240
-         Width           =   1095
-      End
-      Begin VB.Label lblPara 
-         Alignment       =   2  'Center
-         BackColor       =   &H80000013&
-         Caption         =   "Parameter"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   -1  'True
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   360
-         TabIndex        =   63
-         Top             =   240
-         Width           =   975
       End
    End
    Begin VB.Frame fraSetup 
@@ -359,120 +574,6 @@ Begin VB.Form FiberTrack
          Width           =   2535
       End
    End
-   Begin VB.Frame fraDefDet 
-      Caption         =   "Defect Detection"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   -1  'True
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   2415
-      Left            =   3720
-      TabIndex        =   88
-      Top             =   1440
-      Width           =   3375
-      Begin VB.TextBox txtCurValueDD 
-         Alignment       =   2  'Center
-         Height          =   285
-         Index           =   0
-         Left            =   2280
-         MultiLine       =   -1  'True
-         TabIndex        =   94
-         Text            =   "FiberTrack.frx":08DB
-         Top             =   600
-         Width           =   735
-      End
-      Begin VB.CommandButton cmdParDD 
-         Caption         =   "Level 1 Defect %"
-         Height          =   255
-         Index           =   0
-         Left            =   240
-         TabIndex        =   93
-         Top             =   600
-         Width           =   1455
-      End
-      Begin VB.CommandButton cmdCanDD 
-         Caption         =   "Cancel"
-         Height          =   375
-         Left            =   1920
-         TabIndex        =   92
-         Top             =   1920
-         Width           =   855
-      End
-      Begin VB.CommandButton cmdOkDD 
-         Caption         =   "OK"
-         Height          =   375
-         Left            =   480
-         TabIndex        =   91
-         Top             =   1920
-         Width           =   855
-      End
-      Begin VB.Label lblCurValDD 
-         Alignment       =   2  'Center
-         Caption         =   "Current Value"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   -1  'True
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   2160
-         TabIndex        =   90
-         Top             =   240
-         Width           =   975
-      End
-      Begin VB.Label lblParDD 
-         Alignment       =   2  'Center
-         Caption         =   "Parameter"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   -1  'True
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   600
-         TabIndex        =   89
-         Top             =   240
-         Width           =   855
-      End
-   End
-   Begin VB.Frame fraAbout 
-      Caption         =   "About FiberTrack"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   -1  'True
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   4815
-      Left            =   2520
-      TabIndex        =   98
-      Top             =   1560
-      Width           =   5835
-      Begin VB.Label lblCopy 
-         Height          =   855
-         Index           =   0
-         Left            =   120
-         TabIndex        =   99
-         Top             =   480
-         Width           =   5355
-      End
-   End
    Begin VB.Frame fraHelp 
       Caption         =   "Help"
       BeginProperty Font 
@@ -505,107 +606,6 @@ Begin VB.Form FiberTrack
          TabIndex        =   96
          Top             =   360
          Width           =   2175
-      End
-   End
-   Begin VB.Frame fraAppPar 
-      Caption         =   "Application Parameters"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   -1  'True
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   2175
-      Left            =   3720
-      TabIndex        =   80
-      Top             =   960
-      Width           =   3855
-      Begin VB.TextBox txtCurValueAp 
-         Alignment       =   2  'Center
-         Height          =   285
-         Index           =   0
-         Left            =   2520
-         MultiLine       =   -1  'True
-         TabIndex        =   86
-         Text            =   "FiberTrack.frx":08E4
-         Top             =   720
-         Width           =   495
-      End
-      Begin VB.CommandButton cmdCanAP 
-         Caption         =   "Cancel"
-         Height          =   375
-         Left            =   2280
-         TabIndex        =   85
-         Top             =   1680
-         Width           =   855
-      End
-      Begin VB.CommandButton cmdOkAP 
-         Caption         =   "OK"
-         Height          =   375
-         Left            =   720
-         TabIndex        =   84
-         Top             =   1680
-         Width           =   855
-      End
-      Begin VB.CommandButton cmdLineSpeed 
-         Caption         =   "Line &Speed"
-         Height          =   255
-         Index           =   0
-         Left            =   240
-         TabIndex        =   83
-         Top             =   720
-         Width           =   975
-      End
-      Begin VB.Label lblLineSpeed 
-         Appearance      =   0  'Flat
-         BackColor       =   &H80000004&
-         Caption         =   "m/min"
-         ForeColor       =   &H80000008&
-         Height          =   255
-         Index           =   0
-         Left            =   3120
-         TabIndex        =   87
-         Top             =   720
-         Width           =   495
-      End
-      Begin VB.Label lblCurValueAP 
-         Alignment       =   2  'Center
-         Caption         =   "Current Value"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   -1  'True
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   2520
-         TabIndex        =   82
-         Top             =   360
-         Width           =   1095
-      End
-      Begin VB.Label lblParAP 
-         Alignment       =   2  'Center
-         Caption         =   "Parameter"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   -1  'True
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   600
-         TabIndex        =   81
-         Top             =   360
-         Width           =   975
       End
    End
    Begin VB.Frame fraPlotChan 
@@ -1115,7 +1115,7 @@ Begin VB.Form FiberTrack
       TabIndex        =   0
       Top             =   3360
       Width           =   9495
-      _Version        =   524288
+      _Version        =   196608
       _ExtentX        =   16748
       _ExtentY        =   5106
       _StockProps     =   71
@@ -1130,56 +1130,64 @@ Begin VB.Form FiberTrack
          Strikethrough   =   0   'False
       EndProperty
       Reset_0         =   0   'False
-      CompatibleVers_0=   524288
+      CompatibleVers_0=   196608
       Graph_0         =   1
       ClassName_1     =   "CCWGraphFrame"
       opts_1          =   30
+      Bindings_1      =   2
+      ClassName_2     =   "CCWBindingHolderArray"
+      Editor_2        =   3
+      ClassName_3     =   "CCWBindingHolderArrayEditor"
+      Owner_3         =   1
       C[0]_1          =   12632256
       C[1]_1          =   8421504
       C[2]_1          =   8421376
-      Event_1         =   2
-      ClassName_2     =   "CCWGFPlotEvent"
-      Owner_2         =   1
-      Plots_1         =   3
-      ClassName_3     =   "CCWDataPlots"
-      Array_3         =   1
-      Editor_3        =   4
-      ClassName_4     =   "CCWGFPlotArrayEditor"
+      Event_1         =   4
+      ClassName_4     =   "CCWGFPlotEvent"
       Owner_4         =   1
-      Array[0]_3      =   5
-      ClassName_5     =   "CCWDataPlot"
-      opts_5          =   4194335
-      Name_5          =   "Plot-1"
-      C[0]_5          =   8388608
-      C[1]_5          =   255
-      C[2]_5          =   16711680
-      C[3]_5          =   16776960
-      Event_5         =   2
-      X_5             =   6
-      ClassName_6     =   "CCWAxis"
-      opts_6          =   543
-      Name_6          =   "Time"
-      Orientation_6   =   2946
-      format_6        =   7
-      ClassName_7     =   "CCWFormat"
-      Format_7        =   "."
-      Scale_6         =   8
-      ClassName_8     =   "CCWScale"
-      opts_8          =   24576
-      rMin_8          =   49
-      rMax_8          =   621
-      dMax_8          =   20
-      discInterval_8  =   0.0017
-      Radial_6        =   0
-      Enum_6          =   9
-      ClassName_9     =   "CCWEnum"
-      Editor_9        =   10
-      ClassName_10    =   "CCWEnumArrayEditor"
-      Owner_10        =   6
-      Font_6          =   11
-      ClassName_11    =   "CCWFont"
-      bFont_11        =   -1  'True
-      BeginProperty Font_11 {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      Plots_1         =   5
+      ClassName_5     =   "CCWDataPlots"
+      Array_5         =   1
+      Editor_5        =   6
+      ClassName_6     =   "CCWGFPlotArrayEditor"
+      Owner_6         =   1
+      Array[0]_5      =   7
+      ClassName_7     =   "CCWDataPlot"
+      opts_7          =   4194335
+      Name_7          =   "Plot-1"
+      Bindings_7      =   0
+      C[0]_7          =   8388608
+      C[1]_7          =   255
+      C[2]_7          =   16711680
+      C[3]_7          =   16776960
+      Event_7         =   4
+      X_7             =   8
+      ClassName_8     =   "CCWAxis"
+      opts_8          =   543
+      Name_8          =   "Time"
+      Bindings_8      =   0
+      Orientation_8   =   2946
+      format_8        =   9
+      ClassName_9     =   "CCWFormat"
+      Format_9        =   "."
+      Scale_8         =   10
+      ClassName_10    =   "CCWScale"
+      opts_10         =   24576
+      Bindings_10     =   0
+      rMin_10         =   49
+      rMax_10         =   621
+      dMax_10         =   20
+      discInterval_10 =   0.0017
+      Radial_8        =   0
+      Enum_8          =   11
+      ClassName_11    =   "CCWEnum"
+      Editor_11       =   12
+      ClassName_12    =   "CCWEnumArrayEditor"
+      Owner_12        =   8
+      Font_8          =   13
+      ClassName_13    =   "CCWFont"
+      bFont_13        =   -1  'True
+      BeginProperty Font_13 {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "Arial"
          Size            =   9
          Charset         =   0
@@ -1188,43 +1196,47 @@ Begin VB.Form FiberTrack
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      tickopts_6      =   1679
-      major_6         =   10
-      minor_6         =   10
-      Caption_6       =   12
-      ClassName_12    =   "CCWDrawObj"
-      opts_12         =   30
-      C[0]_12         =   -2147483640
-      Image_12        =   13
-      ClassName_13    =   "CCWTextImage"
-      szText_13       =   "Elapsed Time Window(Minutes)"
-      font_13         =   0
-      Animator_12     =   0
-      Blinker_12      =   0
-      Y_5             =   14
-      ClassName_14    =   "CCWAxis"
-      opts_14         =   543
-      Name_14         =   "Denier"
-      Orientation_14  =   2323
-      format_14       =   15
-      ClassName_15    =   "CCWFormat"
-      Scale_14        =   16
-      ClassName_16    =   "CCWScale"
-      opts_16         =   57344
-      rMin_16         =   29
-      rMax_16         =   149
-      dMax_16         =   200
-      discInterval_16 =   1
-      Radial_14       =   0
-      Enum_14         =   17
-      ClassName_17    =   "CCWEnum"
-      Editor_17       =   18
-      ClassName_18    =   "CCWEnumArrayEditor"
-      Owner_18        =   14
-      Font_14         =   19
-      ClassName_19    =   "CCWFont"
-      bFont_19        =   -1  'True
-      BeginProperty Font_19 {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      tickopts_8      =   1679
+      major_8         =   10
+      minor_8         =   10
+      Caption_8       =   14
+      ClassName_14    =   "CCWDrawObj"
+      opts_14         =   30
+      Bindings_14     =   0
+      C[0]_14         =   -2147483640
+      Image_14        =   15
+      ClassName_15    =   "CCWTextImage"
+      Bindings_15     =   0
+      szText_15       =   "Elapsed Time Window(Minutes)"
+      font_15         =   0
+      Animator_14     =   0
+      Blinker_14      =   0
+      Y_7             =   16
+      ClassName_16    =   "CCWAxis"
+      opts_16         =   543
+      Name_16         =   "Denier"
+      Bindings_16     =   0
+      Orientation_16  =   2323
+      format_16       =   17
+      ClassName_17    =   "CCWFormat"
+      Scale_16        =   18
+      ClassName_18    =   "CCWScale"
+      opts_18         =   57344
+      Bindings_18     =   0
+      rMin_18         =   29
+      rMax_18         =   149
+      dMax_18         =   200
+      discInterval_18 =   1
+      Radial_16       =   0
+      Enum_16         =   19
+      ClassName_19    =   "CCWEnum"
+      Editor_19       =   20
+      ClassName_20    =   "CCWEnumArrayEditor"
+      Owner_20        =   16
+      Font_16         =   21
+      ClassName_21    =   "CCWFont"
+      bFont_21        =   -1  'True
+      BeginProperty Font_21 {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "Arial"
          Size            =   9
          Charset         =   0
@@ -1233,212 +1245,155 @@ Begin VB.Form FiberTrack
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      tickopts_14     =   1679
-      major_14        =   10
-      minor_14        =   5
-      Caption_14      =   20
-      ClassName_20    =   "CCWDrawObj"
-      opts_20         =   30
-      C[0]_20         =   -2147483640
-      Image_20        =   21
-      ClassName_21    =   "CCWTextImage"
-      szText_21       =   "Denier"
-      style_21        =   1
-      font_21         =   0
-      Animator_20     =   0
-      Blinker_20      =   0
-      LineStyle_5     =   1
-      LineWidth_5     =   1
-      BasePlot_5      =   0
-      DefaultXInc_5   =   1
-      DefaultPlotPerRow_5=   -1  'True
-      Axes_1          =   22
-      ClassName_22    =   "CCWAxes"
-      Array_22        =   2
-      Editor_22       =   23
-      ClassName_23    =   "CCWGFAxisArrayEditor"
-      Owner_23        =   1
-      Array[0]_22     =   6
-      Array[1]_22     =   14
-      DefaultPlot_1   =   24
-      ClassName_24    =   "CCWDataPlot"
-      opts_24         =   4194335
-      Name_24         =   "[Template]"
-      C[0]_24         =   8421376
-      C[1]_24         =   255
-      C[2]_24         =   16711680
-      C[3]_24         =   16776960
-      Event_24        =   2
-      X_24            =   6
-      Y_24            =   14
-      LineStyle_24    =   4
-      LineWidth_24    =   1
-      BasePlot_24     =   0
-      DefaultXInc_24  =   1
-      DefaultPlotPerRow_24=   -1  'True
-      Cursors_1       =   25
-      ClassName_25    =   "CCWCursors"
-      Array_25        =   3
-      Editor_25       =   26
-      ClassName_26    =   "CCWGFCursorArrayEditor"
-      Owner_26        =   1
-      Array[0]_25     =   27
-      ClassName_27    =   "CCWCursor"
-      opts_27         =   31
-      Name_27         =   "Target_Denier"
-      C[0]_27         =   65280
-      Event_27        =   2
-      X_27            =   6
-      Y_27            =   14
-      XPos_27         =   1
-      YPos_27         =   100
-      PointIndex_27   =   -1
-      ChrosshairStyle_27=   6
-      LockPlot_27     =   0
-      Array[1]_25     =   28
-      ClassName_28    =   "CCWCursor"
-      opts_28         =   31
-      Name_28         =   "Plus_Tol"
-      C[0]_28         =   255
-      Event_28        =   2
-      X_28            =   6
-      Y_28            =   14
-      XPos_28         =   24.8
-      YPos_28         =   50
-      PointIndex_28   =   -1
-      ChrosshairStyle_28=   6
-      LockPlot_28     =   0
-      Array[2]_25     =   29
+      tickopts_16     =   1679
+      major_16        =   10
+      minor_16        =   5
+      Caption_16      =   22
+      ClassName_22    =   "CCWDrawObj"
+      opts_22         =   30
+      Bindings_22     =   0
+      C[0]_22         =   -2147483640
+      Image_22        =   23
+      ClassName_23    =   "CCWTextImage"
+      Bindings_23     =   0
+      szText_23       =   "Denier"
+      style_23        =   1
+      font_23         =   0
+      Animator_22     =   0
+      Blinker_22      =   0
+      LineStyle_7     =   1
+      LineWidth_7     =   1
+      BasePlot_7      =   0
+      DefaultXInc_7   =   1
+      DefaultPlotPerRow_7=   -1  'True
+      Axes_1          =   24
+      ClassName_24    =   "CCWAxes"
+      Array_24        =   2
+      Editor_24       =   25
+      ClassName_25    =   "CCWGFAxisArrayEditor"
+      Owner_25        =   1
+      Array[0]_24     =   8
+      Array[1]_24     =   16
+      DefaultPlot_1   =   26
+      ClassName_26    =   "CCWDataPlot"
+      opts_26         =   4194335
+      Name_26         =   "[Template]"
+      Bindings_26     =   0
+      C[0]_26         =   8421376
+      C[1]_26         =   255
+      C[2]_26         =   16711680
+      C[3]_26         =   16776960
+      Event_26        =   4
+      X_26            =   8
+      Y_26            =   16
+      LineStyle_26    =   4
+      LineWidth_26    =   1
+      BasePlot_26     =   0
+      DefaultXInc_26  =   1
+      DefaultPlotPerRow_26=   -1  'True
+      Cursors_1       =   27
+      ClassName_27    =   "CCWCursors"
+      Array_27        =   3
+      Editor_27       =   28
+      ClassName_28    =   "CCWGFCursorArrayEditor"
+      Owner_28        =   1
+      Array[0]_27     =   29
       ClassName_29    =   "CCWCursor"
       opts_29         =   31
-      Name_29         =   "Minus_Tol"
-      C[0]_29         =   255
-      Event_29        =   2
-      X_29            =   6
-      Y_29            =   14
-      XPos_29         =   36.7
-      YPos_29         =   150
+      Name_29         =   "Target_Denier"
+      Bindings_29     =   0
+      C[0]_29         =   65280
+      Event_29        =   4
+      X_29            =   8
+      Y_29            =   16
+      XPos_29         =   1
+      YPos_29         =   100
       PointIndex_29   =   -1
       ChrosshairStyle_29=   6
       LockPlot_29     =   0
+      Array[1]_27     =   30
+      ClassName_30    =   "CCWCursor"
+      opts_30         =   31
+      Name_30         =   "Plus_Tol"
+      Bindings_30     =   0
+      C[0]_30         =   255
+      Event_30        =   4
+      X_30            =   8
+      Y_30            =   16
+      XPos_30         =   24.8
+      YPos_30         =   50
+      PointIndex_30   =   -1
+      ChrosshairStyle_30=   6
+      LockPlot_30     =   0
+      Array[2]_27     =   31
+      ClassName_31    =   "CCWCursor"
+      opts_31         =   31
+      Name_31         =   "Minus_Tol"
+      Bindings_31     =   0
+      C[0]_31         =   255
+      Event_31        =   4
+      X_31            =   8
+      Y_31            =   16
+      XPos_31         =   36.7
+      YPos_31         =   150
+      PointIndex_31   =   -1
+      ChrosshairStyle_31=   6
+      LockPlot_31     =   0
       TrackMode_1     =   2
       GraphBackground_1=   0
-      GraphFrame_1    =   30
-      ClassName_30    =   "CCWDrawObj"
-      opts_30         =   30
-      C[0]_30         =   8421504
-      C[1]_30         =   8421504
-      Image_30        =   31
-      ClassName_31    =   "CCWPictImage"
-      opts_31         =   1280
-      Rows_31         =   1
-      Cols_31         =   1
-      F_31            =   8421504
-      B_31            =   8421504
-      ColorReplaceWith_31=   8421504
-      ColorReplace_31 =   8421504
-      Tolerance_31    =   2
-      Animator_30     =   0
-      Blinker_30      =   0
-      PlotFrame_1     =   32
+      GraphFrame_1    =   32
       ClassName_32    =   "CCWDrawObj"
       opts_32         =   30
+      Bindings_32     =   0
       C[0]_32         =   8421504
-      C[1]_32         =   12632256
+      C[1]_32         =   8421504
       Image_32        =   33
       ClassName_33    =   "CCWPictImage"
       opts_33         =   1280
+      Bindings_33     =   0
       Rows_33         =   1
       Cols_33         =   1
-      Pict_33         =   1
       F_33            =   8421504
-      B_33            =   12632256
+      B_33            =   8421504
       ColorReplaceWith_33=   8421504
       ColorReplace_33 =   8421504
       Tolerance_33    =   2
       Animator_32     =   0
       Blinker_32      =   0
-      Caption_1       =   34
+      PlotFrame_1     =   34
       ClassName_34    =   "CCWDrawObj"
       opts_34         =   30
-      C[0]_34         =   -2147483640
+      Bindings_34     =   0
+      C[0]_34         =   8421504
+      C[1]_34         =   12632256
       Image_34        =   35
-      ClassName_35    =   "CCWTextImage"
-      szText_35       =   "Online plot of average Orientation"
-      font_35         =   0
+      ClassName_35    =   "CCWPictImage"
+      opts_35         =   1280
+      Bindings_35     =   0
+      Rows_35         =   1
+      Cols_35         =   1
+      Pict_35         =   1
+      F_35            =   8421504
+      B_35            =   12632256
+      ColorReplaceWith_35=   8421504
+      ColorReplace_35 =   8421504
+      Tolerance_35    =   2
       Animator_34     =   0
       Blinker_34      =   0
+      Caption_1       =   36
+      ClassName_36    =   "CCWDrawObj"
+      opts_36         =   30
+      Bindings_36     =   0
+      C[0]_36         =   -2147483640
+      Image_36        =   37
+      ClassName_37    =   "CCWTextImage"
+      Bindings_37     =   0
+      szText_37       =   "Online plot of average Orientation"
+      font_37         =   0
+      Animator_36     =   0
+      Blinker_36      =   0
       DefaultXInc_1   =   1
       DefaultPlotPerRow_1=   -1  'True
-      Bindings_1      =   36
-      ClassName_36    =   "CCWBindingHolderArray"
-      Editor_36       =   37
-      ClassName_37    =   "CCWBindingHolderArrayEditor"
-      Owner_37        =   1
-      Annotations_1   =   38
-      ClassName_38    =   "CCWAnnotations"
-      Editor_38       =   39
-      ClassName_39    =   "CCWAnnotationArrayEditor"
-      Owner_39        =   1
-      AnnotationTemplate_1=   40
-      ClassName_40    =   "CCWAnnotation"
-      opts_40         =   63
-      Name_40         =   "[Template]"
-      Plot_40         =   24
-      Text_40         =   "[Template]"
-      TextXPoint_40   =   13.4
-      TextYPoint_40   =   13.4
-      TextColor_40    =   16777215
-      TextFont_40     =   41
-      ClassName_41    =   "CCWFont"
-      bFont_41        =   -1  'True
-      BeginProperty Font_41 {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Courier New"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   -1  'True
-         Strikethrough   =   0   'False
-      EndProperty
-      ShapeXPoints_40 =   42
-      ClassName_42    =   "CDataBuffer"
-      Type_42         =   5
-      m_cDims;_42     =   1
-      m_cElts_42      =   1
-      Element[0]_42   =   6.6
-      ShapeYPoints_40 =   43
-      ClassName_43    =   "CDataBuffer"
-      Type_43         =   5
-      m_cDims;_43     =   1
-      m_cElts_43      =   1
-      Element[0]_43   =   6.6
-      ShapeFillColor_40=   16777215
-      ShapeLineColor_40=   16777215
-      ShapeLineWidth_40=   1
-      ShapeLineStyle_40=   1
-      ShapePointStyle_40=   10
-      ShapeImage_40   =   44
-      ClassName_44    =   "CCWDrawObj"
-      opts_44         =   62
-      Image_44        =   45
-      ClassName_45    =   "CCWPictImage"
-      opts_45         =   1280
-      Rows_45         =   1
-      Cols_45         =   1
-      Pict_45         =   7
-      F_45            =   -2147483633
-      B_45            =   -2147483633
-      ColorReplaceWith_45=   8421504
-      ColorReplace_45 =   8421504
-      Tolerance_45    =   2
-      Animator_44     =   0
-      Blinker_44      =   0
-      ArrowVisible_40 =   -1  'True
-      ArrowColor_40   =   16777215
-      ArrowWidth_40   =   1
-      ArrowLineStyle_40=   1
-      ArrowHeadStyle_40=   1
    End
    Begin VB.PictureBox picSetup 
       BackColor       =   &H8000000C&
@@ -1754,6 +1709,7 @@ Option Explicit
 '-- Rev 1.7 J. West 9/8/98  - Incorporated separate calibration denier setting.
 '-- Rev 2.5 Jason Sweatt 02/16/2012  - Renamed Denier to Orientation within the application
 '-- Rev 2.5 Jason Sweatt 02/25/2014  - Fixing runtime '6' error
+'-- Rev 2.5 Jason Sweatt 12/08/2016  - Change Wording to use Temperature
 '-- ----------------------------------------------------------------------
 
 Dim RealTemp                        As Single
@@ -1762,6 +1718,10 @@ Dim RealTemp                        As Single
 Dim IntTemp                         As Single
 Dim iTempMinDen                     As Single
 Dim iTempMaxDen                     As Single
+#ElseIf SCALE_DENIERTEMP Then
+Dim IntTemp                         As Integer
+Dim iTempMinDen                     As Integer
+Dim iTempMaxDen                     As Integer
 #Else
 Dim IntTemp                         As Integer
 Dim iTempMinDen                     As Integer
@@ -1788,6 +1748,8 @@ Const YAXIS                         As Integer = 2
 Const XAXIS                         As Integer = 1
 #If SCALE_DIAMETER Then
 Const SETUP_FILENAME                As String = "setupd.svd"
+#ElseIf SCALE_DENIERTEMP Then
+Const SETUP_FILENAME                As String = "setupt.svd"
 #Else
 Const SETUP_FILENAME                As String = "setup.svd"
 #End If
@@ -1900,6 +1862,8 @@ Private Sub cmdCanDR_Click()
     cmdDoneDP.Enabled = True
 #If SCALE_DIAMETER Then
     txtDenPar(0).Text = FormatDiameter(iMin_Denier) & " to " & FormatDiameter(Max_Denier)
+#ElseIf SCALE_DENIERTEMP Then
+    txtDenPar(0).Text = iMin_Denier & " to " & Max_Denier
 #Else
     txtDenPar(0).Text = iMin_Denier & " to " & Max_Denier
 #End If
@@ -1997,7 +1961,7 @@ On Error GoTo cmdComPort_err_hdr
     End Select
     Exit Sub
 cmdComPort_err_hdr:
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Save Settings File Error, cmdComPort"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Save Settings File Error, cmdComPort"
     fraSetup.Enabled = True
     cmdDone.Enabled = True
 End Sub
@@ -2326,7 +2290,7 @@ On Error GoTo cmdOkPC_err_hdr
     cmdDone.Enabled = True
     Exit Sub
 cmdOkPC_err_hdr:
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Error, cmdOkPC FiberTrack"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Error, cmdOkPC FiberTrack"
 End Sub
 
 Private Sub cmdParDD_Click(index As Integer)
@@ -2480,6 +2444,8 @@ On Error GoTo fibertrack_err_rtn
     setupCaption(0) = "&Com Port Alt+C"
 #If SCALE_DIAMETER Then
     setupCaption(1) = "&Diameter Parameters Alt+D"
+#ElseIf SCALE_DENIERTEMP Then
+    setupCaption(1) = "Temperature Range Alt+O"
 #Else
     setupCaption(1) = "Denier Range Alt+O"
 #End If
@@ -2552,6 +2518,17 @@ On Error GoTo fibertrack_err_rtn
     Target_Denier = 0.25
     Calibration_Denier = 0.25
     Target_denier_tol = 20
+#ElseIf SCALE_DENIERTEMP Then
+    sDenParCaption(0) = "Temperture &Range"
+    sDenParCaption(1) = "Target Denier"
+    sDenParCaption(2) = "Target &Gain"
+    sDenParCaption(3) = "Diameter T&olerance"
+
+    iMin_Denier = 0
+    Max_Denier = 1#
+    Target_Denier = 100
+    Calibration_Denier = 100
+    Target_denier_tol = 5
 #Else
     sDenParCaption(0) = "Denier &Range"
     sDenParCaption(1) = "&Target Denier"
@@ -2602,6 +2579,11 @@ On Error GoTo fibertrack_err_rtn
     sDenRge(1) = "0.100 to 1.000  Diameter"
     iInit = 1
     iLast = 1
+#ElseIf SCALE_DENIERTEMP Then
+    sDenRge(0) = "   0 to 100      Denier"
+    sDenRge(1) = "100 to 200       Centi-Newtons"
+    sDenRge(2) = "200 to 300     Centi-Newtons"
+    sDenRge(3) = "300 to 400     Denier"
 #Else
     'sDenRge(0) = "    0 to   500 Denier"
     'sDenRge(1) = "100 to 1000 Denier"
@@ -2876,6 +2858,31 @@ On Error GoTo fibertrack_err_rtn
             txtDenPar(0).Text = optDenRange(0).Caption
             iOptDenRangeIndex = 0
     End Select
+#ElseIf SCALE_DENIERTEMP Then
+    If Max_Denier = 400 Then
+        MsgBox "Warning: Setup file specifies setting of 0 to 400 Temperature.  This parameter is no longer available.  0 to 400 Denier will be used instead.", vbInformation, "Form_Load"
+        Max_Denier = 400
+    End If
+    
+    Select Case Max_Denier
+        Case 400
+            iMin_Denier = 300
+            txtDenPar(0).Text = optDenRange(3).Caption
+            iOptDenRangeIndex = 3
+        Case 300
+            iMin_Denier = 200
+            txtDenPar(0).Text = optDenRange(2).Caption
+            iOptDenRangeIndex = 2
+        Case 200
+            iMin_Denier = 100
+            txtDenPar(0).Text = optDenRange(1).Caption
+            iOptDenRangeIndex = 1
+        Case Else
+            iMin_Denier = 0
+            Max_Denier = 1#
+            txtDenPar(0).Text = optDenRange(0).Caption
+            iOptDenRangeIndex = 0
+    End Select
 #Else
     If Max_Denier = 1500 Then
         MsgBox "Warning: Setup file specifies setting of 150 to 1500 Denier.  This parameter is no longer available.  200 to 2000 Denier will be used instead.", vbInformation, "Form_Load"
@@ -2960,7 +2967,7 @@ fibertrack_err_rtn:
     If Err.Number = 53 Then
         Exit Sub            '53 = file not found
     End If
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Open File Error, Form_Load"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Open File Error, Form_Load"
 End Sub
 
 Private Sub Form_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
@@ -3069,7 +3076,7 @@ On Error GoTo form_unload_err_hdr
     Exit Sub
     
 form_unload_err_hdr:
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " _
+    MsgBox "Error Number = " & str(Err.Number) & ",  " _
         & Err.Description & ", " & Err.Source, vbExclamation, _
         "Form_Unload DataFile Error, FiberTrack"
     End
@@ -3191,6 +3198,8 @@ On Error GoTo init_err_rtn
         InsertWord Host_send, LineSpeed, 4     'Insert linespeed into comm buffer
 #If SCALE_DIAMETER Then
         InsertWord Host_send, CInt(Target_Denier * 1000), 6
+#ElseIf SCALE_DENIERTEMP Then
+        InsertWord Host_send, Target_Denier, 6
 #Else
         InsertWord Host_send, Target_Denier, 6
 #End If
@@ -3267,7 +3276,7 @@ On Error GoTo init_err_rtn
     Exit Sub
     '*******************Sensors initialized********************
 init_err_rtn:
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Initialization Error, Initialization FiberTrack"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Initialization Error, Initialization FiberTrack"
     Exit Sub
 End Sub
 
@@ -3296,9 +3305,7 @@ lblThreadLine_err_hdr:
     'cdlCancel = Cancel button clicked
     If Err.Number = cdlCancel Then Exit Sub
 
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " _
-        & Err.Description & ", " & Err.Source, vbExclamation, _
-        "FiberTrack, lblThreadLine_Click"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "FiberTrack, lblThreadLine_Click"
 
 End Sub
 
@@ -3345,6 +3352,8 @@ Private Sub mnuExpanded_Click()
         CWGraph1.Axes.Item(YAXIS).SetMinMax Target_Denier - IntTemp, Target_Denier + IntTemp
 #If SCALE_DIAMETER Then
         CWGraph1.Cursors.Item(1).YPosition = Target_Denier
+#ElseIf SCALE_DENIERTEMP Then
+        CWGraph1.Cursors.Item(1).YPosition = Target_Denier - Target_Denier * 0.001
 #Else
         CWGraph1.Cursors.Item(1).YPosition = Target_Denier - Target_Denier * 0.001
 #End If
@@ -3385,6 +3394,8 @@ Private Sub mnuNormal_Click()
         CWGraph1.Axes.Item(YAXIS).SetMinMax MIN_DENIER, Max_Denier
 #If SCALE_DIAMETER Then
         CWGraph1.Cursors.Item(1).YPosition = Target_Denier
+#ElseIf SCALE_DENIERTEMP Then
+        CWGraph1.Cursors.Item(1).YPosition = Target_Denier - Target_Denier * 0.05
 #Else
         CWGraph1.Cursors.Item(1).YPosition = Target_Denier - Target_Denier * 0.05
 #End If
@@ -3412,11 +3423,7 @@ On Error GoTo mnuOpen_err_hdr
     comDialog2.Filter = "FiberTrack Setup File (*.sup)|*.sup|FiberTrack Default Settings (" & SETUP_FILENAME & ")|" & SETUP_FILENAME & "|All Files (*.*)|*.*"
     comDialog2.FilterIndex = 1
     
-    comDialog2.Flags = cdlOFNExplorer Or _
-                                  cdlOFNExtensionDifferent Or _
-                                  cdlOFNNoChangeDir Or _
-                                  cdlOFNHideReadOnly
-                                  
+    comDialog2.Flags = cdlOFNExplorer Or cdlOFNExtensionDifferent Or cdlOFNNoChangeDir Or cdlOFNHideReadOnly
 
     comDialog2.ShowOpen
     
@@ -3512,9 +3519,7 @@ mnuOpen_err_hdr:
         Exit Sub
     End If
 
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " _
-        & Err.Description & ", " & Err.Source, vbExclamation, _
-        "Open Setup File Error, mnuOpen FiberTrack"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Open Setup File Error, mnuOpen FiberTrack"
 End Sub
 
 Private Sub mnuOpenDataFile_Click()
@@ -3565,7 +3570,7 @@ mnuPrint_err_hdr:
         Exit Sub
     End If
 
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Print error, mnuPrint"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Print error, mnuPrint"
 
 End Sub
 
@@ -3605,7 +3610,7 @@ On Error GoTo mnuSave_err_hdr
 mnuSave_err_hdr:
     If Err.Number = cdlCancel Then Exit Sub     'Cancel button in Common Dialog
 
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Save Setup File Error, mnuSave"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Save Setup File Error, mnuSave"
 
 End Sub
 
@@ -3647,6 +3652,21 @@ Private Sub optDenRange_Click(index As Integer)
     
     iMinDen(1) = 0.1
     iMaxDen(1) = 1#
+#ElseIf SCALE_DENIERTEMP Then
+    Dim iMinDen(0 To 3) As Integer
+    Dim iMaxDen(0 To 3) As Integer
+    
+    iMinDen(0) = 0
+    iMaxDen(0) = 1#
+    
+    iMinDen(1) = 100
+    iMaxDen(1) = 200
+    
+    iMinDen(2) = 200
+    iMaxDen(2) = 300
+    
+    iMinDen(3) = 300
+    iMaxDen(3) = 400
 #Else
     Dim iMinDen(0 To 3) As Integer
     Dim iMaxDen(0 To 3) As Integer
@@ -4276,10 +4296,10 @@ On Error GoTo mnuText_err_hdr
     Exit Sub
 mnuText_err_hdr:
     If Err.Number = 75 Then
-        MsgBox "Please Open Setup File.  Error Number = " & Str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Open Setup File Error, PrintSetupFile"
+        MsgBox "Please Open Setup File.  Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Open Setup File Error, PrintSetupFile"
         Exit Sub
     End If
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Open Setup File Error, PrintSetupFile"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Open Setup File Error, PrintSetupFile"
 End Sub
 
 'Copy comm buffer contents to sensor data array and verify the Sensor data packet.
@@ -4320,6 +4340,8 @@ On Error Resume Next
     Dim index           As Integer
 #If SCALE_DIAMETER Then
     Dim localAverage    As Double
+#ElseIf SCALE_DENIERTEMP Then
+    Dim localAverage    As Long
 #Else
     Dim localAverage    As Long
 #End If
@@ -4374,6 +4396,16 @@ On Error Resume Next
                                   "L1slub = " & temp(S_L1S) & vbCrLf & _
                                   "L2slub = " & temp(S_L2S) & vbCrLf & _
                                   " DELTA = " & FormatDiameter(floatAverage)
+        #ElseIf SCALE_DENIERTEMP Then
+        'JW Corrected calculations by subtracting 2 from the number of int. periods
+        Text1(sensorIndex).Text = "Now = " & Format(floatAverage, "#00.0") & vbCrLf & _
+                                  "Max. = " & SensorInfos(sensorIndex).Highest & vbCrLf & _
+                                  "Min. = " & SensorInfos(sensorIndex).Lowest & vbCrLf & _
+                                  "Mean = " & Format(SensorInfos(sensorIndex).SumOfAverages / (SensorInfos(sensorIndex).Num_Cycles - 2), "#00.0") & vbCrLf & _
+                                  "CV = " & Format(cvValue, "#0.0") & "%" & vbCrLf & _
+                                  "L1slub = " & temp(S_L1S) & vbCrLf & _
+                                  "L2slub = " & temp(S_L2S) & vbCrLf & _
+                                  "DELTA = " & Format(floatAverage, "#00.0")
                                 
         #Else
         'JW Corrected calculations by subtracting 2 from the number of int. periods
@@ -4567,7 +4599,7 @@ Current_Err_Hdr:
     If Err.Number = cdlCancel Then
         Exit Sub
     End If
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " & Err.Description & ", " & Err.Source & ".  Filename = " & comDialog2.FileName, vbExclamation, "File Error FiberTrack mnuCurrentReport"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source & ".  Filename = " & comDialog2.FileName, vbExclamation, "File Error FiberTrack mnuCurrentReport"
     Exit Sub
 End Sub
 

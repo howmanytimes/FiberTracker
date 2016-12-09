@@ -27,6 +27,11 @@ Public Max_Denier               As Double
 Public iMin_Denier              As Double
 Public Calibration_Denier       As Double      'Separate denier setting for calibration - V1.7
 Public Target_Denier            As Double
+#ElseIf SCALE_DENIERTEMP Then
+Public Max_Denier               As Long
+Public iMin_Denier              As Long
+Public Calibration_Denier       As Long      'Separate denier setting for calibration - V1.7
+Public Target_Denier            As Long
 #Else
 Public Max_Denier               As Long
 Public iMin_Denier              As Long
@@ -74,6 +79,12 @@ Public Type SensorInfo
     Highest         As Double           'Highest average denier
     LastAverage     As Double           'Last integration value
     SumOfAverages   As Double           'Accumulator for average denier
+#ElseIf SCALE_DENIERTEMP Then
+    AverageDiameter As Long
+    Lowest          As Long          'Lowest average denier
+    Highest         As Long          'Highest average denier
+    LastAverage     As Long          'Last integration value
+    SumOfAverages   As Long             'Accumulator for average denier
 #Else
     AverageDiameter As Long
     Lowest          As Long          'Lowest average denier
