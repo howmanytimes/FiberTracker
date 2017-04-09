@@ -28,11 +28,11 @@ Public Seconds As Long
 Private m_Avg(1 To LAST_SENSOR) As Double
 Private m_CvValue(1 To LAST_SENSOR) As Double
 
-Public Property Get Avg(index As Integer) As Double
-    Avg = m_Avg(index)
+Public Property Get avg(index As Integer) As Double
+    avg = m_Avg(index)
 End Property
 
-Public Property Let Avg(index As Integer, value As Double)
+Public Property Let avg(index As Integer, value As Double)
     m_Avg(index) = value
 End Property
 

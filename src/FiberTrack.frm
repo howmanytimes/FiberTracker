@@ -1771,7 +1771,7 @@ End Sub
 Private Sub cmdCanAP_Click()
     txtCurValueAp(0).Text = LineSpeed
     txtCurValueAp(1).Text = Integration_time
-    txtCurValueAp(2).Text = ZeroCal_Interval / 60
+    txtCurValueAp(2).Text = ZeroCal_Interval / CInt(GetIniSetting("Application", "ZeroCalIntervalDivideBy"))
     
     fraAppPar.Visible = False
     fraSetup.Enabled = True
@@ -2130,9 +2130,9 @@ Private Sub cmdOkAP_Click()
     End If
     
     If Val(txtCurValueAp(2).Text) <= 30 And Val(txtCurValueAp(2).Text) >= 1 Then
-        ZeroCal_Interval = Val(txtCurValueAp(2).Text) * 60
+        ZeroCal_Interval = Val(txtCurValueAp(2).Text) * CInt(GetIniSetting("Application", "ZeroCalIntervalMultipleBy"))
     Else
-        txtCurValueAp(2).Text = ZeroCal_Interval / 60
+        txtCurValueAp(2).Text = ZeroCal_Interval / CInt(GetIniSetting("Application", "ZeroCalIntervalDivideBy"))
         iAPErr = iAPErr + 1
     End If
         
@@ -2446,6 +2446,8 @@ On Error GoTo fibertrack_err_rtn
     setupCaption(1) = "&Diameter Parameters Alt+D"
 #ElseIf SCALE_DENIERTEMP Then
     setupCaption(1) = "Temperature Range Alt+O"
+    fraDenRange.Caption = "Temperature Range"
+    fraDenierPar.Caption = "Temperature Parameters"
 #Else
     setupCaption(1) = "Denier Range Alt+O"
 #End If
@@ -2519,13 +2521,13 @@ On Error GoTo fibertrack_err_rtn
     Calibration_Denier = 0.25
     Target_denier_tol = 20
 #ElseIf SCALE_DENIERTEMP Then
-    sDenParCaption(0) = "Temperture &Range"
-    sDenParCaption(1) = "Target Denier"
+    sDenParCaption(0) = "Temperature &Range"
+    sDenParCaption(1) = "Temperature Target"
     sDenParCaption(2) = "Target &Gain"
     sDenParCaption(3) = "Diameter T&olerance"
 
-    iMin_Denier = 0
-    Max_Denier = 1#
+    iMin_Denier = CLng(GetIniSetting("Application", "TempRangeMin1"))
+    Max_Denier = CLng(GetIniSetting("Application", "TempRangeMax4"))
     Target_Denier = 100
     Calibration_Denier = 100
     Target_denier_tol = 5
@@ -2580,10 +2582,10 @@ On Error GoTo fibertrack_err_rtn
     iInit = 1
     iLast = 1
 #ElseIf SCALE_DENIERTEMP Then
-    sDenRge(0) = "   0 to 100      Denier"
-    sDenRge(1) = "100 to 200       Centi-Newtons"
-    sDenRge(2) = "200 to 300     Centi-Newtons"
-    sDenRge(3) = "300 to 400     Denier"
+    sDenRge(0) = "    " & GetIniSetting("Application", "TempRangeMin1") & " to " & GetIniSetting("Application", "TempRangeMax1") & "        " & GetIniSetting("Application", "DegressLabel")
+    sDenRge(1) = GetIniSetting("Application", "TempRangeMin2") & " to " & GetIniSetting("Application", "TempRangeMax2") & "       " & GetIniSetting("Application", "DegressLabel")
+    sDenRge(2) = GetIniSetting("Application", "TempRangeMin3") & " to " & GetIniSetting("Application", "TempRangeMax3") & "      " & GetIniSetting("Application", "DegressLabel")
+    sDenRge(3) = GetIniSetting("Application", "TempRangeMin4") & " to " & GetIniSetting("Application", "TempRangeMax4") & "      " & GetIniSetting("Application", "DegressLabel")
 #Else
     'sDenRge(0) = "    0 to   500 Denier"
     'sDenRge(1) = "100 to 1000 Denier"
@@ -2624,11 +2626,11 @@ On Error GoTo fibertrack_err_rtn
     
     LineSpeed = 250                        'Use these system settings for now
     Integration_time = 2                    'until the input routines are ready
-    ZeroCal_Interval = 15 * 60              'Initialize to 15 minute intervals
+    ZeroCal_Interval = CInt(GetIniSetting("Application", "ZeroCalIntervalMinutes")) * CDbl(GetIniSetting("Application", "ZeroCalIntervalMultipleBy"))              'Initialize to 15 minute intervals
     
     sCurValueAP(0) = LineSpeed
     sCurValueAP(1) = Integration_time
-    sCurValueAP(2) = ZeroCal_Interval / 60
+    sCurValueAP(2) = ZeroCal_Interval / CDbl(GetIniSetting("Application", "ZeroCalIntervalDivideBy"))
     sCurValLblAP(0) = "m/min"
     sCurValLblAP(1) = "sec"
     sCurValLblAP(2) = "min"
@@ -2711,21 +2713,21 @@ On Error GoTo fibertrack_err_rtn
     
     FormLoadCount = FormLoadCount + 1
     
-    Me.Caption = StringFormat("{0} - {1} - {2} Denier", GetIniSetting("Constants", "Name"), GetIniSetting("Constants", "ProductName"), GetIniSetting("Constants", "Version"))
+    Me.Caption = StringFormat("{0} - {1} - {2}", GetIniSetting("Constants", "Name"), GetIniSetting("Constants", "ProductName"), GetIniSetting("Constants", "Version"))
     cmdExit.ToolTipText = "Click here to exit this program."
     cmdPlotData.ToolTipText = "Click here to plot a line chart of saved data files."
     cmdBarChart.ToolTipText = "Click here to plot a bar chart of the current data."
     cmdPrint.ToolTipText = "Click here to print the current screen image."
     cmdCurrent.ToolTipText = "Click here to print the current run results."
     
-    SensorColors(1) = vbBlue
-    SensorColors(2) = vbRed
-    SensorColors(3) = vbYellow
-    SensorColors(4) = vbGreen
-    SensorColors(5) = vbCyan
-    SensorColors(6) = vbMagenta
-    SensorColors(7) = 33023         ' 33023 = orange
-    SensorColors(8) = 8421440       ' 8421440 = darker green
+    SensorColors(1) = RGB(0, 0, 255)    ' Blue
+    SensorColors(2) = RGB(204, 0, 0)    ' Red
+    SensorColors(3) = RGB(204, 255, 0)  ' Yellow
+    SensorColors(4) = RGB(0, 102, 0)    ' Green
+    SensorColors(5) = RGB(0, 255, 204)  ' Cyan
+    SensorColors(6) = RGB(204, 0, 153)  ' Magenta
+    SensorColors(7) = RGB(204, 102, 0)  ' Orange
+    SensorColors(8) = RGB(0, 51, 0)     ' Darker Green
     For iY = 1 To 8
         lblThreadLine(iY).BackColor = SensorColors(iY)
         lblThreadLine(iY).Caption = GetIniSetting("Application", "NameOfThreadLine") ' CHANGED
@@ -2788,7 +2790,7 @@ On Error GoTo fibertrack_err_rtn
     Level2_slub_tol = 7
     Level2_length = 5
     Led1.Visible = False
-    ZeroCal_Interval = 15 * 60              'Initialize to 15 minute intervals
+    ZeroCal_Interval = CInt(GetIniSetting("Application", "ZeroCalIntervalMinutes")) * CInt(GetIniSetting("Application", "ZeroCalIntervalMultipleBy"))              'Initialize to 15 minute intervals
     tmrIntegration.Interval = Integration_time * 1000
     tmrIntegration.Enabled = False
     tmrZeroCal.Interval = 1000                  'One second cal. timer
@@ -2839,7 +2841,7 @@ On Error GoTo fibertrack_err_rtn
     
     txtCurValueAp(0).Text = LineSpeed
     txtCurValueAp(1).Text = Integration_time
-    txtCurValueAp(2).Text = ZeroCal_Interval / 60
+    txtCurValueAp(2).Text = ZeroCal_Interval / CInt(GetIniSetting("Application", "ZeroCalIntervalDivideBy"))
     
     txtCurValueDD(0).Text = Level1_slub_tol & " %"
     txtCurValueDD(1).Text = Level1_length & " mm"
@@ -2859,27 +2861,27 @@ On Error GoTo fibertrack_err_rtn
             iOptDenRangeIndex = 0
     End Select
 #ElseIf SCALE_DENIERTEMP Then
-    If Max_Denier = 400 Then
-        MsgBox "Warning: Setup file specifies setting of 0 to 400 Temperature.  This parameter is no longer available.  0 to 400 Denier will be used instead.", vbInformation, "Form_Load"
-        Max_Denier = 400
+    If Max_Denier = CLng(GetIniSetting("Application", "TempRangeMax4")) Then
+        MsgBox "Warning: Setup file specifies setting of 0 to " & GetIniSetting("Application", "TempRangeMax4") & " Temperature.  This parameter is no longer available.  0 to " & GetIniSetting("Application", "TempRangeMax4") & " Temperature will be used instead.", vbInformation, "Form_Load"
+        Max_Denier = CLng(GetIniSetting("Application", "TempRangeMax4"))
     End If
     
     Select Case Max_Denier
-        Case 400
-            iMin_Denier = 300
+        Case CLng(GetIniSetting("Application", "TempRangeMax4"))
+            iMin_Denier = CLng(GetIniSetting("Application", "TempRangeMin4"))
             txtDenPar(0).Text = optDenRange(3).Caption
             iOptDenRangeIndex = 3
-        Case 300
-            iMin_Denier = 200
+        Case CLng(GetIniSetting("Application", "TempRangeMax3"))
+            iMin_Denier = CLng(GetIniSetting("Application", "TempRangeMin3"))
             txtDenPar(0).Text = optDenRange(2).Caption
             iOptDenRangeIndex = 2
-        Case 200
-            iMin_Denier = 100
+        Case CLng(GetIniSetting("Application", "TempRangeMax2"))
+            iMin_Denier = CLng(GetIniSetting("Application", "TempRangeMin2"))
             txtDenPar(0).Text = optDenRange(1).Caption
             iOptDenRangeIndex = 1
         Case Else
-            iMin_Denier = 0
-            Max_Denier = 1#
+            iMin_Denier = CLng(GetIniSetting("Application", "TempRangeMin1"))
+            Max_Denier = CLng(GetIniSetting("Application", "TempRangeMax1"))
             txtDenPar(0).Text = optDenRange(0).Caption
             iOptDenRangeIndex = 0
     End Select
@@ -3076,9 +3078,7 @@ On Error GoTo form_unload_err_hdr
     Exit Sub
     
 form_unload_err_hdr:
-    MsgBox "Error Number = " & str(Err.Number) & ",  " _
-        & Err.Description & ", " & Err.Source, vbExclamation, _
-        "Form_Unload DataFile Error, FiberTrack"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Form_Unload DataFile Error, FiberTrack"
     End
     Exit Sub
 End Sub
@@ -3433,7 +3433,7 @@ On Error GoTo mnuOpen_err_hdr
     
     txtCurValueAp(0).Text = LineSpeed
     txtCurValueAp(1).Text = Integration_time
-    txtCurValueAp(2).Text = ZeroCal_Interval / 60
+    txtCurValueAp(2).Text = ZeroCal_Interval / CInt(GetIniSetting("Application", "ZeroCalIntervalDivideBy"))
 
     optDenRange(DenierRangeIndex).value = True
     iOptDenRangeIndex = DenierRangeIndex
@@ -3656,17 +3656,17 @@ Private Sub optDenRange_Click(index As Integer)
     Dim iMinDen(0 To 3) As Integer
     Dim iMaxDen(0 To 3) As Integer
     
-    iMinDen(0) = 0
-    iMaxDen(0) = 1#
+    iMinDen(0) = CLng(GetIniSetting("Application", "TempRangeMin1"))
+    iMaxDen(0) = CLng(GetIniSetting("Application", "TempRangeMax1"))
     
-    iMinDen(1) = 100
-    iMaxDen(1) = 200
+    iMinDen(1) = CLng(GetIniSetting("Application", "TempRangeMin2"))
+    iMaxDen(1) = CLng(GetIniSetting("Application", "TempRangeMax2"))
     
-    iMinDen(2) = 200
-    iMaxDen(2) = 300
+    iMinDen(2) = CLng(GetIniSetting("Application", "TempRangeMin3"))
+    iMaxDen(2) = CLng(GetIniSetting("Application", "TempRangeMax3"))
     
-    iMinDen(3) = 300
-    iMaxDen(3) = 400
+    iMinDen(3) = CLng(GetIniSetting("Application", "TempRangeMin4"))
+    iMaxDen(3) = CLng(GetIniSetting("Application", "TempRangeMax4"))
 #Else
     Dim iMinDen(0 To 3) As Integer
     Dim iMaxDen(0 To 3) As Integer
@@ -3822,7 +3822,9 @@ Private Sub StartStop_Click()
                         'JW - 5/25/00 Delay processing of sensor data for several cycles.
                         If SensorInfos(index).Num_Cycles > 2 Then
                             Set currentSensorReportData = GetSensorReportData(index)
-                            dataFileLine.Avg(index) = currentSensorReportData.Average 'Process packet
+                            Dim forumlaValue As Double
+                            forumlaValue = (((currentSensorReportData.Average / CInt(GetIniSetting("Application", "TempForumlaDivideBy"))) - CDbl(GetIniSetting("Application", "TempForumlaSubtractBy"))) * CInt(GetIniSetting("Application", "TempForumlaMultipleBy")))
+                            dataFileLine.avg(index) = forumlaValue 'currentSensorReportData.Average 'Process packet
                             dataFileLine.Cv(index) = currentSensorReportData.Cv
                         Else
                             temp = mo_Comm.ReadData()      ' Flush comm buffer contents
@@ -4273,7 +4275,7 @@ On Error GoTo mnuText_err_hdr
     Printer.Print "Maximum Denier ................ " & Max_Denier & " Denier"
     Printer.Print "Integration time .............. " & Integration_time & " seconds"
     Printer.Print "Target denier tolerance ........" & Target_denier_tol & " per cent"
-    Printer.Print "Zero Calibration Interval ..... " & ZeroCal_Interval / 60 & " minutes"
+    Printer.Print "Zero Calibration Interval ..... " & ZeroCal_Interval / CInt(GetIniSetting("Application", "ZeroCalIntervalDivideBy")) & " minutes"
     Printer.Print "Plot Interval ................. " & Plot_Interval & " minutes"
     Printer.Print "Plot view ..................... " & PlotView(PlotViewIndex)
     ' Printer.Print "Plot channel .............. " & SystemStatus.PlotChannel
