@@ -117,14 +117,14 @@ Private Sub Form_Load()
     
     PlotData.Hide
     
-    SensorColors(1) = vbBlue
-    SensorColors(2) = vbRed
-    SensorColors(3) = vbYellow
-    SensorColors(4) = vbGreen
-    SensorColors(5) = vbCyan
-    SensorColors(6) = vbMagenta
-    SensorColors(7) = 33023         ' 33023 = orange
-    SensorColors(8) = 8421440       ' 8421440 = darker green
+    SensorColors(1) = RGB(0, 0, 255)    ' Blue
+    SensorColors(2) = RGB(204, 0, 0)    ' Red
+    SensorColors(3) = RGB(204, 255, 0)  ' Yellow
+    SensorColors(4) = RGB(0, 102, 0)    ' Green
+    SensorColors(5) = RGB(0, 255, 204)  ' Cyan
+    SensorColors(6) = RGB(204, 0, 153)  ' Magenta
+    SensorColors(7) = RGB(204, 102, 0)  ' Orange
+    SensorColors(8) = RGB(0, 51, 0)     ' Darker Green
 
     lColorMatrix(0) = SensorColors(1) 'vbBlue
     lColorMatrix(1) = SensorColors(2) 'vbGreen

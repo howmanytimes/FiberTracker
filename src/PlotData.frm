@@ -5,15 +5,15 @@ Begin VB.Form PlotData
    BackColor       =   &H00808000&
    BorderStyle     =   0  'None
    Caption         =   "Plot Data"
-   ClientHeight    =   6405
+   ClientHeight    =   9825
    ClientLeft      =   45
    ClientTop       =   1575
-   ClientWidth     =   9480
+   ClientWidth     =   16830
    Icon            =   "PlotData.frx":0000
    LinkTopic       =   "Form1"
    NegotiateMenus  =   0   'False
-   ScaleHeight     =   6405
-   ScaleWidth      =   9480
+   ScaleHeight     =   9825
+   ScaleWidth      =   16830
    StartUpPosition =   2  'CenterScreen
    Begin VB.Frame fraSensorCheck 
       Appearance      =   0  'Flat
@@ -21,10 +21,10 @@ Begin VB.Form PlotData
       Caption         =   "Please check "
       ForeColor       =   &H80000008&
       Height          =   4215
-      Left            =   8160
+      Left            =   15360
       TabIndex        =   36
       ToolTipText     =   "Please check the sensors to plot."
-      Top             =   840
+      Top             =   120
       Width           =   1335
       Begin VB.CommandButton cmdCancel 
          Caption         =   "C&ancel"
@@ -116,14 +116,14 @@ Begin VB.Form PlotData
       End
    End
    Begin CWUIControlsLib.CWGraph cwgLineChart 
-      Height          =   2295
-      Left            =   840
+      Height          =   5295
+      Left            =   960
       TabIndex        =   30
-      Top             =   960
-      Width           =   8415
+      Top             =   1200
+      Width           =   14295
       _Version        =   196608
-      _ExtentX        =   14843
-      _ExtentY        =   4048
+      _ExtentX        =   25215
+      _ExtentY        =   9340
       _StockProps     =   71
       BackColor       =   -2147483633
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -178,7 +178,7 @@ Begin VB.Form PlotData
       opts_10         =   90112
       Bindings_10     =   0
       rMin_10         =   25
-      rMax_10         =   550
+      rMax_10         =   942
       dMax_10         =   20
       discInterval_10 =   1
       Radial_8        =   0
@@ -216,7 +216,7 @@ Begin VB.Form PlotData
       opts_17         =   122880
       Bindings_17     =   0
       rMin_17         =   11
-      rMax_17         =   126
+      rMax_17         =   326
       dMax_17         =   10
       discInterval_17 =   1
       Radial_15       =   0
@@ -409,15 +409,15 @@ Begin VB.Form PlotData
    End
    Begin VB.ComboBox cboomPlotData 
       Height          =   315
-      Left            =   1560
+      Left            =   2760
       Style           =   2  'Dropdown List
       TabIndex        =   52
-      Top             =   5040
+      Top             =   8400
       Width           =   735
    End
    Begin MSComDlg.CommonDialog comDialog1 
-      Left            =   600
-      Top             =   3360
+      Left            =   14520
+      Top             =   240
       _ExtentX        =   847
       _ExtentY        =   847
       _Version        =   393216
@@ -425,33 +425,33 @@ Begin VB.Form PlotData
    Begin VB.CommandButton cmdPrintForm 
       Caption         =   "Print S&creen"
       Height          =   495
-      Left            =   4320
+      Left            =   4800
       TabIndex        =   46
-      Top             =   3960
-      Width           =   1095
+      Top             =   6960
+      Width           =   1215
    End
    Begin VB.CommandButton cmdPlotData 
       Caption         =   "&Plot Data File"
       Height          =   495
-      Left            =   1560
+      Left            =   2400
       TabIndex        =   2
-      Top             =   3960
-      Width           =   1095
+      Top             =   6960
+      Width           =   1215
    End
    Begin VB.CommandButton cmdZoomOut 
       Caption         =   "&Zoom Out"
       Height          =   495
-      Left            =   5640
+      Left            =   6000
       TabIndex        =   31
-      Top             =   3960
-      Width           =   1095
+      Top             =   6960
+      Width           =   1215
    End
    Begin VB.Frame fraCursorMeas 
       Caption         =   "Cursor Measurements"
       Height          =   975
-      Left            =   7080
+      Left            =   13320
       TabIndex        =   25
-      Top             =   3960
+      Top             =   7080
       Width           =   1935
       Begin VB.TextBox PeriodVal 
          Height          =   285
@@ -486,17 +486,17 @@ Begin VB.Form PlotData
    End
    Begin VB.TextBox YPosition 
       Height          =   285
-      Left            =   8160
+      Left            =   14400
       TabIndex        =   24
-      Top             =   5760
+      Top             =   8880
       Width           =   735
    End
    Begin VB.Frame fraCursorInfo 
       Caption         =   "Cursor Information"
       Height          =   975
-      Left            =   7080
+      Left            =   13320
       TabIndex        =   20
-      Top             =   5160
+      Top             =   8280
       Width           =   1935
       Begin VB.TextBox XPosition 
          Height          =   285
@@ -525,9 +525,9 @@ Begin VB.Form PlotData
    Begin VB.Frame fraGraphOps 
       Caption         =   "Graph Operations"
       Height          =   1335
-      Left            =   4440
+      Left            =   5520
       TabIndex        =   18
-      Top             =   4800
+      Top             =   7800
       Width           =   2415
       Begin VB.OptionButton optCursorCood 
          Caption         =   "Cursor Coodinates"
@@ -823,24 +823,24 @@ Begin VB.Form PlotData
    Begin VB.CommandButton cmdBarChart 
       Caption         =   "&Bar Chart"
       Height          =   495
-      Left            =   3000
+      Left            =   2520
       TabIndex        =   17
-      Top             =   5640
-      Width           =   1095
+      Top             =   7560
+      Width           =   1215
    End
    Begin VB.CommandButton cmdLineChart 
       Caption         =   "&Line Chart"
       Height          =   495
-      Left            =   120
+      Left            =   1200
       TabIndex        =   16
-      Top             =   3960
-      Width           =   1095
+      Top             =   6960
+      Width           =   1215
    End
    Begin CWUIControlsLib.CWGraph cwgBarChart 
       Height          =   2295
-      Left            =   1440
+      Left            =   840
       TabIndex        =   15
-      Top             =   840
+      Top             =   1200
       Width           =   6615
       _Version        =   196608
       _ExtentX        =   11668
@@ -1081,51 +1081,51 @@ Begin VB.Form PlotData
    Begin VB.CommandButton cmdViewFile 
       Caption         =   "&View Data File"
       Height          =   495
-      Left            =   360
+      Left            =   1200
       TabIndex        =   14
-      Top             =   4800
+      Top             =   7560
       Width           =   1215
    End
    Begin VB.CommandButton cmdReturn 
       Cancel          =   -1  'True
       Caption         =   "&Return"
       Height          =   495
-      Left            =   3000
+      Left            =   1200
       TabIndex        =   13
-      Top             =   4800
-      Width           =   1095
+      Top             =   8760
+      Width           =   1215
    End
    Begin VB.CommandButton cmdClearGraph 
       Caption         =   "Clear &Graph"
       Height          =   495
-      Left            =   3000
+      Left            =   3600
       TabIndex        =   5
-      Top             =   3960
-      Width           =   1095
+      Top             =   6960
+      Width           =   1215
    End
    Begin VB.CommandButton cmdOpen 
       Caption         =   "&Open Data File"
       Height          =   495
-      Left            =   120
+      Left            =   1200
       TabIndex        =   1
-      Top             =   5640
+      Top             =   8160
       Width           =   1215
    End
    Begin VB.TextBox txtDataFile 
       Height          =   375
-      Left            =   1800
+      Left            =   3000
       TabIndex        =   0
       Text            =   " "
-      Top             =   4800
+      Top             =   8160
       Width           =   2415
    End
    Begin VB.Label lblPlotData 
       Alignment       =   2  'Center
       Caption         =   "X axis in minutes"
       Height          =   255
-      Left            =   1320
+      Left            =   2520
       TabIndex        =   51
-      Top             =   5520
+      Top             =   8880
       Width           =   1335
    End
    Begin VB.Label lblSensor 
@@ -1133,9 +1133,9 @@ Begin VB.Form PlotData
       BackColor       =   &H0000FFFF&
       Height          =   255
       Index           =   3
-      Left            =   4680
+      Left            =   4800
       TabIndex        =   35
-      Top             =   600
+      Top             =   840
       Width           =   975
    End
    Begin VB.Label lblSensor 
@@ -1143,9 +1143,9 @@ Begin VB.Form PlotData
       BackColor       =   &H0000FF00&
       Height          =   255
       Index           =   2
-      Left            =   3480
+      Left            =   3600
       TabIndex        =   34
-      Top             =   600
+      Top             =   840
       Width           =   975
    End
    Begin VB.Label lblSensor 
@@ -1153,9 +1153,9 @@ Begin VB.Form PlotData
       BackColor       =   &H00FF0000&
       Height          =   255
       Index           =   1
-      Left            =   2280
+      Left            =   2400
       TabIndex        =   33
-      Top             =   600
+      Top             =   840
       Width           =   975
    End
    Begin VB.Label lblSensor 
@@ -1163,18 +1163,18 @@ Begin VB.Form PlotData
       BackColor       =   &H000000FF&
       Height          =   255
       Index           =   0
-      Left            =   1080
+      Left            =   1200
       TabIndex        =   32
-      Top             =   600
+      Top             =   840
       Width           =   975
    End
    Begin VB.Label lblXAxis 
       Alignment       =   2  'Center
       Caption         =   "TIME - Seconds"
       Height          =   255
-      Left            =   3120
+      Left            =   4200
       TabIndex        =   12
-      Top             =   3480
+      Top             =   6600
       Width           =   1215
    End
    Begin VB.Label lblYAxis 
@@ -1182,9 +1182,9 @@ Begin VB.Form PlotData
       Caption         =   "R"
       Height          =   255
       Index           =   5
-      Left            =   480
+      Left            =   600
       TabIndex        =   11
-      Top             =   2880
+      Top             =   3120
       Width           =   255
    End
    Begin VB.Label lblYAxis 
@@ -1192,9 +1192,9 @@ Begin VB.Form PlotData
       Caption         =   "E"
       Height          =   255
       Index           =   4
-      Left            =   480
+      Left            =   600
       TabIndex        =   10
-      Top             =   2520
+      Top             =   2760
       Width           =   255
    End
    Begin VB.Label lblYAxis 
@@ -1202,9 +1202,9 @@ Begin VB.Form PlotData
       Caption         =   "I"
       Height          =   255
       Index           =   3
-      Left            =   480
+      Left            =   600
       TabIndex        =   9
-      Top             =   2160
+      Top             =   2400
       Width           =   255
    End
    Begin VB.Label lblYAxis 
@@ -1212,9 +1212,9 @@ Begin VB.Form PlotData
       Caption         =   "N"
       Height          =   255
       Index           =   2
-      Left            =   480
+      Left            =   600
       TabIndex        =   8
-      Top             =   1800
+      Top             =   2040
       Width           =   255
    End
    Begin VB.Label lblYAxis 
@@ -1222,9 +1222,9 @@ Begin VB.Form PlotData
       Caption         =   "E"
       Height          =   255
       Index           =   1
-      Left            =   480
+      Left            =   600
       TabIndex        =   7
-      Top             =   1440
+      Top             =   1680
       Width           =   255
    End
    Begin VB.Label lblYAxis 
@@ -1232,9 +1232,9 @@ Begin VB.Form PlotData
       Caption         =   "D"
       Height          =   255
       Index           =   0
-      Left            =   480
+      Left            =   600
       TabIndex        =   6
-      Top             =   1080
+      Top             =   1320
       Width           =   255
    End
    Begin VB.Label lblCaption 
@@ -1250,9 +1250,9 @@ Begin VB.Form PlotData
       Alignment       =   2  'Center
       Caption         =   "Data File Name"
       Height          =   255
-      Left            =   2400
+      Left            =   3600
       TabIndex        =   3
-      Top             =   5280
+      Top             =   8640
       Width           =   1215
    End
    Begin VB.Menu mnuFile 
@@ -1333,7 +1333,7 @@ Dim ml_SensorColors(1 To 8) As Long
 
 Dim mo_DataFile             As FTDataFile
 
-Private Sub SetDatafileDialog(cdlData As MSComDlg.CommonDialog)
+Private Sub SetDatafileDialog(cdlData As MSComDlg.CommonDialog)    
     With cdlData
         .CancelError = True
         .DialogTitle = "Select Data File To Open"
@@ -1698,14 +1698,14 @@ Private Sub Form_Load()
     lblSensor(2).Visible = False
     lblSensor(3).Visible = False
     
-    ml_SensorColors(1) = vbBlue
-    ml_SensorColors(2) = vbRed
-    ml_SensorColors(3) = vbYellow
-    ml_SensorColors(4) = vbGreen
-    ml_SensorColors(5) = vbCyan
-    ml_SensorColors(6) = vbMagenta
-    ml_SensorColors(7) = vbBlack
-    ml_SensorColors(8) = vbGrayText
+    ml_SensorColors(1) = RGB(0, 0, 255)    ' Blue
+    ml_SensorColors(2) = RGB(204, 0, 0)    ' Red
+    ml_SensorColors(3) = RGB(204, 255, 0)  ' Yellow
+    ml_SensorColors(4) = RGB(0, 102, 0)    ' Green
+    ml_SensorColors(5) = RGB(0, 255, 204)  ' Cyan
+    ml_SensorColors(6) = RGB(204, 0, 153)  ' Magenta
+    ml_SensorColors(7) = RGB(204, 102, 0)  ' Orange
+    ml_SensorColors(8) = RGB(0, 51, 0)     ' Darker Green
     
     cwgLineChart.Enabled = True         ' cwgLineChart = line chart
     cwgBarChart.Enabled = True         ' cwgBarChart = bar chart
