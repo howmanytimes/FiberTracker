@@ -2,209 +2,37 @@ VERSION 5.00
 Object = "{D940E4E4-6079-11CE-88CB-0020AF6845F6}#1.6#0"; "cwui.ocx"
 Object = "{648A5603-2C6E-101B-82B6-000000000014}#1.1#0"; "MSCOMM32.OCX"
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.ocx"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "MSCOMCTL.OCX"
 Begin VB.Form FiberTrack 
    BackColor       =   &H00808000&
    Caption         =   "FiberTrack"
-   ClientHeight    =   8310
+   ClientHeight    =   10020
    ClientLeft      =   135
    ClientTop       =   705
-   ClientWidth     =   11190
+   ClientWidth     =   14355
    FillColor       =   &H000000FF&
    Icon            =   "FiberTrack.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   7850.461
+   ScaleHeight     =   9465.899
    ScaleMode       =   0  'User
-   ScaleWidth      =   11190
+   ScaleWidth      =   14355
    Tag             =   " "
-   Begin VB.Frame fraDefDet 
-      Caption         =   "Defect Detection"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   -1  'True
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
+   Begin MSComctlLib.StatusBar StatusBar 
+      Align           =   2  'Align Bottom
+      Height          =   495
+      Left            =   0
+      TabIndex        =   132
+      Top             =   9525
+      Width           =   14355
+      _ExtentX        =   25321
+      _ExtentY        =   873
+      _Version        =   393216
+      BeginProperty Panels {8E3867A5-8586-11D1-B16A-00C0F0283628} 
+         NumPanels       =   1
+         BeginProperty Panel1 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
+            AutoSize        =   2
+         EndProperty
       EndProperty
-      Height          =   2415
-      Left            =   3720
-      TabIndex        =   88
-      Top             =   1440
-      Width           =   3375
-      Begin VB.TextBox txtCurValueDD 
-         Alignment       =   2  'Center
-         Height          =   285
-         Index           =   0
-         Left            =   2280
-         MultiLine       =   -1  'True
-         TabIndex        =   94
-         Text            =   "FiberTrack.frx":08CA
-         Top             =   600
-         Width           =   735
-      End
-      Begin VB.CommandButton cmdParDD 
-         Caption         =   "Level 1 Defect %"
-         Height          =   255
-         Index           =   0
-         Left            =   240
-         TabIndex        =   93
-         Top             =   600
-         Width           =   1455
-      End
-      Begin VB.CommandButton cmdCanDD 
-         Caption         =   "Cancel"
-         Height          =   375
-         Left            =   1920
-         TabIndex        =   92
-         Top             =   1920
-         Width           =   855
-      End
-      Begin VB.CommandButton cmdOkDD 
-         Caption         =   "OK"
-         Height          =   375
-         Left            =   480
-         TabIndex        =   91
-         Top             =   1920
-         Width           =   855
-      End
-      Begin VB.Label lblCurValDD 
-         Alignment       =   2  'Center
-         Caption         =   "Current Value"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   -1  'True
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   2160
-         TabIndex        =   90
-         Top             =   240
-         Width           =   975
-      End
-      Begin VB.Label lblParDD 
-         Alignment       =   2  'Center
-         Caption         =   "Parameter"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   -1  'True
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   600
-         TabIndex        =   89
-         Top             =   240
-         Width           =   855
-      End
-   End
-   Begin VB.Frame fraAppPar 
-      Caption         =   "Application Parameters"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   400
-         Underline       =   -1  'True
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   2175
-      Left            =   3720
-      TabIndex        =   80
-      Top             =   960
-      Width           =   3855
-      Begin VB.TextBox txtCurValueAp 
-         Alignment       =   2  'Center
-         Height          =   285
-         Index           =   0
-         Left            =   2520
-         MultiLine       =   -1  'True
-         TabIndex        =   86
-         Text            =   "FiberTrack.frx":08D3
-         Top             =   720
-         Width           =   495
-      End
-      Begin VB.CommandButton cmdCanAP 
-         Caption         =   "Cancel"
-         Height          =   375
-         Left            =   2280
-         TabIndex        =   85
-         Top             =   1680
-         Width           =   855
-      End
-      Begin VB.CommandButton cmdOkAP 
-         Caption         =   "OK"
-         Height          =   375
-         Left            =   720
-         TabIndex        =   84
-         Top             =   1680
-         Width           =   855
-      End
-      Begin VB.CommandButton cmdLineSpeed 
-         Caption         =   "Line &Speed"
-         Height          =   255
-         Index           =   0
-         Left            =   240
-         TabIndex        =   83
-         Top             =   720
-         Width           =   975
-      End
-      Begin VB.Label lblLineSpeed 
-         Appearance      =   0  'Flat
-         BackColor       =   &H80000004&
-         Caption         =   "m/min"
-         ForeColor       =   &H80000008&
-         Height          =   255
-         Index           =   0
-         Left            =   3120
-         TabIndex        =   87
-         Top             =   720
-         Width           =   495
-      End
-      Begin VB.Label lblCurValueAP 
-         Alignment       =   2  'Center
-         Caption         =   "Current Value"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   -1  'True
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   2520
-         TabIndex        =   82
-         Top             =   360
-         Width           =   1095
-      End
-      Begin VB.Label lblParAP 
-         Alignment       =   2  'Center
-         Caption         =   "Parameter"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   -1  'True
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   255
-         Left            =   600
-         TabIndex        =   81
-         Top             =   360
-         Width           =   975
-      End
    End
    Begin VB.Frame fraDenierPar 
       BackColor       =   &H80000013&
@@ -218,9 +46,9 @@ Begin VB.Form FiberTrack
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   2415
+      Height          =   2775
       Left            =   3720
-      TabIndex        =   62
+      TabIndex        =   61
       Top             =   480
       Width           =   3135
       Begin VB.CommandButton cmdDoneDP 
@@ -229,8 +57,8 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   960
          Style           =   1  'Graphical
-         TabIndex        =   74
-         Top             =   1920
+         TabIndex        =   73
+         Top             =   2280
          Width           =   855
       End
       Begin VB.CommandButton cmdCanDP 
@@ -239,8 +67,8 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   1680
          Style           =   1  'Graphical
-         TabIndex        =   68
-         Top             =   1920
+         TabIndex        =   67
+         Top             =   2280
          Width           =   855
       End
       Begin VB.CommandButton cmdOkDP 
@@ -249,16 +77,16 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   360
          Style           =   1  'Graphical
-         TabIndex        =   67
-         Top             =   1920
+         TabIndex        =   66
+         Top             =   2280
          Width           =   855
       End
       Begin VB.TextBox txtDenPar 
          Height          =   285
          Index           =   0
          Left            =   1920
-         TabIndex        =   66
-         Text            =   $"FiberTrack.frx":08D8
+         TabIndex        =   65
+         Text            =   "200 to 2000"
          Top             =   600
          Width           =   975
       End
@@ -269,7 +97,7 @@ Begin VB.Form FiberTrack
          Index           =   0
          Left            =   120
          Style           =   1  'Graphical
-         TabIndex        =   65
+         TabIndex        =   64
          Top             =   600
          Width           =   1695
       End
@@ -288,7 +116,7 @@ Begin VB.Form FiberTrack
          EndProperty
          Height          =   255
          Left            =   1920
-         TabIndex        =   64
+         TabIndex        =   63
          Top             =   240
          Width           =   1095
       End
@@ -306,9 +134,500 @@ Begin VB.Form FiberTrack
             Strikethrough   =   0   'False
          EndProperty
          Height          =   255
-         Left            =   360
-         TabIndex        =   63
+         Left            =   120
+         TabIndex        =   62
          Top             =   240
+         Width           =   1815
+      End
+   End
+   Begin VB.Frame fraApplicationIni 
+      Caption         =   "Application Ini Settings"
+      Height          =   6495
+      Left            =   3720
+      TabIndex        =   99
+      Top             =   1800
+      Width           =   7575
+      Begin VB.CheckBox chkIncludeRawOutputOnDat 
+         Caption         =   "Include Raw Data Column"
+         Height          =   375
+         Left            =   3120
+         TabIndex        =   131
+         Top             =   2760
+         Width           =   2295
+      End
+      Begin VB.Frame fraApplicationTempRanges 
+         Caption         =   "Temperature Ranges"
+         Height          =   1815
+         Left            =   240
+         TabIndex        =   118
+         Top             =   4200
+         Width           =   2895
+         Begin VB.TextBox txtTempRangeMax3 
+            Height          =   285
+            Left            =   1800
+            TabIndex        =   129
+            Text            =   "Text8"
+            Top             =   1320
+            Width           =   735
+         End
+         Begin VB.TextBox txtTempRangeMin3 
+            Height          =   285
+            Left            =   960
+            TabIndex        =   128
+            Text            =   "Text7"
+            Top             =   1320
+            Width           =   735
+         End
+         Begin VB.TextBox txtTempRangeMax2 
+            Height          =   285
+            Left            =   1800
+            TabIndex        =   127
+            Text            =   "Text6"
+            Top             =   960
+            Width           =   735
+         End
+         Begin VB.TextBox txtTempRangeMin2 
+            Height          =   285
+            Left            =   960
+            TabIndex        =   126
+            Text            =   "Text5"
+            Top             =   960
+            Width           =   735
+         End
+         Begin VB.TextBox txtTempRangeMax1 
+            Height          =   285
+            Left            =   1800
+            TabIndex        =   125
+            Text            =   "Text4"
+            Top             =   600
+            Width           =   735
+         End
+         Begin VB.TextBox txtTempRangeMin1 
+            Height          =   285
+            Left            =   960
+            TabIndex        =   124
+            Text            =   "Text3"
+            Top             =   600
+            Width           =   735
+         End
+         Begin VB.Label Label7 
+            Caption         =   "Range 3:"
+            Height          =   255
+            Left            =   120
+            TabIndex        =   123
+            Top             =   1320
+            Width           =   735
+         End
+         Begin VB.Label Label6 
+            Caption         =   "Range 2:"
+            Height          =   255
+            Left            =   120
+            TabIndex        =   122
+            Top             =   960
+            Width           =   735
+         End
+         Begin VB.Label Label5 
+            Caption         =   "Range 1:"
+            Height          =   255
+            Left            =   120
+            TabIndex        =   121
+            Top             =   600
+            Width           =   735
+         End
+         Begin VB.Label Label4 
+            Caption         =   "Max"
+            Height          =   255
+            Left            =   1920
+            TabIndex        =   120
+            Top             =   240
+            Width           =   495
+         End
+         Begin VB.Label Label3 
+            Caption         =   "Min"
+            Height          =   255
+            Left            =   1080
+            TabIndex        =   119
+            Top             =   240
+            Width           =   495
+         End
+      End
+      Begin VB.TextBox txtTempForumlaDivideBy 
+         BeginProperty DataFormat 
+            Type            =   1
+            Format          =   "0"
+            HaveTrueFalseNull=   0
+            FirstDayOfWeek  =   0
+            FirstWeekOfYear =   0
+            LCID            =   1033
+            SubFormatType   =   1
+         EndProperty
+         Height          =   285
+         Left            =   1920
+         TabIndex        =   117
+         Text            =   "100"
+         Top             =   3480
+         Width           =   735
+      End
+      Begin VB.TextBox txtTempForumlaMultipleBy 
+         BeginProperty DataFormat 
+            Type            =   1
+            Format          =   "0"
+            HaveTrueFalseNull=   0
+            FirstDayOfWeek  =   0
+            FirstWeekOfYear =   0
+            LCID            =   1033
+            SubFormatType   =   1
+         EndProperty
+         Height          =   285
+         Left            =   1920
+         TabIndex        =   115
+         Text            =   "200"
+         Top             =   3120
+         Width           =   735
+      End
+      Begin VB.TextBox txtTempForumlaSubtractBy 
+         BeginProperty DataFormat 
+            Type            =   1
+            Format          =   """$""#,##0.00"
+            HaveTrueFalseNull=   0
+            FirstDayOfWeek  =   0
+            FirstWeekOfYear =   0
+            LCID            =   1033
+            SubFormatType   =   2
+         EndProperty
+         Height          =   285
+         Left            =   1920
+         TabIndex        =   113
+         Text            =   "1.25"
+         Top             =   2760
+         Width           =   735
+      End
+      Begin VB.TextBox txtDegressLabelName 
+         Height          =   285
+         Left            =   1920
+         TabIndex        =   111
+         Text            =   "DegressLabelName"
+         Top             =   2040
+         Width           =   2655
+      End
+      Begin VB.TextBox txtNameOfThreadLine 
+         Height          =   285
+         Left            =   1920
+         TabIndex        =   109
+         Text            =   "NameOfThreadLine"
+         Top             =   1680
+         Width           =   2655
+      End
+      Begin VB.TextBox txtAppendDateFormatToFile 
+         Height          =   285
+         Left            =   1920
+         TabIndex        =   107
+         Text            =   "AppendDateFormatToFile"
+         Top             =   1320
+         Width           =   2655
+      End
+      Begin VB.CommandButton cmdSaveIniSettings 
+         Caption         =   "Save"
+         Height          =   375
+         Left            =   5880
+         TabIndex        =   105
+         Top             =   6000
+         Width           =   735
+      End
+      Begin VB.TextBox txtExcelPathIniSettings 
+         Height          =   285
+         Left            =   1920
+         MaxLength       =   250
+         TabIndex        =   102
+         Text            =   "Excel Path"
+         Top             =   960
+         Width           =   5415
+      End
+      Begin VB.CheckBox chkIncludeCvIniSettings 
+         Caption         =   "Include Cv Column"
+         Height          =   255
+         Left            =   240
+         TabIndex        =   101
+         Top             =   600
+         Width           =   2175
+      End
+      Begin VB.CheckBox chkOpenApplicationMaxIniSettings 
+         Caption         =   "Open Application Max"
+         Height          =   255
+         Left            =   240
+         TabIndex        =   100
+         Top             =   360
+         Width           =   2055
+      End
+      Begin VB.CommandButton cmdCancelIniSettings 
+         Caption         =   "Cancel"
+         Height          =   375
+         Left            =   6600
+         TabIndex        =   104
+         Top             =   6000
+         Width           =   735
+      End
+      Begin VB.Label lblTemperatureFormula 
+         Caption         =   "Temperature Forumla:"
+         Height          =   255
+         Left            =   240
+         TabIndex        =   130
+         Top             =   2400
+         Width           =   1935
+      End
+      Begin VB.Label lblTempForumlaDivideBy 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Divide By:"
+         Height          =   255
+         Left            =   960
+         TabIndex        =   116
+         Top             =   3480
+         Width           =   855
+      End
+      Begin VB.Label lblTempForumlaMultipleBy 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Multiple By:"
+         Height          =   255
+         Left            =   960
+         TabIndex        =   114
+         Top             =   3120
+         Width           =   855
+      End
+      Begin VB.Label lblTempForumlaSubtractBy 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Subtract By:"
+         Height          =   255
+         Left            =   840
+         TabIndex        =   112
+         Top             =   2760
+         Width           =   975
+      End
+      Begin VB.Label lblDegressLabel 
+         Caption         =   "Name Degress Label:"
+         Height          =   255
+         Left            =   240
+         TabIndex        =   110
+         Top             =   2040
+         Width           =   1575
+      End
+      Begin VB.Label lblNameOfThreadLine 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Name Of ThreadLine:"
+         Height          =   195
+         Left            =   240
+         TabIndex        =   108
+         Top             =   1680
+         Width           =   1530
+      End
+      Begin VB.Label lblAppendDate 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Date Format to File:"
+         Height          =   195
+         Left            =   240
+         TabIndex        =   106
+         Top             =   1320
+         Width           =   1380
+      End
+      Begin VB.Label lblExcelPathIniSettings 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Excel Path (exe):"
+         Height          =   195
+         Left            =   240
+         TabIndex        =   103
+         Top             =   960
+         Width           =   1200
+      End
+   End
+   Begin VB.Frame fraDefDet 
+      Caption         =   "Defect Detection"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   -1  'True
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   2415
+      Left            =   3720
+      TabIndex        =   87
+      Top             =   1440
+      Width           =   3375
+      Begin VB.TextBox txtCurValueDD 
+         Alignment       =   2  'Center
+         Height          =   285
+         Index           =   0
+         Left            =   2280
+         MultiLine       =   -1  'True
+         TabIndex        =   93
+         Text            =   "FiberTrack.frx":08CA
+         Top             =   600
+         Width           =   735
+      End
+      Begin VB.CommandButton cmdParDD 
+         Caption         =   "Level 1 Defect %"
+         Height          =   255
+         Index           =   0
+         Left            =   240
+         TabIndex        =   92
+         Top             =   600
+         Width           =   1455
+      End
+      Begin VB.CommandButton cmdCanDD 
+         Caption         =   "Cancel"
+         Height          =   375
+         Left            =   1920
+         TabIndex        =   91
+         Top             =   1920
+         Width           =   855
+      End
+      Begin VB.CommandButton cmdOkDD 
+         Caption         =   "OK"
+         Height          =   375
+         Left            =   480
+         TabIndex        =   90
+         Top             =   1920
+         Width           =   855
+      End
+      Begin VB.Label lblCurValDD 
+         Alignment       =   2  'Center
+         Caption         =   "Current Value"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   2160
+         TabIndex        =   89
+         Top             =   240
+         Width           =   975
+      End
+      Begin VB.Label lblParDD 
+         Alignment       =   2  'Center
+         Caption         =   "Parameter"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   600
+         TabIndex        =   88
+         Top             =   240
+         Width           =   855
+      End
+   End
+   Begin VB.Frame fraAppPar 
+      Caption         =   "Application Parameters"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   -1  'True
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   2175
+      Left            =   3720
+      TabIndex        =   79
+      Top             =   960
+      Width           =   3855
+      Begin VB.TextBox txtCurValueAp 
+         Alignment       =   2  'Center
+         Height          =   285
+         Index           =   0
+         Left            =   2520
+         MultiLine       =   -1  'True
+         TabIndex        =   85
+         Text            =   "FiberTrack.frx":08D3
+         Top             =   720
+         Width           =   495
+      End
+      Begin VB.CommandButton cmdCanAP 
+         Caption         =   "Cancel"
+         Height          =   375
+         Left            =   2280
+         TabIndex        =   84
+         Top             =   1680
+         Width           =   855
+      End
+      Begin VB.CommandButton cmdOkAP 
+         Caption         =   "OK"
+         Height          =   375
+         Left            =   720
+         TabIndex        =   83
+         Top             =   1680
+         Width           =   855
+      End
+      Begin VB.CommandButton cmdLineSpeed 
+         Caption         =   "Line &Speed"
+         Height          =   255
+         Index           =   0
+         Left            =   240
+         TabIndex        =   82
+         Top             =   720
+         Width           =   975
+      End
+      Begin VB.Label lblLineSpeed 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000004&
+         Caption         =   "m/min"
+         ForeColor       =   &H80000008&
+         Height          =   255
+         Index           =   0
+         Left            =   3120
+         TabIndex        =   86
+         Top             =   720
+         Width           =   495
+      End
+      Begin VB.Label lblCurValueAP 
+         Alignment       =   2  'Center
+         Caption         =   "Current Value"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   2520
+         TabIndex        =   81
+         Top             =   360
+         Width           =   1095
+      End
+      Begin VB.Label lblParAP 
+         Alignment       =   2  'Center
+         Caption         =   "Parameter"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   -1  'True
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   600
+         TabIndex        =   80
+         Top             =   360
          Width           =   975
       End
    End
@@ -325,111 +644,16 @@ Begin VB.Form FiberTrack
       EndProperty
       Height          =   4815
       Left            =   5160
-      TabIndex        =   98
+      TabIndex        =   97
       Top             =   3360
       Width           =   5835
       Begin VB.Label lblCopy 
          Height          =   855
          Index           =   0
          Left            =   120
-         TabIndex        =   99
+         TabIndex        =   98
          Top             =   480
          Width           =   5355
-      End
-   End
-   Begin VB.Frame fraApplicationIni 
-      Caption         =   "Application Ini Settings"
-      Height          =   3015
-      Left            =   3720
-      TabIndex        =   100
-      Top             =   1560
-      Width           =   7095
-      Begin VB.TextBox txtNameOfThreadLine 
-         Height          =   375
-         Left            =   1920
-         TabIndex        =   110
-         Text            =   "NameOfThreadLine"
-         Top             =   1800
-         Width           =   2655
-      End
-      Begin VB.TextBox txtAppendDateFormatToFile 
-         Height          =   375
-         Left            =   1920
-         TabIndex        =   108
-         Text            =   "AppendDateFormatToFile"
-         Top             =   1320
-         Width           =   2655
-      End
-      Begin VB.CommandButton cmdSaveIniSettings 
-         Caption         =   "Save"
-         Height          =   375
-         Left            =   600
-         TabIndex        =   106
-         Top             =   2400
-         Width           =   735
-      End
-      Begin VB.TextBox txtExcelPathIniSettings 
-         Height          =   375
-         Left            =   1920
-         MaxLength       =   250
-         TabIndex        =   103
-         Text            =   "Excel Path"
-         Top             =   840
-         Width           =   5055
-      End
-      Begin VB.CheckBox chkIncludeCvIniSettings 
-         Caption         =   "Include Cv Column"
-         Height          =   255
-         Left            =   360
-         TabIndex        =   102
-         Top             =   600
-         Width           =   2175
-      End
-      Begin VB.CheckBox chkOpenApplicationMaxIniSettings 
-         Caption         =   "Open Application Max"
-         Height          =   255
-         Left            =   360
-         TabIndex        =   101
-         Top             =   360
-         Width           =   2055
-      End
-      Begin VB.CommandButton cmdCancelIniSettings 
-         Caption         =   "Cancel"
-         Height          =   375
-         Left            =   1440
-         TabIndex        =   105
-         Top             =   2400
-         Width           =   735
-      End
-      Begin VB.Label lblNameOfThreadLine 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "Name Of ThreadLine:"
-         Height          =   195
-         Left            =   360
-         TabIndex        =   109
-         Top             =   1920
-         Width           =   1530
-      End
-      Begin VB.Label lblAppendDate 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "Date Format to File:"
-         Height          =   195
-         Left            =   360
-         TabIndex        =   107
-         Top             =   1440
-         Width           =   1380
-      End
-      Begin VB.Label lblExcelPathIniSettings 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "Excel Path (exe):"
-         Height          =   195
-         Left            =   360
-         TabIndex        =   104
-         Top             =   960
-         Width           =   1200
       End
    End
    Begin VB.Frame fraComPort 
@@ -445,7 +669,7 @@ Begin VB.Form FiberTrack
       EndProperty
       Height          =   1455
       Left            =   3720
-      TabIndex        =   57
+      TabIndex        =   56
       Top             =   240
       Width           =   2055
       Begin VB.OptionButton optCom2 
@@ -453,7 +677,7 @@ Begin VB.Form FiberTrack
          Caption         =   "Com &2"
          Height          =   255
          Left            =   240
-         TabIndex        =   61
+         TabIndex        =   60
          Top             =   600
          Width           =   855
       End
@@ -462,7 +686,7 @@ Begin VB.Form FiberTrack
          Caption         =   "Com &1"
          Height          =   255
          Left            =   240
-         TabIndex        =   60
+         TabIndex        =   59
          Top             =   360
          Width           =   855
       End
@@ -472,7 +696,7 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   1080
          Style           =   1  'Graphical
-         TabIndex        =   59
+         TabIndex        =   58
          Top             =   960
          Width           =   855
       End
@@ -482,7 +706,7 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   120
          Style           =   1  'Graphical
-         TabIndex        =   58
+         TabIndex        =   57
          Top             =   960
          Width           =   855
       End
@@ -501,7 +725,7 @@ Begin VB.Form FiberTrack
       EndProperty
       Height          =   1695
       Left            =   6840
-      TabIndex        =   70
+      TabIndex        =   69
       Top             =   1440
       Width           =   3975
       Begin VB.CommandButton cmdCanDR 
@@ -510,7 +734,7 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   3000
          Style           =   1  'Graphical
-         TabIndex        =   73
+         TabIndex        =   72
          Top             =   960
          Width           =   735
       End
@@ -520,7 +744,7 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   3000
          Style           =   1  'Graphical
-         TabIndex        =   72
+         TabIndex        =   71
          Top             =   360
          Width           =   735
       End
@@ -530,7 +754,7 @@ Begin VB.Form FiberTrack
          Height          =   255
          Index           =   0
          Left            =   240
-         TabIndex        =   71
+         TabIndex        =   70
          Top             =   360
          Width           =   2775
       End
@@ -548,7 +772,7 @@ Begin VB.Form FiberTrack
       EndProperty
       Height          =   2895
       Left            =   960
-      TabIndex        =   50
+      TabIndex        =   49
       Top             =   0
       Width           =   2775
       Begin VB.CommandButton cmdDone 
@@ -558,7 +782,7 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   960
          Style           =   1  'Graphical
-         TabIndex        =   69
+         TabIndex        =   68
          Top             =   2400
          Width           =   855
       End
@@ -569,7 +793,7 @@ Begin VB.Form FiberTrack
          Index           =   0
          Left            =   120
          Style           =   1  'Graphical
-         TabIndex        =   51
+         TabIndex        =   50
          Top             =   240
          Width           =   2535
       End
@@ -587,7 +811,7 @@ Begin VB.Form FiberTrack
       EndProperty
       Height          =   1335
       Left            =   2400
-      TabIndex        =   95
+      TabIndex        =   94
       Top             =   120
       Width           =   2415
       Begin VB.CommandButton cmdExitHlp 
@@ -595,7 +819,7 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   840
          Style           =   1  'Graphical
-         TabIndex        =   97
+         TabIndex        =   96
          Top             =   840
          Width           =   855
       End
@@ -603,7 +827,7 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   120
          Style           =   1  'Graphical
-         TabIndex        =   96
+         TabIndex        =   95
          Top             =   360
          Width           =   2175
       End
@@ -622,14 +846,14 @@ Begin VB.Form FiberTrack
       EndProperty
       Height          =   3135
       Left            =   3720
-      TabIndex        =   75
+      TabIndex        =   74
       Top             =   720
       Width           =   2175
       Begin VB.Frame Frame2 
          Caption         =   "Frame2"
          Height          =   15
          Left            =   0
-         TabIndex        =   79
+         TabIndex        =   78
          Top             =   0
          Width           =   135
       End
@@ -639,7 +863,7 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   1200
          Style           =   1  'Graphical
-         TabIndex        =   78
+         TabIndex        =   77
          Top             =   2640
          Width           =   855
       End
@@ -649,7 +873,7 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   120
          Style           =   1  'Graphical
-         TabIndex        =   77
+         TabIndex        =   76
          Top             =   2640
          Width           =   855
       End
@@ -659,7 +883,7 @@ Begin VB.Form FiberTrack
          Height          =   255
          Index           =   0
          Left            =   600
-         TabIndex        =   76
+         TabIndex        =   75
          Top             =   360
          Width           =   1215
       End
@@ -675,7 +899,7 @@ Begin VB.Form FiberTrack
       Caption         =   "&Bar Chart"
       Height          =   615
       Left            =   4440
-      TabIndex        =   48
+      TabIndex        =   47
       Top             =   5640
       Width           =   1215
    End
@@ -683,14 +907,14 @@ Begin VB.Form FiberTrack
       Caption         =   "Print"
       Height          =   1215
       Left            =   4440
-      TabIndex        =   45
+      TabIndex        =   44
       Top             =   5160
       Width           =   1215
       Begin VB.CommandButton cmdCurrent 
          Caption         =   "&Current Report"
          Height          =   495
          Left            =   360
-         TabIndex        =   47
+         TabIndex        =   46
          Top             =   600
          Width           =   735
       End
@@ -698,7 +922,7 @@ Begin VB.Form FiberTrack
          Caption         =   "&Screen"
          Height          =   255
          Left            =   360
-         TabIndex        =   46
+         TabIndex        =   45
          Top             =   240
          Width           =   735
       End
@@ -716,8 +940,8 @@ Begin VB.Form FiberTrack
       Index           =   8
       Left            =   8880
       MultiLine       =   -1  'True
-      TabIndex        =   39
-      Text            =   "FiberTrack.frx":08E9
+      TabIndex        =   38
+      Text            =   "FiberTrack.frx":08D8
       Top             =   480
       Width           =   255
    End
@@ -726,7 +950,7 @@ Begin VB.Form FiberTrack
       Height          =   285
       Index           =   7
       Left            =   7800
-      TabIndex        =   38
+      TabIndex        =   37
       Text            =   " 7"
       Top             =   480
       Width           =   255
@@ -737,8 +961,8 @@ Begin VB.Form FiberTrack
       Index           =   6
       Left            =   6720
       MultiLine       =   -1  'True
-      TabIndex        =   37
-      Text            =   "FiberTrack.frx":08ED
+      TabIndex        =   36
+      Text            =   "FiberTrack.frx":08DC
       Top             =   480
       Width           =   255
    End
@@ -748,8 +972,8 @@ Begin VB.Form FiberTrack
       Index           =   5
       Left            =   5640
       MultiLine       =   -1  'True
-      TabIndex        =   36
-      Text            =   "FiberTrack.frx":08EF
+      TabIndex        =   35
+      Text            =   "FiberTrack.frx":08DE
       Top             =   480
       Width           =   255
    End
@@ -759,8 +983,8 @@ Begin VB.Form FiberTrack
       Index           =   4
       Left            =   4560
       MultiLine       =   -1  'True
-      TabIndex        =   35
-      Text            =   "FiberTrack.frx":08F1
+      TabIndex        =   34
+      Text            =   "FiberTrack.frx":08E0
       Top             =   480
       Width           =   255
    End
@@ -770,8 +994,8 @@ Begin VB.Form FiberTrack
       Index           =   3
       Left            =   3480
       MultiLine       =   -1  'True
-      TabIndex        =   34
-      Text            =   "FiberTrack.frx":08F5
+      TabIndex        =   33
+      Text            =   "FiberTrack.frx":08E4
       Top             =   480
       Width           =   255
    End
@@ -781,8 +1005,8 @@ Begin VB.Form FiberTrack
       Index           =   2
       Left            =   2400
       MultiLine       =   -1  'True
-      TabIndex        =   33
-      Text            =   "FiberTrack.frx":08F9
+      TabIndex        =   32
+      Text            =   "FiberTrack.frx":08E8
       Top             =   480
       Width           =   255
    End
@@ -792,20 +1016,10 @@ Begin VB.Form FiberTrack
       Index           =   1
       Left            =   1320
       MultiLine       =   -1  'True
-      TabIndex        =   30
-      Text            =   "FiberTrack.frx":08FD
+      TabIndex        =   29
+      Text            =   "FiberTrack.frx":08EC
       Top             =   480
       Width           =   255
-   End
-   Begin VB.TextBox Text17 
-      Alignment       =   2  'Center
-      BackColor       =   &H80000004&
-      Height          =   495
-      Left            =   3000
-      MultiLine       =   -1  'True
-      TabIndex        =   28
-      Top             =   6480
-      Width           =   4095
    End
    Begin VB.CommandButton cmdExit 
       Caption         =   "E&xit"
@@ -899,7 +1113,7 @@ Begin VB.Form FiberTrack
       Locked          =   -1  'True
       MultiLine       =   -1  'True
       TabIndex        =   18
-      Text            =   "FiberTrack.frx":0901
+      Text            =   "FiberTrack.frx":08F0
       Top             =   720
       Width           =   1095
    End
@@ -912,7 +1126,7 @@ Begin VB.Form FiberTrack
       Locked          =   -1  'True
       MultiLine       =   -1  'True
       TabIndex        =   17
-      Text            =   "FiberTrack.frx":090B
+      Text            =   "FiberTrack.frx":08FA
       Top             =   720
       Width           =   1095
    End
@@ -925,7 +1139,7 @@ Begin VB.Form FiberTrack
       Locked          =   -1  'True
       MultiLine       =   -1  'True
       TabIndex        =   16
-      Text            =   "FiberTrack.frx":0915
+      Text            =   "FiberTrack.frx":0904
       Top             =   720
       Width           =   1095
    End
@@ -938,7 +1152,7 @@ Begin VB.Form FiberTrack
       Locked          =   -1  'True
       MultiLine       =   -1  'True
       TabIndex        =   15
-      Text            =   "FiberTrack.frx":091F
+      Text            =   "FiberTrack.frx":090E
       Top             =   720
       Width           =   1095
    End
@@ -951,7 +1165,7 @@ Begin VB.Form FiberTrack
       Locked          =   -1  'True
       MultiLine       =   -1  'True
       TabIndex        =   14
-      Text            =   "FiberTrack.frx":0929
+      Text            =   "FiberTrack.frx":0918
       Top             =   720
       Width           =   1095
    End
@@ -964,7 +1178,7 @@ Begin VB.Form FiberTrack
       Locked          =   -1  'True
       MultiLine       =   -1  'True
       TabIndex        =   13
-      Text            =   "FiberTrack.frx":0933
+      Text            =   "FiberTrack.frx":0922
       Top             =   720
       Width           =   1095
    End
@@ -977,7 +1191,7 @@ Begin VB.Form FiberTrack
       Locked          =   -1  'True
       MultiLine       =   -1  'True
       TabIndex        =   12
-      Text            =   "FiberTrack.frx":093D
+      Text            =   "FiberTrack.frx":092C
       Top             =   720
       Width           =   1095
    End
@@ -1401,7 +1615,7 @@ Begin VB.Form FiberTrack
       Left            =   5280
       ScaleHeight     =   2955
       ScaleWidth      =   2595
-      TabIndex        =   52
+      TabIndex        =   51
       Top             =   120
       Width           =   2655
       Begin VB.CommandButton cmdCancel1 
@@ -1410,7 +1624,7 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   1440
          Style           =   1  'Graphical
-         TabIndex        =   56
+         TabIndex        =   55
          Top             =   2520
          Width           =   855
       End
@@ -1420,7 +1634,7 @@ Begin VB.Form FiberTrack
          Height          =   375
          Left            =   240
          Style           =   1  'Graphical
-         TabIndex        =   55
+         TabIndex        =   54
          Top             =   2520
          Width           =   855
       End
@@ -1431,7 +1645,7 @@ Begin VB.Form FiberTrack
          Index           =   0
          Left            =   120
          Style           =   1  'Graphical
-         TabIndex        =   54
+         TabIndex        =   53
          Top             =   480
          Width           =   2415
       End
@@ -1441,7 +1655,7 @@ Begin VB.Form FiberTrack
          Caption         =   "Setup"
          Height          =   255
          Left            =   720
-         TabIndex        =   53
+         TabIndex        =   52
          Top             =   120
          Width           =   1215
       End
@@ -1455,7 +1669,7 @@ Begin VB.Form FiberTrack
       Locked          =   -1  'True
       MultiLine       =   -1  'True
       TabIndex        =   11
-      Text            =   "FiberTrack.frx":0947
+      Text            =   "FiberTrack.frx":0936
       Top             =   720
       Width           =   1095
    End
@@ -1464,7 +1678,7 @@ Begin VB.Form FiberTrack
       Caption         =   "Setup  File Name"
       Height          =   255
       Left            =   3840
-      TabIndex        =   49
+      TabIndex        =   48
       Top             =   5280
       Width           =   5295
    End
@@ -1476,7 +1690,7 @@ Begin VB.Form FiberTrack
       Height          =   255
       Index           =   8
       Left            =   8040
-      TabIndex        =   44
+      TabIndex        =   43
       Top             =   480
       Width           =   855
    End
@@ -1486,7 +1700,7 @@ Begin VB.Form FiberTrack
       Height          =   255
       Index           =   7
       Left            =   6960
-      TabIndex        =   43
+      TabIndex        =   42
       Top             =   480
       Width           =   855
    End
@@ -1496,7 +1710,7 @@ Begin VB.Form FiberTrack
       Height          =   255
       Index           =   6
       Left            =   5880
-      TabIndex        =   42
+      TabIndex        =   41
       Top             =   480
       Width           =   855
    End
@@ -1506,7 +1720,7 @@ Begin VB.Form FiberTrack
       Height          =   255
       Index           =   5
       Left            =   4800
-      TabIndex        =   41
+      TabIndex        =   40
       Top             =   480
       Width           =   855
    End
@@ -1516,7 +1730,7 @@ Begin VB.Form FiberTrack
       Height          =   255
       Index           =   4
       Left            =   3720
-      TabIndex        =   40
+      TabIndex        =   39
       Top             =   480
       Width           =   855
    End
@@ -1526,7 +1740,7 @@ Begin VB.Form FiberTrack
       Height          =   255
       Index           =   3
       Left            =   2640
-      TabIndex        =   32
+      TabIndex        =   31
       Top             =   480
       Width           =   855
    End
@@ -1536,7 +1750,7 @@ Begin VB.Form FiberTrack
       Height          =   255
       Index           =   2
       Left            =   1560
-      TabIndex        =   31
+      TabIndex        =   30
       Top             =   480
       Width           =   855
    End
@@ -1546,7 +1760,7 @@ Begin VB.Form FiberTrack
       Height          =   255
       Index           =   1
       Left            =   480
-      TabIndex        =   29
+      TabIndex        =   28
       Top             =   480
       Width           =   855
    End
@@ -1604,6 +1818,10 @@ Begin VB.Form FiberTrack
       End
       Begin VB.Menu mnuFileSep3 
          Caption         =   "-"
+      End
+      Begin VB.Menu Restart 
+         Caption         =   "&Restart"
+         Shortcut        =   ^R
       End
       Begin VB.Menu mnuExit 
          Caption         =   "E&xit"
@@ -1784,8 +2002,47 @@ Private Sub cmdCancelIniSettings_Click()
     cmdDone.Enabled = True
 End Sub
 
+Private Sub ApplicationIniSettingsOnLoad()
+    fraApplicationTempRanges.Visible = True
+    fraApplicationTempRanges.Enabled = True
+    If GetIniSetting("Application", "OpenMainFormMax") = "True" Then
+        chkOpenApplicationMaxIniSettings.value = 1
+    Else
+        chkOpenApplicationMaxIniSettings.value = 0
+    End If
+    If GetIniSetting("Application", "IncludeCvColumn") = "True" Then
+        chkIncludeCvIniSettings.value = 1
+    Else
+        chkIncludeCvIniSettings.value = 0
+    End If
+    txtExcelPathIniSettings.Text = GetIniSetting("Application", "ExcelPath")
+    txtAppendDateFormatToFile.Text = GetIniSetting("Application", "FileDateFormatAppend")
+    txtNameOfThreadLine.Text = GetIniSetting("Application", "NameOfThreadLine")
+    txtDegressLabelName.Text = GetIniSetting("Application", "DegressLabel")
+        
+    txtTempRangeMin1.Text = GetIniSetting("Application", "TempRangeMin1")
+    txtTempRangeMax1.Text = GetIniSetting("Application", "TempRangeMax1")
+    txtTempRangeMin2.Text = GetIniSetting("Application", "TempRangeMin2")
+    txtTempRangeMax2.Text = GetIniSetting("Application", "TempRangeMax2")
+    txtTempRangeMin3.Text = GetIniSetting("Application", "TempRangeMin3")
+    txtTempRangeMax3.Text = GetIniSetting("Application", "TempRangeMax3")
+    
+    If GetIniSetting("Application", "IncludeOriginalAvgColumn") = "True" Then
+        chkIncludeRawOutputOnDat.value = 1
+    Else
+        chkIncludeRawOutputOnDat.value = 0
+    End If
+    txtTempForumlaSubtractBy.Text = GetIniSetting("Application", "TempForumlaSubtractBy")
+    txtTempForumlaMultipleBy.Text = GetIniSetting("Application", "TempForumlaMultipleBy")
+    txtTempForumlaDivideBy.Text = GetIniSetting("Application", "TempForumlaDivideBy")
+    
+    fraApplicationIni.Visible = True
+    cmdDone.Enabled = False
+End Sub
+
 Private Sub cmdSaveIniSettings_Click()
     MsgBox "For some of these application ini settings to take into affect, please exit and re-open the application.", vbOKOnly, "Warning"
+    
     Dim setValue As String
     If chkOpenApplicationMaxIniSettings = vbChecked Then
         setValue = "True"
@@ -1793,8 +2050,8 @@ Private Sub cmdSaveIniSettings_Click()
         setValue = "False"
     End If
     If PutIniSetting("Application", "OpenMainFormMax", setValue) Then
-    
     End If
+    
     If chkIncludeCvIniSettings = vbChecked Then
         setValue = "True"
     Else
@@ -1811,6 +2068,39 @@ Private Sub cmdSaveIniSettings_Click()
     End If
     
     If PutIniSetting("Application", "NameOfThreadLine", txtNameOfThreadLine.Text) Then
+    End If
+    
+    If PutIniSetting("Application", "DegressLabel", txtDegressLabelName.Text) Then
+    End If
+    
+    If chkIncludeRawOutputOnDat = vbChecked Then
+        setValue = "True"
+    Else
+        setValue = "False"
+    End If
+    If PutIniSetting("Application", "IncludeOriginalAvgColumn", setValue) Then
+    End If
+    
+    If PutIniSetting("Application", "TempRangeMin1", txtTempRangeMin1.Text) Then
+    End If
+    If PutIniSetting("Application", "TempRangeMax1", txtTempRangeMax1.Text) Then
+    End If
+    If PutIniSetting("Application", "TempRangeMin2", txtTempRangeMin2.Text) Then
+    End If
+    If PutIniSetting("Application", "TempRangeMax2", txtTempRangeMax2.Text) Then
+    End If
+    If PutIniSetting("Application", "TempRangeMin3", txtTempRangeMin3.Text) Then
+    End If
+    If PutIniSetting("Application", "TempRangeMax3", txtTempRangeMax3.Text) Then
+    End If
+    
+    If PutIniSetting("Application", "TempForumlaSubtractBy", txtTempForumlaSubtractBy.Text) Then
+    End If
+    
+    If PutIniSetting("Application", "TempForumlaMultipleBy", txtTempForumlaMultipleBy.Text) Then
+    End If
+    
+    If PutIniSetting("Application", "TempForumlaDivideBy", txtTempForumlaDivideBy.Text) Then
     End If
     
     fraApplicationIni.Visible = False
@@ -1852,7 +2142,13 @@ Private Sub cmdCanDP_Click()
     
     txtDenPar(1).Text = Target_Denier
     txtDenPar(2).Text = Calibration_Denier
-    txtDenPar(3).Text = Target_denier_tol
+    
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        txtDenPar(3).Text = TargetToleranceHigh
+        txtDenPar(4).Text = TargetToleranceLow
+    Else
+        txtDenPar(3).Text = TargetTolerancePercentage
+    End If
 End Sub
 
 'Cancel Denier Range setup screen
@@ -1870,7 +2166,13 @@ Private Sub cmdCanDR_Click()
     optDenRange(iOptDenRangeIndex).value = True
     cmdDenPar(1).Enabled = True
     cmdDenPar(2).Enabled = True
-    cmdDenPar(3).Enabled = True
+    
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        cmdDenPar(3).Enabled = True
+        cmdDenPar(4).Enabled = True
+    Else
+        cmdDenPar(3).Enabled = True
+    End If
 End Sub
 
 'Cancel Plot Channels setup screen
@@ -1916,7 +2218,12 @@ On Error GoTo cmdComPort_err_hdr
             txtDenPar(0).Enabled = False
             txtDenPar(1).Enabled = False
             txtDenPar(2).Enabled = False
-            txtDenPar(3).Enabled = False
+            If GetIniSetting("Application", "Type") = "Temperature" Then
+                txtDenPar(3).Enabled = False
+                txtDenPar(4).Enabled = False
+            Else
+                txtDenPar(3).Enabled = False
+            End If
         Case 2          'Plot Channels
             fraPlotChan.Visible = True
             cmdDone.Enabled = False
@@ -1926,22 +2233,8 @@ On Error GoTo cmdComPort_err_hdr
         Case 4          'Defect Detection
             fraDefDet.Visible = True
             cmdDone.Enabled = False
-        Case 5 'Applciation Ini Settings
-            If GetIniSetting("Application", "OpenMainFormMax") = "True" Then
-                chkOpenApplicationMaxIniSettings.value = 1
-            Else
-                chkOpenApplicationMaxIniSettings.value = 0
-            End If
-            If GetIniSetting("Application", "IncludeCvColumn") = "True" Then
-                chkIncludeCvIniSettings.value = 1
-            Else
-                chkIncludeCvIniSettings.value = 0
-            End If
-            txtExcelPathIniSettings.Text = GetIniSetting("Application", "ExcelPath")
-            txtAppendDateFormatToFile.Text = GetIniSetting("Application", "FileDateFormatAppend")
-            txtNameOfThreadLine.Text = GetIniSetting("Application", "NameOfThreadLine")
-            fraApplicationIni.Visible = True
-            cmdDone.Enabled = False
+        Case 5          'Application Ini Settings
+            ApplicationIniSettingsOnLoad
         Case 6          'Save Settings
             mnuSave_Click
             fraSetup.Enabled = True
@@ -1978,14 +2271,16 @@ On Error GoTo Current_Err_Hdr
     comDialog3.DialogTitle = "Save Current Report"
     comDialog3.Filter = "Text File (*.txt)| *.txt"
     comDialog3.FilterIndex = 1
-    comDialog3.Flags = cdlOFNExplorer Or _
-                       cdlOFNExtensionDifferent Or _
-                       cdlOFNNoChangeDir Or _
-                       cdlOFNHideReadOnly
+    comDialog3.Flags = cdlOFNExplorer Or cdlOFNExtensionDifferent Or cdlOFNNoChangeDir Or cdlOFNHideReadOnly
     comDialog3.ShowOpen
     Open comDialog2.FileName For Output As #localFileNamesNumber
   
-    Write #FileNamesNumber, "           STC Denier Monitoring Current Report  - "; Now
+    
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        Write #FileNamesNumber, "          STC Temperature Monitoring Current Report  - "; Now
+    Else
+        Write #FileNamesNumber, "           STC Denier Monitoring Current Report  - "; Now
+    End If
     Write #FileNamesNumber, "           ---------------------------------------------------------"
     Write #FileNamesNumber,
     Write #FileNamesNumber, "Integration Time ="; Integration_time; "Sec.   "; "Target Denier ="; Target_Denier;
@@ -2019,7 +2314,7 @@ End Sub
 
 Private Sub cmdDenPar_Click(index As Integer)
     Select Case index
-        Case 0
+        Case 0 ' Range
             fraDenRange.Visible = True
             cmdOkDP.Visible = False
             cmdOkDP.Enabled = False
@@ -2036,7 +2331,11 @@ Private Sub cmdDenPar_Click(index As Integer)
             txtDenPar(1).Enabled = False
             txtDenPar(2).Enabled = False
             txtDenPar(3).Enabled = False
-        Case 1
+            If GetIniSetting("Application", "Type") = "Temperature" Then
+                cmdDenPar(4).Enabled = False
+                txtDenPar(4).Enabled = False
+            End If
+        Case 1 ' Target
             txtDenPar(index).Enabled = True
             txtDenPar(index).SetFocus
             cmdOkDP.Visible = True
@@ -2051,7 +2350,10 @@ Private Sub cmdDenPar_Click(index As Integer)
             txtDenPar(0).Enabled = False
             txtDenPar(2).Enabled = False
             txtDenPar(3).Enabled = False
-        Case 2
+            If GetIniSetting("Application", "Type") = "Temperature" Then
+                txtDenPar(4).Enabled = False
+            End If
+        Case 2 ' Target Gain
             txtDenPar(index).Enabled = True
             txtDenPar(index).SetFocus
             cmdOkDP.Visible = True
@@ -2066,9 +2368,13 @@ Private Sub cmdDenPar_Click(index As Integer)
             txtDenPar(0).Enabled = False
             txtDenPar(1).Enabled = False
             txtDenPar(3).Enabled = False
-        Case 3
+            If GetIniSetting("Application", "Type") = "Temperature" Then
+                txtDenPar(4).Enabled = False
+            End If
+        Case 3 ' Tolerance Percentage Or High
             txtDenPar(index).Enabled = True
             txtDenPar(index).SetFocus
+            
             cmdOkDP.Visible = True
             cmdOkDP.Enabled = True
             
@@ -2081,6 +2387,27 @@ Private Sub cmdDenPar_Click(index As Integer)
             txtDenPar(0).Enabled = False
             txtDenPar(1).Enabled = False
             txtDenPar(2).Enabled = False
+            
+            If GetIniSetting("Application", "Type") = "Temperature" Then
+                txtDenPar(4).Enabled = False
+            End If
+        Case 4 ' Tolerance Low
+            txtDenPar(index).Enabled = True
+            txtDenPar(index).SetFocus
+            
+            cmdOkDP.Visible = True
+            cmdOkDP.Enabled = True
+            
+            cmdCanDP.Visible = True
+            cmdCanDP.Enabled = True
+            
+            cmdDoneDP.Enabled = False
+            cmdDoneDP.Visible = False
+            
+            txtDenPar(0).Enabled = False
+            txtDenPar(1).Enabled = False
+            txtDenPar(2).Enabled = False
+            txtDenPar(3).Enabled = False
         Case Else
           SetStatusText "Other button pressed"
     End Select
@@ -2212,14 +2539,18 @@ Private Sub cmdOkDP_Click()
         txtDenPar(2).Text = Calibration_Denier
         iDPErr = iDPErr + 1
     End If
-    
-    If Val(txtDenPar(3).Text) <= 20 And Val(txtDenPar(3).Text) >= 0 Then
-        Target_denier_tol = Val(txtDenPar(3).Text)
+        
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        TargetToleranceHigh = Val(txtDenPar(3).Text)
+        TargetToleranceLow = Val(txtDenPar(4).Text)
     Else
-        txtDenPar(3).Text = Target_denier_tol & " %"
-        iDPErr = iDPErr + 1
+        If Val(txtDenPar(3).Text) <= 20 And Val(txtDenPar(3).Text) >= 0 Then
+            TargetTolerancePercentage = Val(txtDenPar(3).Text)
+        Else
+            txtDenPar(3).Text = TargetTolerancePercentage & " %"
+            iDPErr = iDPErr + 1
+        End If
     End If
-    
     If iDPErr = 0 Then
         CWGraph1.Axes.Item(YAXIS).SetMinMax iMin_Denier, Max_Denier  'Initialize plot setup
         mnuNormal.Checked = Not mnuNormal.Checked
@@ -2228,9 +2559,13 @@ Private Sub cmdOkDP_Click()
         PlotViewIndex = 0
         
         CWGraph1.Cursors.Item(1).YPosition = Target_Denier
-        CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (Target_denier_tol / 100 * Target_Denier)
-        CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (Target_denier_tol / 100 * Target_Denier)
-
+        If GetIniSetting("Application", "Type") = "Temperature" Then
+            CWGraph1.Cursors.Item(2).YPosition = TargetToleranceHigh
+            CWGraph1.Cursors.Item(3).YPosition = TargetToleranceLow
+        Else
+            CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (TargetTolerancePercentage / 100 * Target_Denier)
+            CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (TargetTolerancePercentage / 100 * Target_Denier)
+        End If
         fraDenierPar.Visible = False
         fraSetup.Enabled = True
         cmdDone.Enabled = True
@@ -2250,12 +2585,20 @@ Private Sub cmdOkDR_Click()
     
     CWGraph1.Axes.Item(YAXIS).SetMinMax iMin_Denier, Max_Denier  'Initialize plot setup
     CWGraph1.Cursors.Item(1).YPosition = Target_Denier
-    CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (Target_denier_tol / 100 * Target_Denier)
-    CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (Target_denier_tol / 100 * Target_Denier)
-    
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        CWGraph1.Cursors.Item(2).YPosition = TargetToleranceHigh
+        CWGraph1.Cursors.Item(3).YPosition = TargetToleranceLow
+    Else
+        CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (TargetTolerancePercentage / 100 * Target_Denier)
+        CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (TargetTolerancePercentage / 100 * Target_Denier)
+    End If
+   
     cmdDenPar(1).Enabled = True
     cmdDenPar(2).Enabled = True
     cmdDenPar(3).Enabled = True
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        cmdDenPar(4).Enabled = True
+    End If
 End Sub
 
 'Click OK in Plot Channels setup
@@ -2348,8 +2691,13 @@ Private Sub Form_Load()                 'Main initialization routine.
     Dim iLast As Integer
     Dim iIndex As Integer
     Dim setupCaption(0 To 7) As String
-    Dim sDenParCaption(0 To 3) As String
-    Dim sDenParValue(0 To 3) As String
+    #If SCALE_DENIERTEMP Then
+        Dim sDenParCaption(0 To 4) As String
+        Dim sDenParValue(0 To 4) As String
+    #Else
+        Dim sDenParCaption(0 To 3) As String
+        Dim sDenParValue(0 To 3) As String
+    #End If
     Dim sDenRge(0 To 3) As String
     Dim sAppPar(0 To 2) As String
     Dim sCurValueAP(0 To 2) As String
@@ -2519,18 +2867,22 @@ On Error GoTo fibertrack_err_rtn
     Max_Denier = 0.5
     Target_Denier = 0.25
     Calibration_Denier = 0.25
-    Target_denier_tol = 20
+    TargetTolerancePercentage = 20
 #ElseIf SCALE_DENIERTEMP Then
-    sDenParCaption(0) = "Temperature &Range"
-    sDenParCaption(1) = "Temperature Target"
+    lblPara.Caption = "Temperature Paramter"
+    sDenParCaption(0) = "&Range"
+    sDenParCaption(1) = "Target"
     sDenParCaption(2) = "Target &Gain"
-    sDenParCaption(3) = "Diameter T&olerance"
+    sDenParCaption(3) = "Tolerance High"
+    sDenParCaption(4) = "Tolerance Low"
 
-    iMin_Denier = CLng(GetIniSetting("Application", "TempRangeMin1"))
+    iMin_Denier = CLng(GetIniSetting("Application", "TempRangeMin4"))
     Max_Denier = CLng(GetIniSetting("Application", "TempRangeMax4"))
-    Target_Denier = 100
-    Calibration_Denier = 100
-    Target_denier_tol = 5
+    Target_Denier = 200
+    Calibration_Denier = 200
+    ' TargetTolerancePercentage = 5
+    TargetToleranceHigh = 210
+    TargetToleranceLow = 190
 #Else
     sDenParCaption(0) = "Denier &Range"
     sDenParCaption(1) = "&Target Denier"
@@ -2541,7 +2893,7 @@ On Error GoTo fibertrack_err_rtn
     Max_Denier = 1#
     Target_Denier = 100
     Calibration_Denier = 100
-    Target_denier_tol = 5
+    TargetTolerancePercentage = 5
 #End If
 
     iOptDenRangeIndex = 0
@@ -2549,21 +2901,30 @@ On Error GoTo fibertrack_err_rtn
     sDenParValue(0) = iMin_Denier & " to " & Max_Denier
     sDenParValue(1) = Target_Denier
     sDenParValue(2) = Calibration_Denier
-    sDenParValue(3) = Target_denier_tol & " %"
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        sDenParValue(3) = TargetToleranceHigh
+        sDenParValue(4) = TargetToleranceLow
+    Else
+        sDenParValue(3) = TargetTolerancePercentage & " %"
+    End If
         
     Font.Underline = True
     cmdDenPar(0).Caption = sDenParCaption(0)
     txtDenPar(0).Text = sDenParValue(0)
         
     iInit = 1
-    iLast = 3
+    
+    #If SCALE_DENIERTEMP Then
+        iLast = 4
+    #Else
+        iLast = 3
+    #End If
     
     For iIndex = iInit To iLast
         Load txtDenPar(iIndex)
         txtDenPar(iIndex).Top = txtDenPar(iIndex - 1).Top + txtDenPar(iIndex - 1).Height
         txtDenPar(iIndex).Visible = True
         txtDenPar(iIndex).Text = sDenParValue(iIndex)
-        
         Load cmdDenPar(iIndex)
         cmdDenPar(iIndex).Top = cmdDenPar(iIndex - 1).Top + 40 + cmdDenPar(iIndex - 1).Height
         cmdDenPar(iIndex).Visible = True
@@ -2586,6 +2947,9 @@ On Error GoTo fibertrack_err_rtn
     sDenRge(1) = GetIniSetting("Application", "TempRangeMin2") & " to " & GetIniSetting("Application", "TempRangeMax2") & "       " & GetIniSetting("Application", "DegressLabel")
     sDenRge(2) = GetIniSetting("Application", "TempRangeMin3") & " to " & GetIniSetting("Application", "TempRangeMax3") & "      " & GetIniSetting("Application", "DegressLabel")
     sDenRge(3) = GetIniSetting("Application", "TempRangeMin4") & " to " & GetIniSetting("Application", "TempRangeMax4") & "      " & GetIniSetting("Application", "DegressLabel")
+    
+    iInit = 1
+    iLast = 3
 #Else
     'sDenRge(0) = "    0 to   500 Denier"
     'sDenRge(1) = "100 to 1000 Denier"
@@ -2600,7 +2964,11 @@ On Error GoTo fibertrack_err_rtn
     iLast = 3
 #End If
     
-    optDenRange(0).Caption = sDenRge(0)
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        optDenRange(0).Caption = sDenRge(3) ' Default
+    Else
+        optDenRange(0).Caption = sDenRge(0) ' Default
+    End If
     
     For iIndex = iInit To iLast
         Load optDenRange(iIndex)
@@ -2743,18 +3111,21 @@ On Error GoTo fibertrack_err_rtn
     
     If Not SystemStatus.IsFormInit Then     'Do this only the 1st time
         CWGraph1.Axes.Item(YAXIS).SetMinMax iMin_Denier, Max_Denier  'Initialize plot setup
-        'Debug.Print Target_Denier, Calibration_Denier, Target_denier_tol
+        'Debug.Print Target_Denier, Calibration_Denier, TargetTolerancePercentage
         'Target_Denier = 100
         'Calibration_Denier = 100
-        'Target_denier_tol = 5
+        'TargetTolerancePercentage = 5
         
         Label1.Visible = False
         Label2.Visible = False
         RunTimer.Visible = False
         StartTImer.Visible = False
         SystemStatus.ComPort = 1            'Default Comm Port
-      
-        Max_Denier = 1#
+        If GetIniSetting("Application", "Type") = "Temperature" Then
+            Max_Denier = CLng(GetIniSetting("Application", "TempRangeDefaultMax"))
+        Else
+            Max_Denier = 1#
+        End If
         For i = 1 To LAST_SENSOR              'Disable all sensors
             SensorInfos(i).Enabled = False
             SensorInfos(i).Online = False
@@ -2798,9 +3169,13 @@ On Error GoTo fibertrack_err_rtn
     
     CWGraph1.TrackMode = cwGTrackDragCursor 'Setup plot
     
-    CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (Target_denier_tol / 100 * Target_Denier)
-    CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (Target_denier_tol / 100 * Target_Denier)
-    
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        CWGraph1.Cursors.Item(2).YPosition = TargetToleranceHigh
+        CWGraph1.Cursors.Item(3).YPosition = TargetToleranceLow
+    Else
+        CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (TargetTolerancePercentage / 100 * Target_Denier)
+        CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (TargetTolerancePercentage / 100 * Target_Denier)
+    End If
     CWGraph1.Cursors.Item(1).YPosition = Target_Denier
     CWGraph1.Axes.Item(XAXIS).Caption = "Elapsed Time (Minutes)"
     
@@ -2819,7 +3194,6 @@ On Error GoTo fibertrack_err_rtn
     cmdExit.Visible = DEBUG_CONTROLS
     cmdBarChart.Visible = DEBUG_CONTROLS
     cmdPlotData.Visible = DEBUG_CONTROLS
-    Text17.Visible = DEBUG_CONTROLS
     
     Plot_Interval = 10
     ReportType = "Current"
@@ -2861,7 +3235,7 @@ On Error GoTo fibertrack_err_rtn
             iOptDenRangeIndex = 0
     End Select
 #ElseIf SCALE_DENIERTEMP Then
-    If Max_Denier = CLng(GetIniSetting("Application", "TempRangeMax4")) Then
+    If Max_Denier > CLng(GetIniSetting("Application", "TempRangeMax4")) Then
         MsgBox "Warning: Setup file specifies setting of 0 to " & GetIniSetting("Application", "TempRangeMax4") & " Temperature.  This parameter is no longer available.  0 to " & GetIniSetting("Application", "TempRangeMax4") & " Temperature will be used instead.", vbInformation, "Form_Load"
         Max_Denier = CLng(GetIniSetting("Application", "TempRangeMax4"))
     End If
@@ -2915,7 +3289,13 @@ On Error GoTo fibertrack_err_rtn
     
     txtDenPar(1).Text = Target_Denier
     txtDenPar(2).Text = Calibration_Denier
-    txtDenPar(3).Text = Target_denier_tol & " %"
+    
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        txtDenPar(3).Text = TargetToleranceHigh
+        txtDenPar(4).Text = TargetToleranceLow
+    Else
+        txtDenPar(3).Text = TargetTolerancePercentage & " %"
+    End If
             
     For i = 1 To LAST_SENSOR              'Restore sensor enable buttons
         If SensorInfos(i).Enabled = True Then
@@ -2928,16 +3308,27 @@ On Error GoTo fibertrack_err_rtn
     Next i
             
     CWGraph1.Axes.Item(YAXIS).SetMinMax iMin_Denier, Max_Denier  'Restore plot setup
-    CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (Target_denier_tol / 100 * Target_Denier)
-    CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (Target_denier_tol / 100 * Target_Denier)
+    
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        CWGraph1.Cursors.Item(2).YPosition = TargetToleranceHigh
+        CWGraph1.Cursors.Item(3).YPosition = TargetToleranceLow
+    Else
+        CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (TargetTolerancePercentage / 100 * Target_Denier)
+        CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (TargetTolerancePercentage / 100 * Target_Denier)
+    End If
     CWGraph1.Cursors.Item(1).YPosition = Target_Denier
      
     Select Case PlotViewIndex
         Case 0
             SetStatusText "Normal plot window."
             CWGraph1.Axes.Item(YAXIS).SetMinMax iMin_Denier, Max_Denier
-            CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (Target_denier_tol / 100 * Target_Denier)
-            CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (Target_denier_tol / 100 * Target_Denier)
+            If GetIniSetting("Application", "Type") = "Temperature" Then
+                CWGraph1.Cursors.Item(2).YPosition = TargetToleranceHigh
+                CWGraph1.Cursors.Item(3).YPosition = TargetToleranceLow
+            Else
+                CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (TargetTolerancePercentage / 100 * Target_Denier)
+                CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (TargetTolerancePercentage / 100 * Target_Denier)
+            End If
             CWGraph1.Cursors.Item(1).YPosition = Target_Denier
     
             ' Turn check mark on menu items on and off.
@@ -2946,11 +3337,16 @@ On Error GoTo fibertrack_err_rtn
             IsNormal = True
         Case 1
             SetStatusText "Expanded plot window."
-            RealTemp = (Target_Denier * (Target_denier_tol / 100)) * 1.5
+            RealTemp = (Target_Denier * (TargetTolerancePercentage / 100)) * 1.5
             IntTemp = RealTemp
             CWGraph1.Axes.Item(YAXIS).SetMinMax Target_Denier - IntTemp, Target_Denier + IntTemp
-            CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (Target_denier_tol / 100 * Target_Denier)
-            CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (Target_denier_tol / 100 * Target_Denier)
+            If GetIniSetting("Application", "Type") = "Temperature" Then
+                CWGraph1.Cursors.Item(2).YPosition = TargetToleranceHigh
+                CWGraph1.Cursors.Item(3).YPosition = TargetToleranceLow
+            Else
+                CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (TargetTolerancePercentage / 100 * Target_Denier)
+                CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (TargetTolerancePercentage / 100 * Target_Denier)
+            End If
             CWGraph1.Cursors.Item(1).YPosition = Target_Denier
             
             ' Turn check mark on menu items on and off.
@@ -3099,7 +3495,7 @@ Private Sub GainCal_Click()
         SystemStatus.Gain_cal = True         'Set this status flag
         'Send the Start gain calibration packet
         
-        SetStatusText "Performing gain calibration sequence. Using target gain value of " & Calibration_Denier & " Denier."    'V1.7
+        SetStatusText "Performing gain calibration sequence. Using target gain value of " & Calibration_Denier & " Temperature."    'V1.7
         Screen.MousePointer = vbHourglass
   
         For iV = 1 To 5
@@ -3251,7 +3647,7 @@ On Error GoTo init_err_rtn
                     Call ProcessSensorInit(index)          'Process packet
                 Else
                     Text1(index).Text = "No Response"
-                    Command(index).BackColor = &H8080FF
+                    Command(index).BackColor = RGB(255, 75, 75)     ' Red
                     SensorInfos(index).Highest = Calibration_Denier
                     SensorInfos(index).Lowest = Calibration_Denier
                     SensorInfos(index).Enabled = False
@@ -3304,9 +3700,7 @@ On Error GoTo lblThreadLine_err_hdr
 lblThreadLine_err_hdr:
     'cdlCancel = Cancel button clicked
     If Err.Number = cdlCancel Then Exit Sub
-
     MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "FiberTrack, lblThreadLine_Click"
-
 End Sub
 
 Private Sub mnuAbout_Click()
@@ -3339,6 +3733,11 @@ Private Sub mnuExcel_Click()
     Unload PlotData
 End Sub
 
+Private Sub Restart_Click()
+    Call Shell(App.Path & "\" & App.EXEName & ".exe", vbNormalFocus)
+    Unload Me
+End Sub
+
 Private Sub mnuExit_Click()
     Unload Me
 End Sub
@@ -3347,7 +3746,7 @@ End Sub
 Private Sub mnuExpanded_Click()
     If IsNormal Then
         SetStatusText "Expanded plot window."
-        RealTemp = (Target_Denier * (Target_denier_tol / 100)) * 1.5
+        RealTemp = (Target_Denier * (TargetTolerancePercentage / 100)) * 1.5
         IntTemp = RealTemp
         CWGraph1.Axes.Item(YAXIS).SetMinMax Target_Denier - IntTemp, Target_Denier + IntTemp
 #If SCALE_DIAMETER Then
@@ -3380,9 +3779,7 @@ Private Sub mnuMain_Click()
         mnuMain.Checked = Not mnuMain.Checked
         mnuPlotDataFile.Checked = Not mnuPlotDataFile.Checked
         IsMain = True
-        
         FiberTrack.Show
-    
         PlotData.Hide       ' vbModal
     End If
 End Sub
@@ -3399,7 +3796,6 @@ Private Sub mnuNormal_Click()
 #Else
         CWGraph1.Cursors.Item(1).YPosition = Target_Denier - Target_Denier * 0.05
 #End If
-
         ' Turn check mark on menu items on and off.
         mnuNormal.Checked = True
         mnuExpanded.Checked = False
@@ -3416,13 +3812,11 @@ Private Sub mnuOpen_Click()
     Dim iResponse   As Integer
 
 On Error GoTo mnuOpen_err_hdr
-
     comDialog2.CancelError = True
 
     comDialog2.DialogTitle = "Open Settings"
     comDialog2.Filter = "FiberTrack Setup File (*.sup)|*.sup|FiberTrack Default Settings (" & SETUP_FILENAME & ")|" & SETUP_FILENAME & "|All Files (*.*)|*.*"
     comDialog2.FilterIndex = 1
-    
     comDialog2.Flags = cdlOFNExplorer Or cdlOFNExtensionDifferent Or cdlOFNNoChangeDir Or cdlOFNHideReadOnly
 
     comDialog2.ShowOpen
@@ -3448,8 +3842,13 @@ On Error GoTo mnuOpen_err_hdr
     
     txtDenPar(1).Text = Target_Denier
     txtDenPar(2).Text = Calibration_Denier
-    txtDenPar(3).Text = Target_denier_tol & " %"
     
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        txtDenPar(3).Text = TargetToleranceHigh
+        txtDenPar(4).Text = TargetToleranceLow
+    Else
+        txtDenPar(3).Text = TargetTolerancePercentage & " %"
+    End If
     txtCurValueDD(0).Text = Level1_slub_tol & " %"
     txtCurValueDD(1).Text = Level1_length & " mm"
     txtCurValueDD(2).Text = Level2_slub_tol & " %"
@@ -3470,34 +3869,45 @@ On Error GoTo mnuOpen_err_hdr
              Text1(i).Text = "Disabled"
         End If
     Next i
-    
     CWGraph1.Axes.Item(YAXIS).SetMinMax iMin_Denier, Max_Denier  'Restore plot setup
-    CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (Target_denier_tol / 100 * Target_Denier)
-    CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (Target_denier_tol / 100 * Target_Denier)
+    
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        CWGraph1.Cursors.Item(2).YPosition = TargetToleranceHigh
+        CWGraph1.Cursors.Item(3).YPosition = TargetToleranceLow
+    Else
+        CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (TargetTolerancePercentage / 100 * Target_Denier)
+        CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (TargetTolerancePercentage / 100 * Target_Denier)
+    End If
     CWGraph1.Cursors.Item(1).YPosition = Target_Denier
- 
     Select Case PlotViewIndex
         Case 0
             SetStatusText "Normal plot window."
             CWGraph1.Axes.Item(YAXIS).SetMinMax iMin_Denier, Max_Denier
-            CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (Target_denier_tol / 100 * Target_Denier)
-            CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (Target_denier_tol / 100 * Target_Denier)
+            If GetIniSetting("Application", "Type") = "Temperature" Then
+                CWGraph1.Cursors.Item(2).YPosition = TargetToleranceHigh
+                CWGraph1.Cursors.Item(3).YPosition = TargetToleranceLow
+            Else
+                CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (TargetTolerancePercentage / 100 * Target_Denier)
+                CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (TargetTolerancePercentage / 100 * Target_Denier)
+            End If
             CWGraph1.Cursors.Item(1).YPosition = Target_Denier
-            
             ' Turn check mark on menu items on and off.
             mnuExpanded.Checked = False
             mnuNormal.Checked = True
             IsNormal = True
-
         Case 1
             SetStatusText "Expanded plot window."
-            RealTemp = (Target_Denier * (Target_denier_tol / 100)) * 1.5
+            RealTemp = (Target_Denier * (TargetTolerancePercentage / 100)) * 1.5
             IntTemp = RealTemp
             CWGraph1.Axes.Item(YAXIS).SetMinMax Target_Denier - IntTemp, Target_Denier + IntTemp
-            CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (Target_denier_tol / 100 * Target_Denier)
-            CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (Target_denier_tol / 100 * Target_Denier)
+            If GetIniSetting("Application", "Type") = "Temperature" Then
+                CWGraph1.Cursors.Item(2).YPosition = TargetToleranceHigh
+                CWGraph1.Cursors.Item(3).YPosition = TargetToleranceLow
+            Else
+                CWGraph1.Cursors.Item(2).YPosition = Target_Denier + (TargetTolerancePercentage / 100 * Target_Denier)
+                CWGraph1.Cursors.Item(3).YPosition = Target_Denier - (TargetTolerancePercentage / 100 * Target_Denier)
+            End If
             CWGraph1.Cursors.Item(1).YPosition = Target_Denier
-            
             ' Turn check mark on menu items on and off.
             mnuExpanded.Checked = True
             mnuNormal.Checked = False
@@ -3512,13 +3922,10 @@ On Error GoTo mnuOpen_err_hdr
     End If
     
     Exit Sub
- 
 mnuOpen_err_hdr:
-
     If Err.Number = cdlCancel Then
         Exit Sub
     End If
-
     MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Open Setup File Error, mnuOpen FiberTrack"
 End Sub
 
@@ -3534,14 +3941,11 @@ End Sub
 Private Sub mnuPlotDataFile_Click()
     If IsMain Then
         SetStatusText "Plot Data File window."
-        
         ' Turn check mark on menu items on and off.
         mnuMain.Checked = Not mnuMain.Checked
         mnuPlotDataFile.Checked = Not mnuPlotDataFile.Checked
         IsMain = False
-        
         FiberTrack.Hide
-    
         PlotData.Show
         'PlotData.WindowState = FiberTrack.WindowState
         PlotData.cboomPlotData.ListIndex = 0
@@ -3550,28 +3954,27 @@ Private Sub mnuPlotDataFile_Click()
 End Sub
 
 Private Sub mnuPrint_Click()
-
 On Error GoTo mnuPrint_err_hdr
-
     comDialog2.CancelError = True
     comDialog2.Flags = &H100000 + &H4
     '   &H80000  disables Print to File box
     '   &H100000 hides the Print to File box
     '   &H4      disables the Selection option
-    
     comDialog2.ShowPrinter
-    PrintSetupFile
+    
+    If GetIniSetting("Application", "Type") = "Temperature" Then
+        PrintTemperatureSetupFile
+    Else
+        PrintSetupFile
+    End If
     
     Exit Sub
     
 mnuPrint_err_hdr:
-
     If Err.Number = cdlCancel Then  'cdlCancel = Cancel button clicked
         Exit Sub
     End If
-
     MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Print error, mnuPrint"
-
 End Sub
 
 'Save setup file
@@ -3582,7 +3985,6 @@ Private Sub mnuSave_Click()
 On Error GoTo mnuSave_err_hdr
 
     comDialog2.CancelError = True
-
     comDialog2.DialogTitle = "Save Settings"
     comDialog2.Filter = "FiberTrack Setup File (*.sup)| *.sup"
     comDialog2.FilterIndex = 1
@@ -3595,12 +3997,10 @@ On Error GoTo mnuSave_err_hdr
     '   cdlOFNOverwritePrompt       = &H00002&
 
     comDialog2.Flags = &H80200E
-    ' comDialog2.Flags = cdlOFNCreatePrompt & cdlOFNExplorer & _
-            cdlOFNOverwritePrompt & cdlOFNNoChangeDir
+    ' comDialog2.Flags = cdlOFNCreatePrompt & cdlOFNExplorer & cdlOFNOverwritePrompt & cdlOFNNoChangeDir
 
     comDialog2.ShowSave
     SaveSetupFile comDialog2.FileName
-    
     SetStatusText "Saving operating parameters to file named " & comDialog2.FileName & "."
     
     '* lblSetUpFile.Visible = True
@@ -3609,9 +4009,7 @@ On Error GoTo mnuSave_err_hdr
 
 mnuSave_err_hdr:
     If Err.Number = cdlCancel Then Exit Sub     'Cancel button in Common Dialog
-
     MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Save Setup File Error, mnuSave"
-
 End Sub
 
 'Setup from top-level menubar
@@ -3821,11 +4219,24 @@ Private Sub StartStop_Click()
                         SensorInfos(index).Num_Cycles = SensorInfos(index).Num_Cycles + 1
                         'JW - 5/25/00 Delay processing of sensor data for several cycles.
                         If SensorInfos(index).Num_Cycles > 2 Then
-                            Set currentSensorReportData = GetSensorReportData(index)
+                            If GetIniSetting("Application", "Type") = "Temperature" Then
+                                Set currentSensorReportData = GetSensorReportDataForTemperature(index)
+                            Else
+                                Set currentSensorReportData = GetSensorReportData(index)
+                            End If
+                            
                             Dim forumlaValue As Double
+                            Dim offset As Long
+                            offset = SensorInfos(index).Zero_Value
                             forumlaValue = (((currentSensorReportData.Average / CInt(GetIniSetting("Application", "TempForumlaDivideBy"))) - CDbl(GetIniSetting("Application", "TempForumlaSubtractBy"))) * CInt(GetIniSetting("Application", "TempForumlaMultipleBy")))
-                            dataFileLine.avg(index) = forumlaValue 'currentSensorReportData.Average 'Process packet
-                            dataFileLine.Cv(index) = currentSensorReportData.Cv
+                            'currentSensorReportData.Average 'Process packet
+                            If CBool(GetIniSetting("Application", "IncludeOffsetInFormula")) Then
+                                dataFileLine.avg(index) = forumlaValue - (offset * CInt(GetIniSetting("Application", "MultipleOffsetInFormulaBy")))
+                            Else
+                                dataFileLine.avg(index) = forumlaValue
+                            End If
+                            dataFileLine.OrigAvg(index) = currentSensorReportData.Average
+                            dataFileLine.cv(index) = currentSensorReportData.cv
                         Else
                             temp = mo_Comm.ReadData()      ' Flush comm buffer contents
                             'Debug.Assert False            ' Just checking
@@ -3984,10 +4395,8 @@ Private Sub ZeroCal_Click()
                 End If
             End If
         Next index
-        
         SystemStatus.Zero_cal = False          'Clear this flag
     End If
-    
     SetStatusText "Finished Zero Calibration sequence."
     ZeroCal.Enabled = False
     Screen.MousePointer = vbArrow
@@ -3999,14 +4408,12 @@ End Sub
 
 Private Sub HideAllFrames()
     Dim ctl As Control
-    
     For Each ctl In Me.Controls
         If TypeOf ctl Is VB.Frame Then
             ctl.Visible = False
         End If
     Next ctl
 End Sub
-
 
 'Jw 5/25/00 This is added to place the correct objects into the command buffer.
 'The last average is used to compute the new slub values.
@@ -4067,9 +4474,9 @@ End Sub
 'if inappropriate values are assigned to important setup parameters.
 'Called from Plot_Data in a loop, approx. 1x/2sec       'CM 2001-11-23
 Private Sub DisableBarChart()
-    'Neither Target_denier_tol nor Calibration_Denier can be zero:
+    'Neither TargetTolerancePercentage nor Calibration_Denier can be zero:
     'Leads to error on scaleHeight below
-    BarChart.Caption = "Bar Graph Disabled - Bad Denier Parameters"    'Note "Bar Graph" terminology similar to menu
+    BarChart.Caption = "Bar Graph Disabled - Bad Temperature Parameters"    'Note "Bar Graph" terminology similar to menu
     
     With BarChart.MyChart
         'This RESETS values that may have been set if Gain Target and
@@ -4089,7 +4496,7 @@ Private Sub DisableBarChart()
         .FontBold = False
         .FontUnderline = False
         .FontSize = .FontSize - 2
-        BarChart.MyChart.Print "Zero value is not expected for Target Gain and/or Denier Tolerance."
+        BarChart.MyChart.Print "Zero value is not expected for Target Gain and/or Temperature Tolerance."
         .FontSize = .FontSize + 2
     End With
 End Sub
@@ -4097,15 +4504,12 @@ End Sub
 'Perform a Zero calibration cycle.
 Private Sub Do_ZeroCal()
     SetStatusText "Will now perform Zero calibration cycle."
-    
     ZeroCal_Click
-    
-    'Must now send a Start data collection command to the sensors
+    ' Must now send a Start data collection command to the sensors
     Command_Packet(2) = ALL_CHANNELS        'Sensor #
     Command_Packet(3) = STARTDATA_COMMAND
     PacketChecksum Command_Packet           'compute packet checksum
     mo_Comm.WriteData Command_Packet        'Xmit command packet
-    
     SetStatusText "Zero calibration completed."
 End Sub
 
@@ -4143,7 +4547,7 @@ Private Sub Plot_Data()
     Dim fScaleHeight As Single
     
     fBase = Calibration_Denier
-    fTol = Target_denier_tol / 100 * fBase
+    fTol = TargetTolerancePercentage / 100 * fBase
     
     If fTol = 0 Then
         'Inappropriate value for fTol; can't continue with plot routine
@@ -4154,8 +4558,8 @@ Private Sub Plot_Data()
     'Otherwise,
     BarChart.Caption = StringFormat("Bar Chart({0}) - {1} - {2}", GetIniSetting("Constants", "Name"), GetIniSetting("Constants", "ProductName"), GetIniSetting("Constants", "Version"))
     
-    fTolPlus = fBase + Target_denier_tol / 100 * fBase
-    fTolMinus = fBase - Target_denier_tol / 100 * fBase
+    fTolPlus = fBase + TargetTolerancePercentage / 100 * fBase
+    fTolMinus = fBase - TargetTolerancePercentage / 100 * fBase
     fScaleTop = fBase + 2 * fTol
     
     fScaleHeight = 4 * fTol
@@ -4253,7 +4657,56 @@ Private Sub Plot_Data()
     Next i
 End Sub
 
-'Print Setup File (formerly mnuText_Click)
+Private Sub PrintTemperatureSetupFile()
+    Dim i           As Integer
+    Dim iTemp       As Integer
+    Dim iTempP1     As Integer
+    Dim iResponse   As Integer
+
+On Error GoTo mnuText_err_hdr
+
+    ReadSetupFile comDialog2.FileName
+    Printer.Print
+    Printer.Print
+    Printer.Print "Setup File Name .................... " & comDialog2.FileName
+    Printer.Print
+    Printer.Print "Temperature Parameters:"
+    Printer.Print
+    Printer.Print "Line Speed ......................... " & LineSpeed & " meters per minute"
+    Printer.Print "Target Temperature ................. " & Target_Denier & " Temperature"
+    Printer.Print "Temperature Target Gain............. " & Calibration_Denier & " Temperature"
+    Printer.Print "Maximum Temperature ................ " & Max_Denier & " Temperature"
+    Printer.Print "Integration time ................... " & Integration_time & " seconds"
+    Printer.Print "Temperature Tolerance High/Low...... " & TargetToleranceHigh & "/" & TargetToleranceLow
+    Printer.Print "Zero Calibration Interval .......... " & ZeroCal_Interval / CInt(GetIniSetting("Application", "ZeroCalIntervalDivideBy")) & " minutes"
+    Printer.Print "Plot Interval ...................... " & Plot_Interval & " minutes"
+    Printer.Print "Plot view .......................... " & PlotView(PlotViewIndex)
+    ' Printer.Print "Plot channel .............. " & SystemStatus.PlotChannel
+    Printer.Print "Communications Port COM ............ " & SystemStatus.ComPort
+    Printer.Print "Level 1 defect tolerance ........... " & Level1_slub_tol & " per cent"
+    Printer.Print "Level 1 defect length .............. " & Level1_length & " millimeters"
+    Printer.Print "Level 2 defect tolerance ........... " & Level2_slub_tol & " per cent"
+    Printer.Print "Level 2 defect length .............. " & Level2_length & " millimeters"
+    Printer.Print
+    Printer.Print
+    For i = 1 To LAST_SENSOR
+        Printer.Print "Sensor " & i & " " & GetIniSetting("Application", "NameOfThreadLine") & " ............ " & SensorInfos(i).Package
+        Printer.Print "Sensor " & i & " Enabled ............ " & SensorInfos(i).Enabled
+        Printer.Print "Sensor " & i & " Zero Value ......... " & SensorInfos(i).Zero_Value & " Temperature"
+        Printer.Print "Sensor " & i & " Calibration Factor . " & SensorInfos(i).Cal_Factor
+        Printer.Print "Sensor " & i & " Calibration Value .. " & SensorInfos(i).Cal_Value & " Temperature"
+        Printer.Print
+    Next i
+    Printer.EndDoc
+    Exit Sub
+mnuText_err_hdr:
+    If Err.Number = 75 Then
+        MsgBox "Please Open Setup File.  Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Open Setup File Error, PrintTemperatureSetupFile"
+        Exit Sub
+    End If
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Open Setup File Error, PrintTemperatureSetupFile"
+End Sub
+
 Private Sub PrintSetupFile()
     Dim i           As Integer
     Dim iTemp       As Integer
@@ -4274,7 +4727,7 @@ On Error GoTo mnuText_err_hdr
     Printer.Print "Target Gain ................... " & Calibration_Denier & " Denier"
     Printer.Print "Maximum Denier ................ " & Max_Denier & " Denier"
     Printer.Print "Integration time .............. " & Integration_time & " seconds"
-    Printer.Print "Target denier tolerance ........" & Target_denier_tol & " per cent"
+    Printer.Print "Target denier tolerance ........" & TargetTolerancePercentage & " per cent"
     Printer.Print "Zero Calibration Interval ..... " & ZeroCal_Interval / CInt(GetIniSetting("Application", "ZeroCalIntervalDivideBy")) & " minutes"
     Printer.Print "Plot Interval ................. " & Plot_Interval & " minutes"
     Printer.Print "Plot view ..................... " & PlotView(PlotViewIndex)
@@ -4304,9 +4757,9 @@ mnuText_err_hdr:
     MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Open Setup File Error, PrintSetupFile"
 End Sub
 
-'Copy comm buffer contents to sensor data array and verify the Sensor data packet.
+' Copy comm buffer contents to sensor data array and verify the Sensor data packet.
 Private Sub ProcessCalData(sensorIndex As Integer)
-    'Use Calibration_Denier instead of Target Denier V1.7
+    ' Use Calibration_Denier instead of Target Denier V1.7
     Dim index As Integer
     Dim counter As Integer
     Dim value As Double
@@ -4316,15 +4769,15 @@ Private Sub ProcessCalData(sensorIndex As Integer)
         For index = 0 To 25
             Host_rcv(26 * (sensorIndex - 1) + index) = temp(index)
         Next index
-        'Compute gain calibration value
+        ' Compute gain calibration value
         counter = Host_rcv(26 * (sensorIndex - 1) + C_DAT_HI) * 256
         counter = counter + Host_rcv(26 * (sensorIndex - 1) + C_DAT_LO)
-        counter = counter - SensorInfos(sensorIndex).Zero_Value    'Correct for zero offset
+        counter = counter - SensorInfos(sensorIndex).Zero_Value    ' Correct for zero offset
         SensorInfos(sensorIndex).Cal_Value = counter
         If counter <> 0 Then
-            value = Calibration_Denier / counter            'Compute calibration factor V1.7
+            value = Calibration_Denier / counter            ' Compute calibration factor V1.7
             SensorInfos(sensorIndex).Cal_Factor = value
-            'JW 5/25/00 Format calibration display
+            ' JW 5/25/00 Format calibration display
             Text1(sensorIndex).Text = "Cal factor = " & Format(value, "##.0000")
         Else
             Text1(sensorIndex).Text = "Cal Error"
@@ -4338,12 +4791,10 @@ End Sub
 'Return Average value (float), which is written to file.
 Private Function GetSensorReportData(sensorIndex As Integer) As SensorReportData
 On Error Resume Next
-
     Dim index           As Integer
+
 #If SCALE_DIAMETER Then
     Dim localAverage    As Double
-#ElseIf SCALE_DENIERTEMP Then
-    Dim localAverage    As Long
 #Else
     Dim localAverage    As Long
 #End If
@@ -4371,6 +4822,7 @@ On Error Resume Next
         SensorInfos(sensorIndex).Raw_Denier = localAverage
         localAverage = localAverage - SensorInfos(sensorIndex).Zero_Value         'Correct for offset
         floatAverage = localAverage * SensorInfos(sensorIndex).Cal_Factor   'Scale the result
+        
         localAverage = floatAverage
         'save floatAverage for current printing
         CurrentAverage(sensorIndex) = floatAverage
@@ -4390,57 +4842,43 @@ On Error Resume Next
         End If                                                 'V1.6 end code
     
         #If SCALE_DIAMETER Then
-        Text1(sensorIndex).Text = "Now = " & FormatDiameter(floatAverage) & vbCrLf & _
-                                  "Max. = " & FormatDiameter(SensorInfos(sensorIndex).Highest) & vbCrLf & _
-                                  "Min. = " & FormatDiameter(SensorInfos(sensorIndex).Lowest) & vbCrLf & _
-                                  "Mean = " & FormatDiameter(SensorInfos(sensorIndex).SumOfAverages / (SensorInfos(sensorIndex).Num_Cycles - 2)) & vbCrLf & _
-                                  "CV = " & Format(cvValue, "#0.0") & "%" & vbCrLf & _
-                                  "L1slub = " & temp(S_L1S) & vbCrLf & _
-                                  "L2slub = " & temp(S_L2S) & vbCrLf & _
-                                  " DELTA = " & FormatDiameter(floatAverage)
-        #ElseIf SCALE_DENIERTEMP Then
-        'JW Corrected calculations by subtracting 2 from the number of int. periods
-        Text1(sensorIndex).Text = "Now = " & Format(floatAverage, "#00.0") & vbCrLf & _
-                                  "Max. = " & SensorInfos(sensorIndex).Highest & vbCrLf & _
-                                  "Min. = " & SensorInfos(sensorIndex).Lowest & vbCrLf & _
-                                  "Mean = " & Format(SensorInfos(sensorIndex).SumOfAverages / (SensorInfos(sensorIndex).Num_Cycles - 2), "#00.0") & vbCrLf & _
-                                  "CV = " & Format(cvValue, "#0.0") & "%" & vbCrLf & _
-                                  "L1slub = " & temp(S_L1S) & vbCrLf & _
-                                  "L2slub = " & temp(S_L2S) & vbCrLf & _
-                                  "DELTA = " & Format(floatAverage, "#00.0")
-                                
+            Text1(sensorIndex).Text = "Now = " & FormatDiameter(floatAverage) & vbCrLf & _
+                                      "Max. = " & FormatDiameter(SensorInfos(sensorIndex).Highest) & vbCrLf & _
+                                      "Min. = " & FormatDiameter(SensorInfos(sensorIndex).Lowest) & vbCrLf & _
+                                      "Mean = " & FormatDiameter(SensorInfos(sensorIndex).SumOfAverages / (SensorInfos(sensorIndex).Num_Cycles - 2)) & vbCrLf & _
+                                      "CV = " & Format(cvValue, "#0.0") & "%" & vbCrLf & _
+                                      "L1slub = " & temp(S_L1S) & vbCrLf & _
+                                      "L2slub = " & temp(S_L2S) & vbCrLf & _
+                                      "DELTA = " & FormatDiameter(floatAverage)
         #Else
-        'JW Corrected calculations by subtracting 2 from the number of int. periods
-        Text1(sensorIndex).Text = "Now = " & Format(floatAverage, "#00.0") & vbCrLf & _
-                                  "Max. = " & SensorInfos(sensorIndex).Highest & vbCrLf & _
-                                  "Min. = " & SensorInfos(sensorIndex).Lowest & vbCrLf & _
-                                  "Mean = " & Format(SensorInfos(sensorIndex).SumOfAverages / (SensorInfos(sensorIndex).Num_Cycles - 2), "#00.0") & vbCrLf & _
-                                  "CV = " & Format(cvValue, "#0.0") & "%" & vbCrLf & _
-                                  "L1slub = " & temp(S_L1S) & vbCrLf & _
-                                  "L2slub = " & temp(S_L2S) & vbCrLf & _
-                                  "DELTA = " & Format(floatAverage, "#00.0")
+            'JW Corrected calculations by subtracting 2 from the number of int. periods
+            Text1(sensorIndex).Text = "Now = " & Format(floatAverage, "#00.0") & vbCrLf & _
+                                      "Max. = " & SensorInfos(sensorIndex).Highest & vbCrLf & _
+                                      "Min. = " & SensorInfos(sensorIndex).Lowest & vbCrLf & _
+                                      "Mean = " & Format(SensorInfos(sensorIndex).SumOfAverages / (SensorInfos(sensorIndex).Num_Cycles - 2), "#00.0") & vbCrLf & _
+                                      "CV = " & Format(cvValue, "#0.0") & "%" & vbCrLf & _
+                                      "L1slub = " & temp(S_L1S) & vbCrLf & _
+                                      "L2slub = " & temp(S_L2S) & vbCrLf & _
+                                      "DELTA = " & Format(floatAverage, "#00.0")
         #End If
         
-        'save current mean value for printing
+        ' save current mean value for printing
         CurrentMean(sensorIndex) = SensorInfos(sensorIndex).SumOfAverages / (SensorInfos(sensorIndex).Num_Cycles - 2)
-        
-        ' <<<<<<<<<< Test Only !!! >>>>>>>>>>
-        '  Print #1, Tab; Format(floatAverage, "####.0");
-        '  Print #1, Tab; Format(floatAverage, "####.0");
-        ' <<<<<<<<<< Test Only !!! >>>>>>>>>>
-    
-        'Graph the current channel
+            
+        ' Graph the current channel
         If iPLotChannels(sensorIndex) = 1 Then
             iPlotDenier(iPLot, 0) = localAverage
             CWGraph1.Plots.Item(iPLot).LineColor = SensorColors(sensorIndex)
             iPLot = iPLot + 1
         End If
   
-        'Check limits V1.7
-        If (localAverage <= Target_Denier + Target_Denier * (Target_denier_tol / 100)) And (localAverage >= Target_Denier - Target_Denier * (Target_denier_tol / 100)) Then
-            Text1(sensorIndex).BackColor = &HC0C0C0
+        ' Check limits V1.7
+        If (localAverage <= Target_Denier + Target_Denier * (TargetTolerancePercentage / 100)) And (localAverage >= Target_Denier - Target_Denier * (TargetTolerancePercentage / 100)) Then
+            Text1(sensorIndex).BackColor = RGB(216, 216, 216)   ' RGB_SILVER
+            Text1(sensorIndex).ForeColor = RGB(12, 12, 12)      ' Black
         Else
-            Text1(sensorIndex).BackColor = &H8080FF
+            Text1(sensorIndex).BackColor = RGB(255, 75, 75)     ' Red
+            Text1(sensorIndex).BackColor = RGB(242, 242, 242)   ' light gray
         End If
     Else
         Text1(sensorIndex).Text = "Comm Err"
@@ -4451,12 +4889,138 @@ On Error Resume Next
     Dim currentSensorReportData As New SensorReportData
     With currentSensorReportData
         .Average = floatAverage
-        .Cv = cvValue
+        .cv = cvValue
     End With
     
     Debug.Print "floatAverage " & CStr(currentSensorReportData.Average)
-    Debug.Print "cvValue " & CStr(currentSensorReportData.Cv)
+    Debug.Print "cvValue " & CStr(currentSensorReportData.cv)
     Set GetSensorReportData = currentSensorReportData
+End Function
+
+Private Function GetSensorReportDataForTemperature(sensorIndex As Integer) As SensorReportData
+On Error Resume Next
+
+    Dim index                   As Integer
+    Dim localAverage            As Double
+    Dim floatAverage            As Double
+    Dim localAverageTemperature As Double
+    Dim floatAverageTemperature As Double
+    Dim cvSummary               As Double
+    Dim cvValue                 As Double 'V1.6
+    Dim temp
+    temp = mo_Comm.ReadData             'Xfer comm buffer contents to temp buffer
+    If temp(1) = sensorIndex And temp(2) = SEND_DATA Then
+        For index = 0 To 25
+            Host_rcv(26 * (sensorIndex - 1) + index) = temp(index)
+        Next index
+  
+        ' accumulate the level1 and level2 slub counts
+        With SensorInfos(sensorIndex)
+            .Level1_Slub = .Level1_Slub + temp(S_L1S)
+            .Level2_Slub = .Level2_Slub + temp(S_L2S)
+        End With
+        
+        ' display average diameter, min & max denier, and cv
+        ' Integer and floating-point averages are computed in order to save compute time.
+        localAverage = (Host_rcv(26 * (sensorIndex - 1) + S_DAT_HI) * 256) + Host_rcv(26 * (sensorIndex - 1) + S_DAT_LO)
+        ' JW 5/25/00 Store raw sensor average denier
+        SensorInfos(sensorIndex).Raw_Denier = localAverage
+        localAverage = localAverage - SensorInfos(sensorIndex).Zero_Value       ' Correct for offset
+        floatAverage = localAverage * SensorInfos(sensorIndex).Cal_Factor       ' Scale the result
+        localAverage = floatAverage
+        
+        ' save floatAverage for current printing
+        CurrentAverage(sensorIndex) = floatAverage
+        SensorInfos(sensorIndex).AverageDiameter = localAverage                 ' save the average diameter V1.6
+        SensorInfos(sensorIndex).SumOfAverages = SensorInfos(sensorIndex).SumOfAverages + localAverage
+        
+        If localAverage < SensorInfos(sensorIndex).Lowest Then                  ' Update min/max values
+            SensorInfos(sensorIndex).Lowest = localAverage
+        End If
+        
+        If localAverage > SensorInfos(sensorIndex).Highest Then
+            SensorInfos(sensorIndex).Highest = localAverage
+        End If
+        
+        If COMPUTE_CV Then                                     'V1.6 start cv code
+            Call ComputeCv(sensorIndex, cvValue)
+        End If                                                 'V1.6 end code
+    
+        ' TEMPERATURE CHANGES
+        ' Corrected calculations by subtracting 2 from the number of int. periods
+        Dim nowText As String
+        Dim maxText As String
+        Dim minText As String
+        Dim meanText As String
+        Dim mean As Double
+        mean = SensorInfos(sensorIndex).SumOfAverages / (SensorInfos(sensorIndex).Num_Cycles - 2)
+        Dim cvText As String
+        Dim l1slubText As String
+        Dim l2slubText As String
+        Dim deltaText As String
+        
+        nowText = "Now = " & Format(ConvertToTemperature(floatAverage), "#00.0")
+        maxText = "Max. = " & ConvertToTemperature(SensorInfos(sensorIndex).Highest)
+        minText = "Min. = " & ConvertToTemperature(SensorInfos(sensorIndex).Lowest)
+        
+        meanText = "Mean = " & Format(ConvertToTemperature(mean), "#00.0")
+        If GetIniSetting("Application", "IncludeCvColumn") = True Then
+            cvText = "CV = " & Format(cvValue, "#0.0") & "%"
+        Else
+            cvText = ""
+        End If
+        l1slubText = "L1slub = " & temp(S_L1S)
+        l2slubText = "L2slub = " & temp(S_L2S)
+        deltaText = "DELTA = " & Format(ConvertToTemperature(floatAverage), "#00.0")
+        
+        Dim displayText As String
+        displayText = nowText & vbCrLf & maxText & vbCrLf & minText & vbCrLf & meanText & vbCrLf & cvText & vbCrLf & l1slubText & vbCrLf & l2slubText & vbCrLf & deltaText
+        
+        Text1(sensorIndex).Text = displayText
+        ' save current mean value for printing
+        CurrentMean(sensorIndex) = mean
+        
+        localAverageTemperature = ConvertToTemperature(localAverage)
+        
+        ' Graph the current channel
+        If iPLotChannels(sensorIndex) = 1 Then
+            iPlotDenier(iPLot, 0) = localAverageTemperature
+            CWGraph1.Plots.Item(iPLot).LineStyle = cwLineSolid
+            CWGraph1.Plots.Item(iPLot).LineWidth = 2
+            CWGraph1.Plots.Item(iPLot).LineColor = SensorColors(sensorIndex)
+            iPLot = iPLot + 1
+        End If
+  
+        ' Check limits V1.7
+        If (localAverageTemperature <= TargetToleranceHigh And localAverageTemperature >= TargetToleranceLow) Then
+            Text1(sensorIndex).BackColor = RGB(216, 216, 216)   ' RGB_SILVER
+            Text1(sensorIndex).ForeColor = RGB(12, 12, 12)      ' Black
+        Else
+            Text1(sensorIndex).BackColor = RGB(255, 75, 75)     ' Red
+            Text1(sensorIndex).ForeColor = RGB(242, 242, 242)   ' light gray
+        End If
+    Else
+        Text1(sensorIndex).Text = "Comm Err"
+    End If
+    
+    Dim currentSensorReportData As New SensorReportData
+    With currentSensorReportData
+        .Average = floatAverage
+        .cv = cvValue
+        .AverageTemperature = floatAverage
+    End With
+    
+    Debug.Print "floatAverage " & CStr(currentSensorReportData.Average)
+    Debug.Print "floatAverageTemperature " & CStr(currentSensorReportData.AverageTemperature)
+    Debug.Print "cvValue " & CStr(currentSensorReportData.cv)
+    
+    Set GetSensorReportDataForTemperature = currentSensorReportData
+End Function
+
+Private Function ConvertToTemperature(value As Double) As Double
+    Dim newValue As Double
+    newValue = (((value / CInt(GetIniSetting("Application", "TempForumlaDivideBy"))) - CDbl(GetIniSetting("Application", "TempForumlaSubtractBy"))) * CInt(GetIniSetting("Application", "TempForumlaMultipleBy")))
+    ConvertToTemperature = newValue
 End Function
 
 'Copy comm buffer contents to sensor data array and
@@ -4471,10 +5035,13 @@ Private Sub ProcessSensorInit(sensorIndex As Integer)
         Next index
         SensorInfos(sensorIndex).Online = True
         Text1(sensorIndex).Text = "Online"       'Update display button
+        Text1(sensorIndex).BackColor = RGB(216, 216, 216)   ' RGB_SILVER
+        Text1(sensorIndex).ForeColor = RGB(12, 12, 12)      ' Black
     Else
         SensorInfos(sensorIndex).Online = False
         Text1(sensorIndex).Text = "No Comm"
-        Command(sensorIndex).BackColor = &H8080FF
+        Command(sensorIndex).BackColor = RGB(255, 75, 75)     ' Red
+        Text1(sensorIndex).ForeColor = RGB(242, 242, 242)    ' light gray
     End If
 End Sub
 
@@ -4517,7 +5084,7 @@ Private Function ReadSetupFile(inputFileName As String) As Boolean
         Max_Denier = .DenierMax
         DenierRangeIndex = .DenierRangeIndex
         Target_Denier = .DenierTarget
-        Target_denier_tol = .DenierTargetTolerance
+        TargetTolerancePercentage = .DenierTargetTolerance
         Integration_time = .IntegrationTime
         Level1_length = CLng(.Level1Length)
         Level1_slub_tol = CLng(.Level1SlubTolerance)
@@ -4618,7 +5185,7 @@ Private Function SaveSetupFile(FileName As String) As Boolean
         .DenierMax = Max_Denier
         .DenierRangeIndex = DenierRangeIndex
         .DenierTarget = Target_Denier
-        .DenierTargetTolerance = Target_denier_tol
+        .DenierTargetTolerance = TargetTolerancePercentage
         .IntegrationTime = Integration_time
         .Level1Length = CLng(Level1_length)
         .Level1SlubTolerance = CLng(Level1_slub_tol)
@@ -4644,7 +5211,8 @@ End Function
 
 'Wrapper for status information display.
 Public Sub SetStatusText(statusText As String)
-    Text17.Text = statusText
+    'Text17.Text = statusText
+    StatusBar.Panels(1).Text = statusText
     Debug.Print "STATUS: " & statusText
 End Sub
 

@@ -100,6 +100,7 @@ Private Const HEADER_SPEED_POST = " Meters/sec."
 Private Const HEADER_TIME = "  Time"
 Private Const HEADER_SENSOR = "Sensor "
 Private Const HEADER_CV = "CV"
+Private Const HEADER_ORIG = "ORIG AVG"
 
 Private Const ERRUI_TITLE = "FiberTrack DataFile"
 Private Const FILE_EXT_TEXT = ".dat"
@@ -149,7 +150,7 @@ End Property
 Public Property Get DenierValues(sensorIndex As Integer, index As Long) As Single
     Debug.Assert index <= UBound(mo_DataLines)
     Debug.Assert index >= LBound(mo_DataLines)
-    DenierValues = mo_DataLines(index).Avg(sensorIndex)
+    DenierValues = mo_DataLines(index).avg(sensorIndex)
 End Property
 
 Public Property Get FileFormat() As DataFileFormatEnum
@@ -283,10 +284,10 @@ On Error GoTo ErrHan
             divide = value1 / value2
         End If
         Dim currentDataLine  As New FTDataLine
-        currentDataLine.Avg(1) = value1
-        currentDataLine.Avg(2) = value2
-        currentDataLine.Avg(3) = substract
-        currentDataLine.Avg(4) = divide
+        currentDataLine.avg(1) = value1
+        currentDataLine.avg(2) = value2
+        currentDataLine.avg(3) = substract
+        currentDataLine.avg(4) = divide
         outputDataFile.WriteDataLine currentDataLine
     Next n
     outputDataFile.CloseFile
@@ -333,10 +334,18 @@ Private Sub WriteHeaderText()
     WriteLine ""
     WriteComma ""
     Dim line As String
+    Dim blank As String
+    blank = "             "
     For index = LBound(mb_SensorOnline) To UBound(mb_SensorOnline)
         If mb_SensorOnline(index) Then
             line = CStr(GetIniSetting("Application", "NameOfThreadLine") & " " & RTrim(SensorInfos(index).Package))   ' CHANGED
-            writeComma Replace(line, vbNewLine, "") 
+            If CBool(GetIniSetting("Application", "IncludeCvColumn")) Then
+                line = line & blank
+            End If
+            If CBool(GetIniSetting("Application", "IncludeOriginalAvgColumn")) Then
+                line = line & blank
+            End If
+            WriteComma Replace(line, vbNewLine, "")
         End If
     Next index
     WriteLine ""
@@ -346,6 +355,9 @@ Private Sub WriteHeaderText()
             WriteComma HEADER_SENSOR & index
             If CBool(GetIniSetting("Application", "IncludeCvColumn")) Then
                 WriteComma HEADER_CV & index
+            End If
+            If CBool(GetIniSetting("Application", "IncludeOriginalAvgColumn")) Then
+                WriteComma HEADER_ORIG & index
             End If
         End If
     Next index
@@ -362,6 +374,9 @@ Private Sub WriteHeaderCSV()
             line = line & ", " & HEADER_SENSOR & CStr(index) & " " & GetIniSetting("Application", "NameOfThreadLine") & " " & RTrim(SensorInfos(index).Package) ' CHANGED
             If CBool(GetIniSetting("Application", "IncludeCvColumn")) Then
                 line = line & ", " & HEADER_CV & CStr(index)
+            End If
+            If CBool(GetIniSetting("Application", "IncludeOriginalAvgColumn")) Then
+                line = line & ", " & HEADER_ORIG & CStr(index)
             End If
         End If
     Next index
@@ -381,6 +396,9 @@ Public Sub WriteFooter()
             WriteComma HEADER_SENSOR & index & " " & GetIniSetting("Application", "NameOfThreadLine") & " " & SensorInfos(index).Package  ' CHANGED
             If CBool(GetIniSetting("Application", "IncludeCvColumn")) Then
                 WriteComma HEADER_CV & index
+            End If
+            If CBool(GetIniSetting("Application", "IncludeOriginalAvgColumn")) Then
+                WriteComma HEADER_ORIG & index
             End If
         End If
     Next index
@@ -402,9 +420,12 @@ Public Sub WriteDataLine(currentDataLine As FTDataLine)
             WriteTime currentDataLine
             For index = LBound(mb_SensorOnline) To UBound(mb_SensorOnline)
                 If mb_SensorOnline(index) Then
-                    WriteData currentDataLine.Avg(index)
+                    WriteData currentDataLine.avg(index)
                     If CBool(GetIniSetting("Application", "IncludeCvColumn")) Then
-                        WriteData currentDataLine.Cv(index)
+                        WriteData currentDataLine.cv(index)
+                    End If
+                    If CBool(GetIniSetting("Application", "IncludeOriginalAvgColumn")) Then
+                        WriteData currentDataLine.OrigAvg(index)
                     End If
                 End If
             Next index
@@ -414,9 +435,12 @@ Public Sub WriteDataLine(currentDataLine As FTDataLine)
             line = FormatTime(currentDataLine)
             For index = LBound(mb_SensorOnline) To UBound(mb_SensorOnline)
                 If mb_SensorOnline(index) Then
-                    line = line & ", " & FormatData(currentDataLine.Avg(index))
+                    line = line & ", " & FormatData(currentDataLine.avg(index))
                     If CBool(GetIniSetting("Application", "IncludeCvColumn")) Then
-                        line = line & ", " & FormatData(currentDataLine.Cv(index))
+                        line = line & ", " & FormatData(currentDataLine.cv(index))
+                    End If
+                    If CBool(GetIniSetting("Application", "IncludeOriginalAvgColumn")) Then
+                        line = line & ", " & FormatData(currentDataLine.OrigAvg(index))
                     End If
                 End If
             Next index
@@ -430,23 +454,23 @@ End Sub
 Private Sub SetTitleAndInfo()
 #If SCALE_DIAMETER Then
     If mb_CompareMode Then
-        ms_Title = "          STC Diameter Comparison Data File - " & CStr(Now)
+        ms_Title = "          STC Diameter Comparison Data File - " & CStr(now)
     Else
-        ms_Title = "          STC Diameter Monitoring Data File - " & CStr(Now)
+        ms_Title = "          STC Diameter Monitoring Data File - " & CStr(now)
     End If
     ms_Info = HEADER_TIME_PRE & mbyt_IntegrationTime & HEADER_TIME_POST & HEADER_DNR_PRE & Format$(mi_DenierTarget, "0.000") & HEADER_DNR_POST & HEADER_SPEED_PRE & mi_LineSpeed & HEADER_SPEED_POST
 #ElseIf SCALE_DENIERTEMP Then
     If mb_CompareMode Then
-        ms_Title = "          STC Temperature Comparison Data File - " & CStr(Now)
+        ms_Title = "          STC Temperature Comparison Data File - " & CStr(now)
     Else
-        ms_Title = "          STC Temperature Monitoring Data File - " & CStr(Now)
+        ms_Title = "          STC Temperature Monitoring Data File - " & CStr(now)
     End If
     ms_Info = HEADER_TIME_PRE & mbyt_IntegrationTime & HEADER_TIME_POST & HEADER_DNR_PRE & Format$(mi_DenierTarget, "0.000") & HEADER_DNR_POST & HEADER_SPEED_PRE & mi_LineSpeed & HEADER_SPEED_POST
 #Else
     If mb_CompareMode Then
-        ms_Title = "            STC Denier Comparison Data File - " & CStr(Now)
+        ms_Title = "            STC Denier Comparison Data File - " & CStr(now)
     Else
-        ms_Title = "            STC Denier Monitoring Data File - " & CStr(Now)
+        ms_Title = "            STC Denier Monitoring Data File - " & CStr(now)
     End If
     ms_Info = HEADER_TIME_PRE & mbyt_IntegrationTime & HEADER_TIME_POST & HEADER_DNR_PRE & mi_DenierTarget & HEADER_DNR_POST & HEADER_SPEED_PRE & mi_LineSpeed & HEADER_SPEED_POST
 #End If
@@ -579,7 +603,7 @@ Private Function GetDefaultFileName() As String
         'Not enough information to set the filename
         result = ""
     Else
-        result = GetDefaultPath & "\" & FILE_ROOT_NAME & CStr(RunNumber) & "_" & Format(Now, GetIniSetting("Application", "FileDateFormatAppend")) & GetFileExtension(mDataFileFormatEnum) ' CHANGED
+        result = GetDefaultPath & "\" & FILE_ROOT_NAME & CStr(RunNumber) & "_" & Format(now, GetIniSetting("Application", "FileDateFormatAppend")) & GetFileExtension(mDataFileFormatEnum) ' CHANGED
     End If
     GetDefaultFileName = result
 End Function
@@ -944,10 +968,10 @@ Private Function ParseDataLine(inputLine As String) As FTDataLine
                 isEven = ((index Mod 2) = 0)
                 If isEven Then
                     ' x is even
-                    currentDataLine.Cv(numberOfSensor) = CDbl(newValues(index))
+                    currentDataLine.cv(numberOfSensor) = CDbl(newValues(index))
                 Else
                     ' x is odd
-                    currentDataLine.Avg(numberOfSensor) = CDbl(newValues(index))
+                    currentDataLine.avg(numberOfSensor) = CDbl(newValues(index))
                 End If
                 If index <= numberOfSensors And isEven Then
                     numberOfSensor = numberOfSensor + 1
@@ -957,7 +981,8 @@ Private Function ParseDataLine(inputLine As String) As FTDataLine
         Else
             ' handle single sensor lines without Cv column
             For index = (LBound(newValues) + 1) To UBound(newValues)
-                currentDataLine.Avg(index) = CDbl(newValues(index))
+                currentDataLine.avg(index) = CDbl(newValues(index))
+                currentDataLine.OrigAvg(index) = CDbl(newValues(index))
             Next index
         End If
     Else

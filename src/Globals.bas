@@ -40,7 +40,10 @@ Public Target_Denier            As Long
 #End If
 
 Public Integration_time         As Byte         'Integration time in seconds
-Public Target_denier_tol        As Byte
+Public TargetTolerancePercentage As Byte
+Public TargetToleranceHigh      As Integer
+Public TargetToleranceLow       As Integer
+
 Public Level1_slub_tol          As Byte
 Public Level1_length            As Byte
 Public Level2_slub_tol          As Byte
@@ -80,11 +83,11 @@ Public Type SensorInfo
     LastAverage     As Double           'Last integration value
     SumOfAverages   As Double           'Accumulator for average denier
 #ElseIf SCALE_DENIERTEMP Then
-    AverageDiameter As Long
-    Lowest          As Long          'Lowest average denier
-    Highest         As Long          'Highest average denier
-    LastAverage     As Long          'Last integration value
-    SumOfAverages   As Long             'Accumulator for average denier
+    AverageDiameter As Double
+    Lowest          As Double           'Lowest average denier
+    Highest         As Double           'Highest average denier
+    LastAverage     As Double           'Last integration value
+    SumOfAverages   As Double           'Accumulator for average denier
 #Else
     AverageDiameter As Long
     Lowest          As Long          'Lowest average denier
