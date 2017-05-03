@@ -14,6 +14,7 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private m_Average As Double
+Private m_AverageTemperature As Double
 Private m_Cv As Double
 
 Public Property Get Average() As Double
@@ -24,10 +25,20 @@ Public Property Let Average(value As Double)
     m_Average = value
 End Property
 
-Public Property Get Cv() As Double
-    Cv = m_Cv
+Public Property Get cv() As Double
+    cv = m_Cv
 End Property
 
-Public Property Let Cv(value As Double)
+Public Property Let cv(value As Double)
     m_Cv = value
+End Property
+
+Public Property Get AverageTemperature() As Double
+    AverageTemperature = m_AverageTemperature
+End Property
+
+Public Property Let AverageTemperature(value As Double)
+    Dim newValue As Double
+    newValue = (((value / CInt(GetIniSetting("Application", "TempForumlaDivideBy"))) - CDbl(GetIniSetting("Application", "TempForumlaSubtractBy"))) * CInt(GetIniSetting("Application", "TempForumlaMultipleBy")))
+    m_AverageTemperature = newValue
 End Property

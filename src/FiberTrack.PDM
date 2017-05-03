@@ -1,5 +1,5 @@
 [Root]
-Most Recent Package=FiberTrack Temperature 2.5.0.6
+Most Recent Package=FiberTrack Temperature 2.5.0
 
 
 [Package|FiberTrack Resistance Setup Script|Root]
@@ -846,5 +846,334 @@ ServerSideCab=
 File1=C:\FiberTrackerTemperature2506\setup.exe
 File2=C:\FiberTrackerTemperature2506\Setup.Lst
 File3=C:\FiberTrackerTemperature2506\FiberTrack.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|FiberTrack Temperature 2.5.0.7|FiberTrack 2.5.0.4 Temperature Denier]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.5.0.4 Temperature Denier
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Temperature 2.5.0.7|FiberTrack 2.5.0 Denier]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.5.0 Denier
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Temperature 2.5.0.7|FiberTrack 2.31 Denier]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.31 Denier
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Temperature 2.5.0.7|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\FiberTrackerTemperature2507
+
+[Package|FiberTrack Temperature 2.5.0.7|Configure DAO ISAMs]
+Applicable=No
+
+[Package|FiberTrack Temperature 2.5.0.7|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|FiberTrack Temperature 2.5.0.7|Files Found]
+
+[Package|FiberTrack Temperature 2.5.0.7|Files Released]
+setup.svd=
+3=
+
+[Package|FiberTrack Temperature 2.5.0.7|Missing Dependency Information]
+C:\WINDOWS\system32\SQLPARSE.DLL=
+
+[Package|FiberTrack Temperature 2.5.0.7|Out-of-Date Dependency Information]
+C:\WINNT\system32\scrrun.dll=
+C:\WINNT\system32\comdlg32.ocx=
+C:\WINDOWS\system32\comdlg32.ocx=
+C:\WINDOWS\system32\scrrun.dll=
+
+[Package|FiberTrack Temperature 2.5.0.7|Files Added]
+c:\github\fibertracker\src\settings.ini=
+
+[Package|FiberTrack Temperature 2.5.0.7|Files In Project]
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\WINDOWS\system32\cwui.ocx=Yes
+C:\WINDOWS\system32\mfc42.dll=Yes
+C:\WINDOWS\system32\mesa.dll=Yes
+C:\WINDOWS\system32\MSCOMM32.OCX=Yes
+C:\WINDOWS\system32\comdlg32.ocx=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\WINDOWS\system32\COMCT232.OCX=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\WINDOWS\system32\SQLPARSE.DLL=Yes
+C:\Github\FiberTracker\src\settings.ini=Yes
+C:\Github\FiberTracker\src\FiberTrack.exe=Yes
+
+[Package|FiberTrack Temperature 2.5.0.7|Configure Registry Files]
+Applicable=No
+
+[Package|FiberTrack Temperature 2.5.0.7|Configure Remote Servers]
+Applicable=No
+
+[Package|FiberTrack Temperature 2.5.0.7|Install Locations]
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\scrrun.dll=$(WinSysPath)
+C:\WINNT\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\cwui.ocx=$(WinSysPath)
+C:\WINNT\system32\mfc42.dll=$(WinSysPath)
+C:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINNT\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINNT\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINNT\system32\Comct232.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\sti\bin\FiberTrack231\Denier\setup.svd=$(AppPath)
+F:\Denier2.5.0\SourceCode\FiberTrack.exe=$(AppPath)
+C:\WINNT\system32\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\FiberTrack.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\cwui.ocx=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPath)
+C:\WINDOWS\system32\mesa.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCT232.OCX=$(WinSysPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\SQLPARSE.DLL=$(WinSysPath)
+C:\Github\FiberTracker\src\settings.ini=$(AppPath)
+C:\Github\FiberTracker\src\FiberTrack.exe=$(AppPath)
+
+[Package|FiberTrack Temperature 2.5.0.7|Configure Shared Files]
+Applicable=Yes
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=No
+C:\sti\bin\FiberTrack231\Denier\setup.svd=No
+F:\Denier2.5.0\SourceCode\FiberTrack.exe=No
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\FiberTrack.exe=Yes
+C:\Github\FiberTracker\srcsettings.ini=No
+C:\Github\FiberTracker\src\FiberTrack.exe=No
+C:\Github\FiberTracker\src\settings.ini=No
+
+[Package|FiberTrack Temperature 2.5.0.7|Distribution]
+Type=single
+Size=1.44 MB
+Title=FiberTrack - Temperature 2.5.0.7
+
+[Package|FiberTrack Temperature 2.5.0.7|Files Removed]
+
+[Package|FiberTrack Temperature 2.5.0.7|IconGroups]
+Group0=FiberTrack 2.5.0.7 Temperature
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|FiberTrack Temperature 2.5.0.7|FiberTrack 2.5.0.7 Temperature]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.5.0.7 Temperature
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Temperature 2.5.0.7|Package]
+PackageFolder=C:\FiberTrackerTemperature2507
+ProjectFolder=C:\Github\FiberTracker\src
+ServerSideCab=
+File1=C:\FiberTrackerTemperature2507\setup.exe
+File2=C:\FiberTrackerTemperature2507\Setup.Lst
+File3=C:\FiberTrackerTemperature2507\FiberTrack.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|FiberTrack Temperature 2.5.0|FiberTrack 2.5.0.4 Temperature Denier]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.5.0.4 Temperature Denier
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Temperature 2.5.0|FiberTrack 2.5.0 Denier]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.5.0 Denier
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Temperature 2.5.0|FiberTrack 2.31 Denier]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.31 Denier
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Temperature 2.5.0|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\FiberTrackerTemperature2509
+
+[Package|FiberTrack Temperature 2.5.0|Configure DAO ISAMs]
+Applicable=No
+
+[Package|FiberTrack Temperature 2.5.0|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|FiberTrack Temperature 2.5.0|Files Found]
+
+[Package|FiberTrack Temperature 2.5.0|Files Released]
+setup.svd=
+3=
+
+[Package|FiberTrack Temperature 2.5.0|Missing Dependency Information]
+C:\WINDOWS\system32\SQLPARSE.DLL=
+C:\WINDOWS\system32\MSSTDFMT.DLL=
+
+[Package|FiberTrack Temperature 2.5.0|Out-of-Date Dependency Information]
+C:\WINNT\system32\scrrun.dll=
+C:\WINNT\system32\comdlg32.ocx=
+C:\WINDOWS\system32\comdlg32.ocx=
+C:\WINDOWS\system32\scrrun.dll=
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+
+[Package|FiberTrack Temperature 2.5.0|Files Added]
+c:\github\fibertracker\src\settings.ini=
+
+[Package|FiberTrack Temperature 2.5.0|Files In Project]
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\WINDOWS\system32\scrrun.dll=Yes
+C:\WINDOWS\system32\msvcrt.dll=Yes
+C:\WINDOWS\system32\cwui.ocx=Yes
+C:\WINDOWS\system32\mfc42.dll=Yes
+C:\WINDOWS\system32\mesa.dll=Yes
+C:\WINDOWS\system32\MSCOMM32.OCX=Yes
+C:\WINDOWS\system32\comdlg32.ocx=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\WINDOWS\system32\SQLPARSE.DLL=Yes
+C:\Github\FiberTracker\src\settings.ini=Yes
+C:\Github\FiberTracker\src\FiberTrack.exe=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+
+[Package|FiberTrack Temperature 2.5.0|Configure Registry Files]
+Applicable=No
+
+[Package|FiberTrack Temperature 2.5.0|Configure Remote Servers]
+Applicable=No
+
+[Package|FiberTrack Temperature 2.5.0|Install Locations]
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\scrrun.dll=$(WinSysPath)
+C:\WINNT\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\cwui.ocx=$(WinSysPath)
+C:\WINNT\system32\mfc42.dll=$(WinSysPath)
+C:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINNT\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINNT\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINNT\system32\Comct232.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\sti\bin\FiberTrack231\Denier\setup.svd=$(AppPath)
+F:\Denier2.5.0\SourceCode\FiberTrack.exe=$(AppPath)
+C:\WINNT\system32\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\FiberTrack.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\WINDOWS\system32\scrrun.dll=$(WinSysPath)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\cwui.ocx=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPath)
+C:\WINDOWS\system32\mesa.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMCT232.OCX=$(WinSysPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\SQLPARSE.DLL=$(WinSysPath)
+C:\Github\FiberTracker\src\settings.ini=$(AppPath)
+C:\Github\FiberTracker\src\FiberTrack.exe=$(AppPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+
+[Package|FiberTrack Temperature 2.5.0|Configure Shared Files]
+Applicable=Yes
+C:\sti\bin\FiberTrack231\Denier\FiberTrack.exe=No
+C:\sti\bin\FiberTrack231\Denier\setup.svd=No
+F:\Denier2.5.0\SourceCode\FiberTrack.exe=No
+C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\FiberTrack.exe=Yes
+C:\Github\FiberTracker\srcsettings.ini=No
+C:\Github\FiberTracker\src\FiberTrack.exe=No
+C:\Github\FiberTracker\src\settings.ini=No
+
+[Package|FiberTrack Temperature 2.5.0|Distribution]
+Type=single
+Size=1.44 MB
+Title=FiberTrack - Temperature 2.5.0
+
+[Package|FiberTrack Temperature 2.5.0|Files Removed]
+
+[Package|FiberTrack Temperature 2.5.0|IconGroups]
+Group0=FiberTrack 2.5.0 Temperature
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|FiberTrack Temperature 2.5.0|FiberTrack 2.5.0 Temperature]
+Icon1=FiberTrack.exe
+Title1=FiberTrack 2.5.0 Temperature
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|FiberTrack Temperature 2.5.0|Package]
+PackageFolder=C:\FiberTrackerTemperature2509
+ProjectFolder=C:\Github\FiberTracker\src
+ServerSideCab=
+File1=C:\FiberTrackerTemperature2509\setup.exe
+File2=C:\FiberTrackerTemperature2509\Setup.Lst
+File3=C:\FiberTrackerTemperature2509\FiberTrack.CAB
 Handler1=PDWizard.FolderDplySubWiz
 Handler2=PDWizard.WebPostDplySubWiz

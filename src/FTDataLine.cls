@@ -25,6 +25,7 @@ End Enum
 Public Hours As Long
 Public Minutes As Long
 Public Seconds As Long
+Private m_OrigAvg(1 To LAST_SENSOR) As Double
 Private m_Avg(1 To LAST_SENSOR) As Double
 Private m_CvValue(1 To LAST_SENSOR) As Double
 
@@ -34,6 +35,14 @@ End Property
 
 Public Property Let avg(index As Integer, value As Double)
     m_Avg(index) = value
+End Property
+
+Public Property Get OrigAvg(index As Integer) As Double
+    OrigAvg = m_OrigAvg(index)
+End Property
+
+Public Property Let OrigAvg(index As Integer, value As Double)
+    m_OrigAvg(index) = value
 End Property
 
 Public Property Get Cv(index As Integer) As Double
