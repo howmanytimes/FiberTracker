@@ -1650,6 +1650,10 @@ Begin VB.Form FiberTrack
       Begin VB.Menu mnuFileSep3 
          Caption         =   "-"
       End
+      Begin VB.Menu Restart 
+         Caption         =   "&Restart"
+         Shortcut        =   ^R
+      End
       Begin VB.Menu mnuExit 
          Caption         =   "E&xit"
       End
@@ -2014,10 +2018,7 @@ On Error GoTo Current_Err_Hdr
     comDialog3.DialogTitle = "Save Current Report"
     comDialog3.Filter = "Text File (*.txt)| *.txt"
     comDialog3.FilterIndex = 1
-    comDialog3.Flags = cdlOFNExplorer Or _
-                       cdlOFNExtensionDifferent Or _
-                       cdlOFNNoChangeDir Or _
-                       cdlOFNHideReadOnly
+    comDialog3.Flags = cdlOFNExplorer Or cdlOFNExtensionDifferent Or cdlOFNNoChangeDir Or cdlOFNHideReadOnly
     comDialog3.ShowOpen
     Open comDialog2.FileName For Output As #localFileNamesNumber
   
@@ -2736,14 +2737,14 @@ On Error GoTo fibertrack_err_rtn
     cmdPrint.ToolTipText = "Click here to print the current screen image."
     cmdCurrent.ToolTipText = "Click here to print the current run results."
     
-    SensorColors(1) = vbBlue
-    SensorColors(2) = vbRed
-    SensorColors(3) = vbYellow
-    SensorColors(4) = vbGreen
-    SensorColors(5) = vbCyan
-    SensorColors(6) = vbMagenta
-    SensorColors(7) = 33023         ' 33023 = orange
-    SensorColors(8) = 8421440       ' 8421440 = darker green
+    SensorColors(1) = RGB(0, 0, 255)    ' Blue
+    SensorColors(2) = RGB(204, 0, 0)    ' Red
+    SensorColors(3) = RGB(204, 255, 0)  ' Yellow
+    SensorColors(4) = RGB(0, 102, 0)    ' Green
+    SensorColors(5) = RGB(0, 255, 204)  ' Cyan
+    SensorColors(6) = RGB(204, 0, 153)  ' Magenta
+    SensorColors(7) = RGB(204, 102, 0)  ' Orange
+    SensorColors(8) = RGB(0, 51, 0)     ' Darker Green
     For iY = 1 To 8
         lblThreadLine(iY).BackColor = SensorColors(iY)
         lblThreadLine(iY).Caption = GetIniSetting("Application", "NameOfThreadLine") ' CHANGED
@@ -3069,9 +3070,7 @@ On Error GoTo form_unload_err_hdr
     Exit Sub
     
 form_unload_err_hdr:
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " _
-        & Err.Description & ", " & Err.Source, vbExclamation, _
-        "Form_Unload DataFile Error, FiberTrack"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Form_Unload DataFile Error, FiberTrack"
     End
     Exit Sub
 End Sub
@@ -3242,7 +3241,7 @@ On Error GoTo init_err_rtn
                     Call ProcessSensorInit(index)          'Process packet
                 Else
                     Text1(index).Text = "No Response"
-                    Command(index).BackColor = &H8080FF
+                    Command(index).BackColor = RGB(255, 75, 75)     ' Red
                     SensorInfos(index).Highest = Calibration_Denier
                     SensorInfos(index).Lowest = Calibration_Denier
                     SensorInfos(index).Enabled = False
@@ -3295,11 +3294,7 @@ On Error GoTo lblThreadLine_err_hdr
 lblThreadLine_err_hdr:
     'cdlCancel = Cancel button clicked
     If Err.Number = cdlCancel Then Exit Sub
-
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " _
-        & Err.Description & ", " & Err.Source, vbExclamation, _
-        "FiberTrack, lblThreadLine_Click"
-
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "FiberTrack, lblThreadLine_Click"
 End Sub
 
 Private Sub mnuAbout_Click()
@@ -3330,6 +3325,11 @@ Private Sub mnuExcel_Click()
     Load PlotData
     PlotData.ChooseExcelFile
     Unload PlotData
+End Sub
+
+Private Sub Restart_Click()
+    Call Shell(App.Path & "\" & App.EXEName & ".exe", vbNormalFocus)
+    Unload Me
 End Sub
 
 Private Sub mnuExit_Click()
@@ -3411,12 +3411,7 @@ On Error GoTo mnuOpen_err_hdr
     comDialog2.DialogTitle = "Open Settings"
     comDialog2.Filter = "FiberTrack Setup File (*.sup)|*.sup|FiberTrack Default Settings (" & SETUP_FILENAME & ")|" & SETUP_FILENAME & "|All Files (*.*)|*.*"
     comDialog2.FilterIndex = 1
-    
-    comDialog2.Flags = cdlOFNExplorer Or _
-                                  cdlOFNExtensionDifferent Or _
-                                  cdlOFNNoChangeDir Or _
-                                  cdlOFNHideReadOnly
-                                  
+    comDialog2.Flags = cdlOFNExplorer Or cdlOFNExtensionDifferent Or cdlOFNNoChangeDir Or cdlOFNHideReadOnly
 
     comDialog2.ShowOpen
     
@@ -3511,10 +3506,7 @@ mnuOpen_err_hdr:
     If Err.Number = cdlCancel Then
         Exit Sub
     End If
-
-    MsgBox "Error Number = " & Str(Err.Number) & ",  " _
-        & Err.Description & ", " & Err.Source, vbExclamation, _
-        "Open Setup File Error, mnuOpen FiberTrack"
+    MsgBox "Error Number = " & str(Err.Number) & ",  " & Err.Description & ", " & Err.Source, vbExclamation, "Open Setup File Error, mnuOpen FiberTrack"
 End Sub
 
 Private Sub mnuOpenDataFile_Click()
@@ -4404,9 +4396,11 @@ On Error Resume Next
   
         'Check limits V1.7
         If (localAverage <= Target_Denier + Target_Denier * (Target_denier_tol / 100)) And (localAverage >= Target_Denier - Target_Denier * (Target_denier_tol / 100)) Then
-            Text1(sensorIndex).BackColor = &HC0C0C0
+            Text1(sensorIndex).BackColor = RGB(216, 216, 216)   ' RGB_SILVER
+            Text1(sensorIndex).ForeColor = RGB(12, 12, 12)      ' Black
         Else
-            Text1(sensorIndex).BackColor = &H8080FF
+            Text1(sensorIndex).BackColor = RGB(255, 75, 75)     ' Red
+            Text1(sensorIndex).BackColor = RGB(242, 242, 242)   ' light gray
         End If
     Else
         Text1(sensorIndex).Text = "Comm Err"
@@ -4437,10 +4431,13 @@ Private Sub ProcessSensorInit(sensorIndex As Integer)
         Next index
         SensorInfos(sensorIndex).Online = True
         Text1(sensorIndex).Text = "Online"       'Update display button
+        Text1(sensorIndex).BackColor = RGB(216, 216, 216)   ' RGB_SILVER
+        Text1(sensorIndex).ForeColor = RGB(12, 12, 12)      ' Black
     Else
         SensorInfos(sensorIndex).Online = False
         Text1(sensorIndex).Text = "No Comm"
-        Command(sensorIndex).BackColor = &H8080FF
+        Command(sensorIndex).BackColor = RGB(255, 75, 75)     ' Red
+        Text1(sensorIndex).ForeColor = RGB(242, 242, 242)    ' light gray
     End If
 End Sub
 

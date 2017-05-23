@@ -91,10 +91,7 @@ ErrHan:
         log "Error " & Err.Number & ": " & Err.Description
         MsgBox "Error opening communications channel.  Please try another COM Port or check your device configuration.", vbCritical Or vbOKOnly, "FiberTrack FTComm"
     Else
-        MsgBox "Unexpected error occurred while opening communications channel." & vbCrLf & _
-               "Please try another COM Port or check your device configuration." & vbCrLf & _
-               "Error " & Err.Number & ": " & Err.Description, _
-               vbCritical Or vbOKOnly, "FiberTrack FTComm"
+        MsgBox "Unexpected error occurred while opening communications channel." & vbCrLf & "Please try another COM Port or check your device configuration." & vbCrLf & "Error " & Err.Number & ": " & Err.Description, vbCritical Or vbOKOnly, "FiberTrack FTComm"
     End If
         
 End Function
