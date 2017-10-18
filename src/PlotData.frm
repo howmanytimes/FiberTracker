@@ -1702,14 +1702,14 @@ Private Sub Form_Load()
     lblSensor(2).Visible = False
     lblSensor(3).Visible = False
     
-    ml_SensorColors(1) = vbBlue
-    ml_SensorColors(2) = vbRed
-    ml_SensorColors(3) = vbYellow
-    ml_SensorColors(4) = vbGreen
-    ml_SensorColors(5) = vbCyan
-    ml_SensorColors(6) = vbMagenta
-    ml_SensorColors(7) = vbBlack
-    ml_SensorColors(8) = vbGrayText
+    ml_SensorColors(1) = RGB(0, 0, 255)    ' Blue
+    ml_SensorColors(2) = RGB(204, 0, 0)    ' Red
+    ml_SensorColors(3) = RGB(204, 255, 0)  ' Yellow
+    ml_SensorColors(4) = RGB(0, 102, 0)    ' Green
+    ml_SensorColors(5) = RGB(0, 255, 204)  ' Cyan
+    ml_SensorColors(6) = RGB(204, 0, 153)  ' Magenta
+    ml_SensorColors(7) = RGB(204, 102, 0)  ' Orange
+    ml_SensorColors(8) = RGB(0, 51, 0)     ' Darker Green
     
     cwgLineChart.Enabled = True         ' cwgLineChart = line chart
     cwgBarChart.Enabled = True         ' cwgBarChart = bar chart
