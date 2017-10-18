@@ -321,15 +321,22 @@ Private Sub WriteHeaderText()
     Debug.Assert mDataFileFormatEnum = Text
     Dim index As Integer
     WriteLine ms_Title
-    WriteLine "       --------------------------------------------------------------"
+    WriteLine "            ----------------------------------------------------"
     WriteLine ""
     WriteLine ms_Info
     WriteLine ""
-    WriteLine ""
+    ' WriteLine ""
     WriteComma ""
+    Dim line As String
+    Dim blank As String
+    blank = "             "
     For index = LBound(mb_SensorOnline) To UBound(mb_SensorOnline)
         If mb_SensorOnline(index) Then
-            WriteComma GetIniSetting("Application", "NameOfThreadLine") & " " & SensorInfos(index).Package  ' CHANGED
+            line = CStr(GetIniSetting("Application", "NameOfThreadLine") & " " & RTrim(SensorInfos(index).Package))  ' CHANGED
+	    If CBool(GetIniSetting("Application", "IncludeCvColumn")) Then
+                line = line & blank
+            End If
+            WriteComma Replace(line, vbNewLine, "")
         End If
     Next index
     WriteLine ""
@@ -343,7 +350,7 @@ Private Sub WriteHeaderText()
         End If
     Next index
     WriteLine ""
-    WriteLine "--------------------------------------------------------------------------------------------------------------------------------------------------------------"
+    WriteLine "-------------------------------------------------------------------------------"
 End Sub
 
 Private Sub WriteHeaderCSV()
@@ -352,7 +359,7 @@ Private Sub WriteHeaderCSV()
     line = HEADER_TIME
     For index = LBound(mb_SensorOnline) To UBound(mb_SensorOnline)
         If mb_SensorOnline(index) Then
-            line = line & ", " & HEADER_SENSOR & CStr(index) & " " & GetIniSetting("Application", "NameOfThreadLine") & " " & SensorInfos(index).Package ' CHANGED
+            line = line & ", " & HEADER_SENSOR & CStr(index) & " " & GetIniSetting("Application", "NameOfThreadLine") & " " & Replace(SensorInfos(index).Package, vbNewLine, "") ' CHANGED
             If CBool(GetIniSetting("Application", "IncludeCvColumn")) Then
                 line = line & ", " & HEADER_CV & CStr(index)
             End If
@@ -371,7 +378,7 @@ Public Sub WriteFooter()
     WriteComma HEADER_TIME
     For index = LBound(mb_SensorOnline) To UBound(mb_SensorOnline)
         If mb_SensorOnline(index) Then
-            WriteComma HEADER_SENSOR & index & " " & GetIniSetting("Application", "NameOfThreadLine") & " " & SensorInfos(index).Package  ' CHANGED
+            WriteComma HEADER_SENSOR & index & " " & GetIniSetting("Application", "NameOfThreadLine") & " " & Replace(SensorInfos(index).Package, vbNewLine, "")  ' CHANGED
             If CBool(GetIniSetting("Application", "IncludeCvColumn")) Then
                 WriteComma HEADER_CV & index
             End If

@@ -178,7 +178,7 @@ Private Function ConvertCSVToExcel(cvsFileName As String, excelFileName As Strin
     End If
     Set workBook = mo_ExcelObject.Workbooks.Open(cvsFileName, Editable:=True, AddToMRU:=False)
 #If USE_GENERIC_OBJECTS Then
-    workBook.SaveAs excelFileName, FileFormat:=43, CreateBackup:=True, AddToMRU:=True
+    workBook.SaveAs excelFileName, FileFormat:=56, CreateBackup:=True, AddToMRU:=True
 #Else
     workBook.SaveAs excelFileName, FileFormat:=xlExcel9795, CreateBackup:=True, AddToMRU:=True
 #End If
