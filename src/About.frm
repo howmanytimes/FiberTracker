@@ -245,8 +245,8 @@ Private Sub Form_Load()
     
     lblAddress.Caption = address(0) & address(1) & address(2) & address(3)
     
-    lblTelephone.Caption = "Telephone: 781-555-0000"
-    lblTelephone.Caption = "E-mail: jpiso@aol.com"
+    lblTelephone.Caption = StringFormat("Telephone: {0}", GetIniSetting("Application", "Phone"))
+    lblEmail.Caption = StringFormat("E-mail: {0}", GetIniSetting("Application", "Email"))
     lblWarning.Caption = warning(0) & warning(1) & warning(2) & warning(3)
     '"Warning!  This computer program is protected by copyright law and international treaties.  Unauthorized reproduction or distribution of this program is illegal and may result in criminal and civil penalties."
 
