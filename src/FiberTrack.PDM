@@ -387,7 +387,7 @@ Key1=Icon1
 
 [Package|FiberTrack Denier 2.5.0|Root]
 SubWizProgID=PDWizard.SetupPkgSubWiz
-BuildFolder=C:\FiberTrackerDenier250
+BuildFolder=C:\Publish\FiberTrackerDenier250
 
 [Package|FiberTrack Denier 2.5.0|Configure DAO ISAMs]
 Applicable=No
@@ -412,7 +412,7 @@ C:\WINDOWS\system32\comdlg32.ocx=
 C:\WINDOWS\system32\scrrun.dll=
 
 [Package|FiberTrack Denier 2.5.0|Files Added]
-C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\settings.ini=
+c:\documents and settings\compaq_owner\desktop\works\denier2.5.0\sourcecode\settings.ini=
 
 [Package|FiberTrack Denier 2.5.0|Files Removed]
 
@@ -421,7 +421,6 @@ C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL
 C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
 C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
 C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
-C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\FiberTrack.exe=Yes
 C:\WINDOWS\system32\msvbvm60.dll=Yes
 C:\WINDOWS\system32\oleaut32.dll=Yes
 C:\WINDOWS\system32\olepro32.dll=Yes
@@ -439,6 +438,7 @@ C:\WINDOWS\system32\COMCT232.OCX=Yes
 C:\WINDOWS\system32\VB6STKIT.DLL=Yes
 C:\WINDOWS\system32\SQLPARSE.DLL=Yes
 C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\settings.ini=Yes
+C:\github3\FiberTracker\src\FiberTrack.exe=Yes
 
 [Package|FiberTrack Denier 2.5.0|Configure Registry Files]
 Applicable=No
@@ -490,6 +490,7 @@ C:\WINDOWS\system32\COMCT232.OCX=$(WinSysPath)
 C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
 C:\WINDOWS\system32\SQLPARSE.DLL=$(WinSysPath)
 C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\settings.ini=$(AppPath)
+C:\github3\FiberTracker\src\FiberTrack.exe=$(AppPath)
 
 [Package|FiberTrack Denier 2.5.0|Configure Shared Files]
 Applicable=Yes
@@ -498,21 +499,12 @@ C:\sti\bin\FiberTrack231\Denier\setup.svd=No
 F:\Denier2.5.0\SourceCode\FiberTrack.exe=No
 C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\FiberTrack.exe=Yes
 C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode\settings.ini=No
+C:\github3\FiberTracker\src\FiberTrack.exe=No
 
 [Package|FiberTrack Denier 2.5.0|Distribution]
 Type=single
 Size=1.44 MB
 Title=FiberTrack - Denier 2.5.0
-
-[Package|FiberTrack Denier 2.5.0|Package]
-PackageFolder=C:\FiberTrackerDenier250
-ProjectFolder=C:\Documents and Settings\Compaq_Owner\Desktop\WORKS\Denier2.5.0\SourceCode
-ServerSideCab=
-File1=C:\FiberTrackerDenier250\setup.exe
-File2=C:\FiberTrackerDenier250\Setup.Lst
-File3=C:\FiberTrackerDenier250\FiberTrack.CAB
-Handler1=PDWizard.FolderDplySubWiz
-Handler2=PDWizard.WebPostDplySubWiz
 
 [Package|FiberTrack Denier 2.5.0|IconGroups]
 Group0=FiberTrack 2.5.0 Denier
@@ -524,3 +516,13 @@ Icon1=FiberTrack.exe
 Title1=FiberTrack 2.5.0 Denier
 StartIn1=$(AppPath)
 Key1=Icon1
+
+[Package|FiberTrack Denier 2.5.0|Package]
+PackageFolder=C:\Publish\FiberTrackerDenier250
+ProjectFolder=C:\github3\FiberTracker\src
+ServerSideCab=
+File1=C:\Publish\FiberTrackerDenier250\setup.exe
+File2=C:\Publish\FiberTrackerDenier250\Setup.Lst
+File3=C:\Publish\FiberTrackerDenier250\FiberTrack.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
